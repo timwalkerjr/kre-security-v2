@@ -1,0 +1,89 @@
+---
+const reasons = [
+  {
+    num: '01',
+    title: 'Sense of Security',
+    body: 'Even just the presence of a security system can make a business more effective and efficient by giving owners and employees peace of mind.',
+  },
+  {
+    num: '02',
+    title: 'Prevention',
+    body: 'A thief will think twice when a security system is present. It lets them know that you are serious about your security and will deter them from targeting you.',
+  },
+  {
+    num: '03',
+    title: 'Customer Service',
+    body: 'Not only does a sense of security put your employees at ease but also your customers — creating a safer, more welcoming environment.',
+  },
+  {
+    num: '04',
+    title: 'Handling Crime',
+    body: 'Having security measures in place will allow police to solve a crime quickly and get you back to business in no time.',
+  },
+  {
+    num: '05',
+    title: 'Monitoring',
+    body: 'Take this responsibility off your shoulders and leave your home or business security to a professional security system.',
+  },
+];
+
+const included = [
+  'Standard touch screen',
+  'Three door or window sensors',
+  'One pet proof motion detector',
+  'One four button key fob',
+];
+---
+
+<section class="relative isolate py-[72px] border-t border-white/[0.06]" data-ps="src/components/in-home-security/InHomeFeatures.astro:section">
+  <div class="max-w-[1180px] mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-12">
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-4 h-[2px] bg-[#f5bd14]"></span>
+          <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase">System Specs</span>
+        </div>
+        <h2 class="text-[32px] sm:text-[36px] font-extrabold text-[#f5f5f4] leading-[1.08] mb-4">What's Included</h2>
+        <p class="text-[#a8a29e] text-[15px] leading-[24px] mb-6">
+          Our systems are homeowner/businessowner owned and have a small monthly or yearly service fee.
+        </p>
+        <ul class="space-y-3 mb-6 m-0 p-0 list-none">
+          {included.map((item) => (
+            <li class="flex items-center gap-3 bg-white/[0.035] border border-white/[0.09] rounded-[12px] p-3">
+              <span class="w-2 h-2 bg-[#f5bd14] shrink-0 rounded-full"></span>
+              <span class="text-[#f5f5f4] text-[14px]">{item}</span>
+            </li>
+          ))}
+        </ul>
+        <div class="border-l-2 border-[#f5bd14] pl-4 mb-4">
+          <p class="text-[#a8a29e] text-[14px] leading-[22px] m-0">
+            * Additional equipment such as wireless smoke or carbon monoxide detectors can be added at a small fee.
+          </p>
+        </div>
+        <p class="text-[#a8a29e] text-[14px] leading-[22px] m-0">
+          You can control your system using a simple, easy-to-use application on your smartphone, tablet, and more.
+        </p>
+      </div>
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-4 h-[2px] bg-[#f5bd14]"></span>
+          <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase">Why Install a System</span>
+        </div>
+        <h2 class="text-[28px] sm:text-[32px] font-extrabold text-[#f5f5f4] leading-[1.08] mb-6">
+          5 Reasons to Install a Home Security System
+        </h2>
+        <div class="space-y-4">
+          {reasons.map((r) => (
+            <div class="flex gap-4 items-start border-b border-white/[0.09] pb-4 last:border-b-0 last:pb-0">
+              <span class="text-[#f5bd14] text-[24px] font-extrabold shrink-0">{r.num}</span>
+              <div>
+                <h3 class="text-[#f5f5f4] text-[14px] font-bold mb-1">{r.title}</h3>
+                <p class="text-[#a8a29e] text-[14px] leading-[22px] m-0">{r.body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
