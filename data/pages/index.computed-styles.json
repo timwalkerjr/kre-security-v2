@@ -1,0 +1,1402 @@
+{
+  "viewportWidth": 1920,
+  "pageBackground": {
+    "type": "color",
+    "value": "rgb(9, 26, 44)"
+  },
+  "isElementor": false,
+  "sectionThemes": [
+    {
+      "background": "rgb(9, 26, 44)",
+      "textColor": "rgb(238, 243, 247)",
+      "headings": [
+        {
+          "tag": "h1",
+          "fontSize": "62.4px",
+          "fontWeight": "800",
+          "color": "rgb(238, 243, 247)",
+          "text": "Always on.Always local.",
+          "letterSpacing": "-2.184px",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h2",
+          "fontSize": "44px",
+          "fontWeight": "800",
+          "color": "rgb(238, 243, 247)",
+          "text": "Everything your business needs to stay connected.",
+          "letterSpacing": "-1.1px",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h3",
+          "fontSize": "18.24px",
+          "fontWeight": "700",
+          "color": "rgb(238, 243, 247)",
+          "text": "Hosted VoIP",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h3",
+          "fontSize": "18.24px",
+          "fontWeight": "700",
+          "color": "rgb(238, 243, 247)",
+          "text": "Tailored Solutions",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h3",
+          "fontSize": "18.24px",
+          "fontWeight": "700",
+          "color": "rgb(238, 243, 247)",
+          "text": "Business Internet & Fiber",
+          "textAlign": "start"
+        }
+      ],
+      "bodyStyle": {
+        "fontSize": "18.56px",
+        "color": "rgb(159, 177, 194)",
+        "lineHeight": "29.696px",
+        "textAlign": "start"
+      },
+      "buttons": [
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgb(10, 26, 46)",
+          "borderRadius": "10px",
+          "padding": "15px 28px 15px 28px",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "text": "Get a Free Quote →"
+        },
+        {
+          "color": "rgb(230, 236, 242)",
+          "borderRadius": "10px",
+          "border": "1px solid rgba(255, 255, 255, 0.2)",
+          "padding": "15px 28px 15px 28px",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "text": "See What We Do"
+        },
+        {
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "color": "rgb(238, 243, 247)",
+          "borderRadius": "12px",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "padding": "12px 14px 12px 14px",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "text": "Remote Support"
+        }
+      ],
+      "links": [
+        {
+          "text": "Learn about FaxBridge →",
+          "color": "rgb(148, 231, 96)",
+          "fontWeight": "650"
+        }
+      ],
+      "images": [
+        {
+          "displayWidth": 169,
+          "displayHeight": 31
+        }
+      ],
+      "layout": {
+        "containerMaxWidth": "1180px",
+        "paddingBlock": "15px 15px",
+        "display": "flex",
+        "flexDirection": "row",
+        "gap": "30px",
+        "childCount": 6
+      },
+      "interactionType": "accordion",
+      "accordionItems": [
+        {
+          "question": "What does Net Express do?",
+          "answer": "Net Express is a single-source provider for business phone, internet, and IT. We deliver Hosted VoIP, high-speed business internet and fiber, virtual fax, managed IT, and 4G LTE failover — all from on"
+        },
+        {
+          "question": "Can I keep my existing phone numbers?",
+          "answer": "Yes. We port your current business numbers to our network, so your customers keep reaching you at the numbers they already know — with no interruption."
+        },
+        {
+          "question": "Do I need to buy a phone system or PBX hardware?",
+          "answer": "No. Our Hosted VoIP runs in the cloud, so there's no on-site PBX to purchase or maintain — you get auto-attendants, voicemail-to-email, and multi-location extension dialing without the hardware."
+        },
+        {
+          "question": "What areas do you serve?",
+          "answer": "We're headquartered in Clarkston, Michigan and serve businesses across Michigan and the Midwest — from single storefronts to multi-location enterprises."
+        },
+        {
+          "question": "What is FaxBridge?",
+          "answer": "FaxBridge internet-enables your existing fax machine. Plug it in and send or receive faxes over your internet connection instead of a dedicated phone line, with every fax stored securely in the cloud "
+        },
+        {
+          "question": "What happens to my phones if the internet goes down?",
+          "answer": "Our 4G LTE failover automatically switches to a wireless connection if your wired line drops, so your phones keep ringing and your business stays online."
+        },
+        {
+          "question": "How do billing and support work?",
+          "answer": "One provider, one monthly bill, and one number to call. Our US-based support is available 24/7, backed by a local Michigan team that's accountable from setup through day-to-day service."
+        }
+      ],
+      "pseudoElements": [
+        {
+          "host": "eyebrow",
+          "type": "::before",
+          "width": "24px",
+          "height": "2px",
+          "backgroundColor": "rgb(148, 231, 96)"
+        }
+      ]
+    },
+    {
+      "background": "rgba(9, 26, 44, 0.82)",
+      "textColor": null,
+      "headings": [],
+      "bodyStyle": null,
+      "buttons": [],
+      "images": [
+        {
+          "displayWidth": 169,
+          "displayHeight": 31
+        }
+      ],
+      "layout": {
+        "containerMaxWidth": "1180px",
+        "paddingBlock": "15px 15px",
+        "display": "flex",
+        "flexDirection": "row",
+        "gap": "30px",
+        "childCount": 6
+      }
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "gradient": "linear-gradient(rgba(255, 255, 255, 0.09) 1px, rgba(0, 0, 0, 0) 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.09) 1px, rgba(0, 0, 0, 0) 1px)",
+      "textColor": null,
+      "headings": [],
+      "bodyStyle": null,
+      "buttons": [],
+      "layout": {}
+    },
+    {
+      "background": "rgba(0, 0, 0, 0)",
+      "gradient": "radial-gradient(55% 65% at 80% 32%, rgba(46, 104, 168, 0.2), rgba(0, 0, 0, 0) 62%), radial-gradient(38% 46% at 74% 46%, rgba(97, 149, 63, 0.12), rgba(0, 0, 0, 0) 62%), radial-gradient(60% 60% at 12% 92%, rgba(20, 52, 86, 0.35), rgba(0, 0, 0, 0) 68%)",
+      "textColor": null,
+      "headings": [],
+      "bodyStyle": null,
+      "buttons": [],
+      "layout": {}
+    },
+    {
+      "background": "rgb(12, 33, 54)",
+      "textColor": null,
+      "headings": [],
+      "bodyStyle": null,
+      "buttons": [],
+      "layout": {
+        "containerMaxWidth": "1180px",
+        "paddingBlock": "26px 26px",
+        "display": "flex",
+        "flexDirection": "row",
+        "alignItems": "center",
+        "gap": "12px",
+        "childCount": 2
+      }
+    },
+    {
+      "background": "rgb(12, 33, 54)",
+      "textColor": "rgb(238, 243, 247)",
+      "headings": [
+        {
+          "tag": "h2",
+          "fontSize": "44px",
+          "fontWeight": "800",
+          "color": "rgb(238, 243, 247)",
+          "text": "One provider instead of four.",
+          "letterSpacing": "-1.1px",
+          "textAlign": "start"
+        }
+      ],
+      "bodyStyle": {
+        "fontSize": "17.28px",
+        "color": "rgb(159, 177, 194)",
+        "lineHeight": "28.512px",
+        "textAlign": "start"
+      },
+      "buttons": [
+        {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgb(10, 26, 46)",
+          "borderRadius": "10px",
+          "padding": "12px 22px 12px 22px",
+          "fontSize": "15.2px",
+          "fontWeight": "600",
+          "text": "Talk to a specialist"
+        }
+      ],
+      "layout": {
+        "containerMaxWidth": "1180px",
+        "paddingBlock": "92px 92px",
+        "display": "grid",
+        "gridTemplateColumns": "530px 530px",
+        "gap": "56px",
+        "childCount": 2
+      },
+      "pseudoElements": [
+        {
+          "host": "eyebrow",
+          "type": "::before",
+          "width": "24px",
+          "height": "2px",
+          "backgroundColor": "rgb(148, 231, 96)"
+        }
+      ]
+    },
+    {
+      "background": "rgb(12, 33, 54)",
+      "textColor": null,
+      "headings": [],
+      "bodyStyle": null,
+      "buttons": [],
+      "layout": {
+        "containerMaxWidth": "1180px",
+        "paddingBlock": "92px 92px"
+      }
+    },
+    {
+      "background": "rgb(6, 19, 31)",
+      "textColor": "rgb(255, 255, 255)",
+      "headings": [
+        {
+          "tag": "h4",
+          "fontSize": "12.8px",
+          "fontWeight": "700",
+          "color": "rgb(255, 255, 255)",
+          "text": "Services",
+          "textTransform": "uppercase",
+          "letterSpacing": "1.28px",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h4",
+          "fontSize": "12.8px",
+          "fontWeight": "700",
+          "color": "rgb(255, 255, 255)",
+          "text": "Company",
+          "textTransform": "uppercase",
+          "letterSpacing": "1.28px",
+          "textAlign": "start"
+        },
+        {
+          "tag": "h4",
+          "fontSize": "12.8px",
+          "fontWeight": "700",
+          "color": "rgb(255, 255, 255)",
+          "text": "Contact",
+          "textTransform": "uppercase",
+          "letterSpacing": "1.28px",
+          "textAlign": "start"
+        }
+      ],
+      "bodyStyle": {
+        "fontSize": "14.72px",
+        "color": "rgb(159, 177, 194)",
+        "lineHeight": "25.024px",
+        "textAlign": "start"
+      },
+      "buttons": [],
+      "links": [
+        {
+          "text": "Hosted VoIP",
+          "color": "rgb(159, 177, 194)",
+          "fontWeight": "400"
+        },
+        {
+          "text": "Web Design and SEO by twalkerco",
+          "color": "rgb(238, 243, 247)",
+          "fontWeight": "400"
+        }
+      ],
+      "layout": {
+        "containerMaxWidth": "1180px",
+        "paddingBlock": "64px 28px",
+        "display": "grid",
+        "gridTemplateColumns": "317.859px 211.922px 211.906px 254.312px",
+        "gap": "40px",
+        "childCount": 4
+      }
+    }
+  ],
+  "globalTypography": {
+    "headingFont": "Inter",
+    "bodyFont": "Inter",
+    "scale": {
+      "h1": {
+        "fontSize": "62.4px",
+        "fontWeight": "800",
+        "lineHeight": "61.152px"
+      },
+      "h2": {
+        "fontSize": "44px",
+        "fontWeight": "800",
+        "lineHeight": "47.52px"
+      },
+      "h3": {
+        "fontSize": "18.24px",
+        "fontWeight": "700",
+        "lineHeight": "27.36px"
+      },
+      "h4": {
+        "fontSize": "12.8px",
+        "fontWeight": "700",
+        "lineHeight": "19.2px"
+      },
+      "body": {
+        "fontSize": "17.28px",
+        "fontWeight": "400",
+        "lineHeight": "28.512px"
+      }
+    }
+  },
+  "navigation": {
+    "isFullWidth": true,
+    "width": "1905px",
+    "backgroundColor": "rgba(9, 26, 44, 0.82)",
+    "position": "sticky",
+    "logo": {
+      "width": "169px",
+      "height": "31px",
+      "position": "inside-nav",
+      "hasBadge": false,
+      "src": "https://gonetexpress.netlify.app/netexpress-logo.png"
+    },
+    "links": [
+      {
+        "text": "Services",
+        "fontSize": "14.88px",
+        "fontFamily": "Inter",
+        "fontWeight": "500",
+        "color": "rgb(196, 209, 221)"
+      },
+      {
+        "text": "Why Net Express",
+        "fontSize": "14.88px",
+        "fontFamily": "Inter",
+        "fontWeight": "500",
+        "color": "rgb(196, 209, 221)"
+      },
+      {
+        "text": "Service Area",
+        "fontSize": "14.88px",
+        "fontFamily": "Inter",
+        "fontWeight": "500",
+        "color": "rgb(196, 209, 221)"
+      },
+      {
+        "text": "Reviews",
+        "fontSize": "14.88px",
+        "fontFamily": "Inter",
+        "fontWeight": "500",
+        "color": "rgb(196, 209, 221)"
+      },
+      {
+        "text": "FAQ",
+        "fontSize": "14.88px",
+        "fontFamily": "Inter",
+        "fontWeight": "500",
+        "color": "rgb(196, 209, 221)"
+      },
+      {
+        "text": "Contact",
+        "fontSize": "14.88px",
+        "fontFamily": "Inter",
+        "fontWeight": "500",
+        "color": "rgb(196, 209, 221)"
+      },
+      {
+        "text": "Get a Quote",
+        "fontSize": "15.2px",
+        "fontFamily": "Inter",
+        "fontWeight": "600",
+        "color": "rgb(10, 26, 46)",
+        "isButton": true,
+        "buttonStyle": {
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "10px"
+        }
+      }
+    ],
+    "linkLayout": {
+      "paddingX": "0px 0px",
+      "pitchPx": 105,
+      "distribution": "left",
+      "verticalAlign": "middle"
+    }
+  },
+  "sliders": [],
+  "buttons": [
+    {
+      "backgroundColor": "rgb(255, 255, 255)",
+      "color": "rgb(10, 26, 46)",
+      "borderRadius": "10px",
+      "padding": "15px 28px 15px 28px",
+      "fontSize": "16px",
+      "fontWeight": "600",
+      "text": "Get a Free Quote →"
+    },
+    {
+      "color": "rgb(230, 236, 242)",
+      "borderRadius": "10px",
+      "border": "1px solid rgba(255, 255, 255, 0.2)",
+      "padding": "15px 28px 15px 28px",
+      "fontSize": "16px",
+      "fontWeight": "600",
+      "text": "See What We Do"
+    },
+    {
+      "backgroundColor": "rgba(255, 255, 255, 0.035)",
+      "color": "rgb(238, 243, 247)",
+      "borderRadius": "12px",
+      "border": "1px solid rgba(255, 255, 255, 0.09)",
+      "padding": "12px 14px 12px 14px",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "text": "Remote Support"
+    }
+  ],
+  "videos": [],
+  "footer": {
+    "background": "rgb(6, 19, 31)",
+    "textColor": "rgb(238, 243, 247)",
+    "columns": 4,
+    "textAlign": "start",
+    "linkGroups": [
+      {
+        "heading": "Services",
+        "links": [
+          {
+            "text": "Hosted VoIP",
+            "href": "#services"
+          },
+          {
+            "text": "Tailored Solutions",
+            "href": "#services"
+          },
+          {
+            "text": "Internet & Fiber",
+            "href": "#services"
+          },
+          {
+            "text": "Virtual Fax (FaxBridge)",
+            "href": "/faxbridge/"
+          },
+          {
+            "text": "Managed IT",
+            "href": "#services"
+          }
+        ]
+      },
+      {
+        "heading": "Company",
+        "links": [
+          {
+            "text": "Why Net Express",
+            "href": "#why"
+          },
+          {
+            "text": "Service Area",
+            "href": "#areas"
+          },
+          {
+            "text": "Reviews",
+            "href": "#reviews"
+          },
+          {
+            "text": "FAQ",
+            "href": "#faq"
+          },
+          {
+            "text": "Contact",
+            "href": "#contact"
+          }
+        ]
+      }
+    ]
+  },
+  "socialLinks": null,
+  "hoverStyles": {
+    ".btn-primary": {
+      "backgroundColor": "rgb(238, 243, 247)",
+      "transform": "translateY(-1px)"
+    },
+    ".btn-ghost": {
+      "color": "rgb(255, 255, 255)",
+      "borderColor": "var(--accent-bright)"
+    },
+    ".menu a": {
+      "color": "rgb(255, 255, 255)"
+    },
+    ".support-row .arw": {
+      "transform": "translateX(3px)"
+    },
+    ".support-row": {
+      "backgroundColor": "rgba(148, 231, 96, 0.07)",
+      "borderColor": "rgba(148, 231, 96, 0.5)"
+    },
+    ".card": {
+      "transform": "translateY(-4px)",
+      "boxShadow": "rgba(0, 0, 0, 0.3) 0px 14px 40px",
+      "borderColor": "rgba(148, 231, 96, 0.4)"
+    },
+    ".crow a.v": {
+      "color": "var(--accent-bright)"
+    },
+    ".faq-item summary": {
+      "color": "rgb(255, 255, 255)"
+    },
+    "footer ul a": {
+      "color": "var(--accent-bright)"
+    },
+    "footer .fc-contact a": {
+      "color": "var(--accent-bright)"
+    },
+    ".crumbs a": {
+      "color": "var(--accent-bright)"
+    },
+    ".card-link": {
+      "color": "rgb(255, 255, 255)"
+    }
+  },
+  "cssVariables": {
+    "--font": "'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif"
+  },
+  "externalFonts": [
+    "https://fonts.googleapis.com/",
+    "https://fonts.gstatic.com/",
+    "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+  ],
+  "portSectionStyles": [
+    {
+      "index": 0,
+      "heading": "Site header / navigation (port into Navigation.astro)",
+      "elements": [
+        {
+          "tag": "a",
+          "cls": "brand",
+          "color": "rgb(238, 243, 247)",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "img",
+          "color": "rgb(238, 243, 247)",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "a",
+          "text": "Services",
+          "color": "rgb(196, 209, 221)",
+          "fontSize": "14.88px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "a",
+          "text": "Why Net Express",
+          "color": "rgb(196, 209, 221)",
+          "fontSize": "14.88px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "a",
+          "text": "Service Area",
+          "color": "rgb(196, 209, 221)",
+          "fontSize": "14.88px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "a",
+          "text": "Reviews",
+          "color": "rgb(196, 209, 221)",
+          "fontSize": "14.88px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "a",
+          "text": "FAQ",
+          "color": "rgb(196, 209, 221)",
+          "fontSize": "14.88px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "a",
+          "text": "Contact",
+          "color": "rgb(196, 209, 221)",
+          "fontSize": "14.88px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "a",
+          "cls": "btn",
+          "text": "Get a Quote",
+          "color": "rgb(10, 26, 46)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "10px",
+          "fontSize": "15.2px",
+          "fontWeight": "600"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "heading": "Always on.Always local.",
+      "elements": [
+        {
+          "tag": "h1",
+          "text": "Always on.Always local.",
+          "color": "rgb(238, 243, 247)",
+          "fontSize": "62.4px",
+          "fontWeight": "800"
+        },
+        {
+          "tag": "a",
+          "cls": "btn",
+          "text": "Get a Free Quote →",
+          "color": "rgb(10, 26, 46)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "10px",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "a",
+          "cls": "btn",
+          "text": "See What We Do",
+          "color": "rgb(230, 236, 242)",
+          "border": "1px solid rgba(255, 255, 255, 0.2)",
+          "borderRadius": "10px",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "span",
+          "cls": "dot",
+          "color": "rgb(184, 197, 210)",
+          "backgroundColor": "rgb(148, 231, 96)",
+          "borderRadius": "50%",
+          "fontSize": "13.6px",
+          "fontWeight": "500"
+        },
+        {
+          "tag": "div",
+          "cls": "sep",
+          "color": "rgb(238, 243, 247)",
+          "backgroundColor": "rgba(255, 255, 255, 0.09)",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "aside",
+          "cls": "support-panel",
+          "text": "Client Support Center\n        ",
+          "color": "rgb(238, 243, 247)",
+          "border": "1px solid rgba(148, 231, 96, 0.22)",
+          "borderRadius": "20px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "div",
+          "cls": "sp-head",
+          "text": "Client Support Center\n        ",
+          "color": "rgb(238, 243, 247)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "span",
+          "cls": "live",
+          "color": "rgb(159, 177, 194)",
+          "backgroundColor": "rgb(148, 231, 96)",
+          "borderRadius": "50%",
+          "fontSize": "12.48px"
+        },
+        {
+          "tag": "a",
+          "cls": "support-row",
+          "text": "Remote Support",
+          "color": "rgb(238, 243, 247)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "12px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "span",
+          "cls": "ic",
+          "color": "rgb(148, 231, 96)",
+          "backgroundColor": "rgba(148, 231, 96, 0.13)",
+          "borderRadius": "9px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(148, 231, 96)",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(159, 177, 194)",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "a",
+          "cls": "support-row",
+          "text": "Open a Support Ticket",
+          "color": "rgb(238, 243, 247)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "12px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "a",
+          "cls": "support-row",
+          "text": "Pay Your Invoice",
+          "color": "rgb(238, 243, 247)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "12px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "a",
+          "cls": "support-row",
+          "text": "Client Portal",
+          "color": "rgb(238, 243, 247)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "12px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "a",
+          "cls": "support-row",
+          "text": "Call Support",
+          "color": "rgb(238, 243, 247)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "12px",
+          "fontSize": "16px"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "heading": "Everything your business needs to stay connected.",
+      "elements": [
+        {
+          "tag": "h2",
+          "text": "Everything your business needs",
+          "color": "rgb(238, 243, 247)",
+          "fontSize": "44px",
+          "fontWeight": "800"
+        },
+        {
+          "tag": "div",
+          "cls": "card",
+          "text": "Hosted VoIP\n        A full clo",
+          "color": "rgb(238, 243, 247)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "16px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "div",
+          "cls": "ic",
+          "color": "rgb(148, 231, 96)",
+          "backgroundColor": "rgba(148, 231, 96, 0.12)",
+          "borderRadius": "11px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(148, 231, 96)",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "Hosted VoIP",
+          "color": "rgb(238, 243, 247)",
+          "fontSize": "18.24px",
+          "fontWeight": "700"
+        },
+        {
+          "tag": "div",
+          "cls": "card",
+          "text": "Tailored Solutions\n        No ",
+          "color": "rgb(238, 243, 247)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "16px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "Tailored Solutions",
+          "color": "rgb(238, 243, 247)",
+          "fontSize": "18.24px",
+          "fontWeight": "700"
+        },
+        {
+          "tag": "div",
+          "cls": "card",
+          "text": "Business Internet & Fiber\n    ",
+          "color": "rgb(238, 243, 247)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "16px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "path",
+          "color": "rgb(148, 231, 96)",
+          "fontSize": "16px",
+          "lineWidth": 18,
+          "lineHeight": 4
+        },
+        {
+          "tag": "h3",
+          "text": "Business Internet & Fiber",
+          "color": "rgb(238, 243, 247)",
+          "fontSize": "18.24px",
+          "fontWeight": "700"
+        },
+        {
+          "tag": "div",
+          "cls": "card",
+          "text": "Virtual Fax (FaxBridge)\n      ",
+          "color": "rgb(238, 243, 247)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "16px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "Virtual Fax (FaxBridge)",
+          "color": "rgb(238, 243, 247)",
+          "fontSize": "18.24px",
+          "fontWeight": "700"
+        },
+        {
+          "tag": "a",
+          "cls": "card-link",
+          "text": "Learn about FaxBridge →",
+          "color": "rgb(148, 231, 96)",
+          "fontSize": "14.4px",
+          "fontWeight": "650"
+        },
+        {
+          "tag": "div",
+          "cls": "card",
+          "text": "Managed IT\n        Network man",
+          "color": "rgb(238, 243, 247)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "16px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "Managed IT",
+          "color": "rgb(238, 243, 247)",
+          "fontSize": "18.24px",
+          "fontWeight": "700"
+        },
+        {
+          "tag": "div",
+          "cls": "card",
+          "text": "4G LTE Failover\n        Automa",
+          "color": "rgb(238, 243, 247)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "16px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h3",
+          "text": "4G LTE Failover",
+          "color": "rgb(238, 243, 247)",
+          "fontSize": "18.24px",
+          "fontWeight": "700"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "heading": "One provider instead of four.",
+      "elements": [
+        {
+          "tag": "h2",
+          "text": "One provider instead of four.",
+          "color": "rgb(238, 243, 247)",
+          "fontSize": "44px",
+          "fontWeight": "800"
+        },
+        {
+          "tag": "a",
+          "cls": "btn",
+          "text": "Talk to a specialist",
+          "color": "rgb(10, 26, 46)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "10px",
+          "fontSize": "15.2px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "span",
+          "cls": "check",
+          "color": "rgb(148, 231, 96)",
+          "backgroundColor": "rgba(148, 231, 96, 0.15)",
+          "borderRadius": "6px",
+          "fontSize": "15.68px"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(148, 231, 96)",
+          "fontSize": "15.68px"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "heading": "Proudly serving Michigan & the Midwest.",
+      "elements": [
+        {
+          "tag": "h2",
+          "text": "Proudly serving Michigan & the",
+          "color": "rgb(238, 243, 247)",
+          "fontSize": "44px",
+          "fontWeight": "800"
+        },
+        {
+          "tag": "span",
+          "cls": "tag",
+          "text": "Clarkston",
+          "color": "rgb(184, 197, 210)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "999px",
+          "fontSize": "14.4px"
+        },
+        {
+          "tag": "span",
+          "cls": "tag",
+          "text": "Metro Detroit",
+          "color": "rgb(184, 197, 210)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "999px",
+          "fontSize": "14.4px"
+        },
+        {
+          "tag": "span",
+          "cls": "tag",
+          "text": "Oakland County",
+          "color": "rgb(184, 197, 210)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "999px",
+          "fontSize": "14.4px"
+        },
+        {
+          "tag": "span",
+          "cls": "tag",
+          "text": "Flint",
+          "color": "rgb(184, 197, 210)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "999px",
+          "fontSize": "14.4px"
+        },
+        {
+          "tag": "span",
+          "cls": "tag",
+          "text": "Grand Rapids",
+          "color": "rgb(184, 197, 210)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "999px",
+          "fontSize": "14.4px"
+        },
+        {
+          "tag": "span",
+          "cls": "tag",
+          "text": "Lansing",
+          "color": "rgb(184, 197, 210)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "999px",
+          "fontSize": "14.4px"
+        },
+        {
+          "tag": "span",
+          "cls": "tag",
+          "text": "Ann Arbor",
+          "color": "rgb(184, 197, 210)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "999px",
+          "fontSize": "14.4px"
+        },
+        {
+          "tag": "span",
+          "cls": "tag",
+          "text": "& the Midwest",
+          "color": "rgb(184, 197, 210)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "999px",
+          "fontSize": "14.4px"
+        },
+        {
+          "tag": "div",
+          "cls": "area-card",
+          "text": "1 Gbps\n        dedicated fiber",
+          "color": "rgb(238, 243, 247)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "18px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "div",
+          "cls": "hr",
+          "color": "rgb(238, 243, 247)",
+          "backgroundColor": "rgba(255, 255, 255, 0.09)",
+          "fontSize": "16px",
+          "lineWidth": 411,
+          "lineHeight": 1
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "heading": "Frequently asked questions",
+      "elements": [
+        {
+          "tag": "h2",
+          "text": "Frequently asked questions",
+          "color": "rgb(238, 243, 247)",
+          "fontSize": "44px",
+          "fontWeight": "800"
+        },
+        {
+          "tag": "details",
+          "cls": "faq-item",
+          "text": "What does Net Express do?\n    ",
+          "color": "rgb(238, 243, 247)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "12px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(148, 231, 96)",
+          "fontSize": "16.32px",
+          "fontWeight": "650"
+        },
+        {
+          "tag": "details",
+          "cls": "faq-item",
+          "text": "Can I keep my existing phone n",
+          "color": "rgb(238, 243, 247)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "12px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "details",
+          "cls": "faq-item",
+          "text": "Do I need to buy a phone syste",
+          "color": "rgb(238, 243, 247)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "12px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "details",
+          "cls": "faq-item",
+          "text": "What areas do you serve?\n     ",
+          "color": "rgb(238, 243, 247)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "12px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "details",
+          "cls": "faq-item",
+          "text": "What is FaxBridge?\n        Fax",
+          "color": "rgb(238, 243, 247)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "12px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "details",
+          "cls": "faq-item",
+          "text": "What happens to my phones if t",
+          "color": "rgb(238, 243, 247)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "12px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "details",
+          "cls": "faq-item",
+          "text": "How do billing and support wor",
+          "color": "rgb(238, 243, 247)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "12px",
+          "fontSize": "16px"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "heading": "Let's simplify your business communications.",
+      "elements": [
+        {
+          "tag": "h2",
+          "text": "Let's simplify your business c",
+          "color": "rgb(238, 243, 247)",
+          "fontSize": "44px",
+          "fontWeight": "800"
+        },
+        {
+          "tag": "a",
+          "cls": "btn",
+          "text": "Call (855) 313-2300",
+          "color": "rgb(10, 26, 46)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderRadius": "10px",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "a",
+          "cls": "btn",
+          "text": "Email us",
+          "color": "rgb(230, 236, 242)",
+          "border": "1px solid rgba(255, 255, 255, 0.2)",
+          "borderRadius": "10px",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "div",
+          "cls": "contact-card",
+          "text": "Call us(855) 313-2300\n        ",
+          "color": "rgb(238, 243, 247)",
+          "backgroundColor": "rgba(255, 255, 255, 0.035)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "borderRadius": "18px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "div",
+          "cls": "crow",
+          "text": "Call us(855) 313-2300",
+          "color": "rgb(238, 243, 247)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "span",
+          "cls": "ic",
+          "color": "rgb(148, 231, 96)",
+          "backgroundColor": "rgba(148, 231, 96, 0.12)",
+          "borderRadius": "10px",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(148, 231, 96)",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "a",
+          "cls": "v",
+          "text": "(855) 313-2300",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "16.8px",
+          "fontWeight": "600"
+        },
+        {
+          "tag": "div",
+          "cls": "crow",
+          "text": "Emailsupport@gonetexpress.com",
+          "color": "rgb(238, 243, 247)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "a",
+          "cls": "v",
+          "text": "support@gonetexpress.com",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "16.8px",
+          "fontWeight": "600"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "heading": "Site footer (port into Footer.astro)",
+      "elements": [
+        {
+          "tag": "img",
+          "cls": "flogo",
+          "color": "rgb(238, 243, 247)",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "h4",
+          "text": "Services",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "12.8px",
+          "fontWeight": "700"
+        },
+        {
+          "tag": "a",
+          "text": "Hosted VoIP",
+          "color": "rgb(159, 177, 194)",
+          "fontSize": "14.72px"
+        },
+        {
+          "tag": "a",
+          "text": "Tailored Solutions",
+          "color": "rgb(159, 177, 194)",
+          "fontSize": "14.72px"
+        },
+        {
+          "tag": "a",
+          "text": "Internet & Fiber",
+          "color": "rgb(159, 177, 194)",
+          "fontSize": "14.72px"
+        },
+        {
+          "tag": "a",
+          "text": "Virtual Fax (FaxBridge)",
+          "color": "rgb(159, 177, 194)",
+          "fontSize": "14.72px"
+        },
+        {
+          "tag": "a",
+          "text": "Managed IT",
+          "color": "rgb(159, 177, 194)",
+          "fontSize": "14.72px"
+        },
+        {
+          "tag": "h4",
+          "text": "Company",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "12.8px",
+          "fontWeight": "700"
+        },
+        {
+          "tag": "a",
+          "text": "Why Net Express",
+          "color": "rgb(159, 177, 194)",
+          "fontSize": "14.72px"
+        },
+        {
+          "tag": "a",
+          "text": "Service Area",
+          "color": "rgb(159, 177, 194)",
+          "fontSize": "14.72px"
+        },
+        {
+          "tag": "a",
+          "text": "Reviews",
+          "color": "rgb(159, 177, 194)",
+          "fontSize": "14.72px"
+        },
+        {
+          "tag": "a",
+          "text": "FAQ",
+          "color": "rgb(159, 177, 194)",
+          "fontSize": "14.72px"
+        },
+        {
+          "tag": "a",
+          "text": "Contact",
+          "color": "rgb(159, 177, 194)",
+          "fontSize": "14.72px"
+        },
+        {
+          "tag": "h4",
+          "text": "Contact",
+          "color": "rgb(255, 255, 255)",
+          "fontSize": "12.8px",
+          "fontWeight": "700"
+        },
+        {
+          "tag": "a",
+          "text": "Toll free (855) 313-2300",
+          "color": "rgb(159, 177, 194)",
+          "fontSize": "14.72px"
+        },
+        {
+          "tag": "a",
+          "text": "Local (248) 313-2300",
+          "color": "rgb(159, 177, 194)",
+          "fontSize": "14.72px"
+        },
+        {
+          "tag": "a",
+          "text": "support@gonetexpress.com",
+          "color": "rgb(159, 177, 194)",
+          "fontSize": "14.72px"
+        },
+        {
+          "tag": "div",
+          "cls": "copy",
+          "text": "© 2026 Net Express. All rights",
+          "color": "rgb(159, 177, 194)",
+          "border": "1px solid rgba(255, 255, 255, 0.09)",
+          "fontSize": "13.6px"
+        },
+        {
+          "tag": "div",
+          "text": "Web Design and SEO by twalkerc",
+          "color": "rgb(238, 243, 247)",
+          "border": "1px solid rgba(128, 128, 128, 0.2)",
+          "fontSize": "16px"
+        },
+        {
+          "tag": "a",
+          "text": "Web Design and SEO by twalkerc",
+          "color": "rgb(238, 243, 247)",
+          "fontSize": "12px"
+        },
+        {
+          "tag": "svg",
+          "color": "rgb(238, 243, 247)",
+          "fontSize": "12px"
+        }
+      ]
+    }
+  ],
+  "floatingOverlays": [],
+  "positionedOverlays": [],
+  "captureViewport": 1920
+}

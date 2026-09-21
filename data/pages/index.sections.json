@@ -1,0 +1,828 @@
+[
+  {
+    "index": 0,
+    "heading": "Site header / navigation (port into Navigation.astro)",
+    "widgetTypes": [
+      "nav"
+    ],
+    "html": "<header> <div class=\"nav\"> <a class=\"brand\" href=\"https://gonetexpress.netlify.app/#home\"><img src=\"https://gonetexpress.netlify.app/netexpress-logo.png\" alt=\"Net Express\" width=\"333\" height=\"61\"></a> <ul class=\"menu\"> <li><a href=\"https://gonetexpress.netlify.app/#services\">Services</a></li> <li><a href=\"https://gonetexpress.netlify.app/#why\">Why Net Express</a></li> <li><a href=\"https://gonetexpress.netlify.app/#areas\">Service Area</a></li> <li><a href=\"https://gonetexpress.netlify.app/#reviews\">Reviews</a></li> <li><a href=\"https://gonetexpress.netlify.app/#faq\">FAQ</a></li> <li><a href=\"https://gonetexpress.netlify.app/#contact\">Contact</a></li> </ul> <div class=\"nav-cta\"> <div class=\"nav-phone\">Call <b>(855) 313-2300</b></div> <a class=\"btn btn-primary\" href=\"https://gonetexpress.netlify.app/#contact\">Get a Quote</a> </div> </div> </header>",
+    "elementStyles": [
+      {
+        "tag": "a",
+        "cls": "brand",
+        "color": "rgb(238, 243, 247)"
+      },
+      {
+        "tag": "img",
+        "color": "rgb(238, 243, 247)",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "a",
+        "text": "Services",
+        "color": "rgb(196, 209, 221)",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "a",
+        "text": "Why Net Express",
+        "color": "rgb(196, 209, 221)",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "a",
+        "text": "Service Area",
+        "color": "rgb(196, 209, 221)",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "a",
+        "text": "Reviews",
+        "color": "rgb(196, 209, 221)",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "a",
+        "text": "FAQ",
+        "color": "rgb(196, 209, 221)",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "color": "rgb(196, 209, 221)",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "a",
+        "cls": "btn",
+        "text": "Get a Quote",
+        "color": "rgb(10, 26, 46)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "borderRadius": "10px",
+        "fontWeight": "600"
+      }
+    ]
+  },
+  {
+    "index": 1,
+    "heading": "Always on. Always local.",
+    "html": "<section class=\"hero\" id=\"home\"> <div class=\"grid-bg\"></div> <div class=\"hero-glow\"></div> <div class=\"wrap hero-grid\"> <div class=\"hero-copy\"> <span class=\"eyebrow\">VoIP · Business Internet · Managed IT</span> <h1>Always on.<br><span class=\"g\">Always local.</span></h1> <p class=\"sub\">Business phone, internet, and IT from one Michigan provider — engineered so you never miss a call, a customer, or a beat.</p> <div class=\"cta-row\"> <a class=\"btn btn-primary btn-lg\" href=\"https://gonetexpress.netlify.app/#contact\">Get a Free Quote →</a> <a class=\"btn btn-ghost btn-lg\" href=\"https://gonetexpress.netlify.app/#services\">See What We Do</a> </div> <div class=\"trust\"> <div class=\"item\"><span class=\"dot\"></span> Locally owned &amp; operated</div> <div class=\"sep\"></div> <div class=\"item\"><span class=\"dot\"></span> One provider, one bill</div> </div> </div> <aside class=\"support-panel\"> <div class=\"sp-head\"> <div class=\"sp-title\">Client Support Center</div> <div class=\"sp-sub\"><span class=\"live\"></span> Online · 24/7 US-based support</div> </div> <a class=\"support-row\" href=\"https://gonetexpress.netlify.app/#\"> <span class=\"ic\"><svg width=\"19\" height=\"19\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 18v-6a9 9 0 0 1 18 0v6\"></path><path d=\"M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z\"></path></svg></span> <span class=\"lbl\">Remote Support</span> <span class=\"arw\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span> </a> <a class=\"support-row\" href=\"https://gonetexpress.netlify.app/#\"> <span class=\"ic\"><svg width=\"19\" height=\"19\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z\"></path></svg></span> <span class=\"lbl\">Open a Support Ticket</span> <span class=\"arw\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span> </a> <a class=\"support-row\" href=\"https://gonetexpress.netlify.app/#\"> <span class=\"ic\"><svg width=\"19\" height=\"19\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"1\" y=\"4\" width=\"22\" height=\"16\" rx=\"2\"></rect><line x1=\"1\" y1=\"10\" x2=\"23\" y2=\"10\"></line></svg></span> <span class=\"lbl\">Pay Your Invoice</span> <span class=\"arw\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span> </a> <a class=\"support-row\" href=\"https://gonetexpress.netlify.app/#\"> <span class=\"ic\"><svg width=\"19\" height=\"19\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2\"></path><circle cx=\"9\" cy=\"7\" r=\"4\"></circle><path d=\"M23 21v-2a4 4 0 0 0-3-3.87\"></path><path d=\"M16 3.13a4 4 0 0 1 0 7.75\"></path></svg></span> <span class=\"lbl\">Client Portal</span> <span class=\"arw\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span> </a> <a class=\"support-row\" href=\"tel:+18553132300\"> <span class=\"ic\"><svg width=\"19\" height=\"19\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z\"></path></svg></span> <span class=\"lbl\">Call Support</span> <span class=\"arw\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"9 18 15 12 9 6\"></polyline></svg></span> </a> </aside> </div> </section>",
+    "elementStyles": [
+      {
+        "tag": "h1",
+        "text": "Always on.Always local.",
+        "color": "rgb(238, 243, 247)",
+        "fontSize": "62.4px",
+        "fontWeight": "800"
+      },
+      {
+        "tag": "a",
+        "cls": "btn",
+        "text": "Get a Free Quote →",
+        "color": "rgb(10, 26, 46)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "borderRadius": "10px",
+        "fontSize": "16px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "a",
+        "cls": "btn",
+        "text": "See What We Do",
+        "color": "rgb(230, 236, 242)",
+        "border": "1px solid rgba(255, 255, 255, 0.2)",
+        "borderRadius": "10px",
+        "fontSize": "16px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "span",
+        "cls": "dot",
+        "color": "rgb(184, 197, 210)",
+        "backgroundColor": "rgb(148, 231, 96)",
+        "borderRadius": "50%",
+        "fontSize": "13.6px",
+        "fontWeight": "500"
+      },
+      {
+        "tag": "div",
+        "cls": "sep",
+        "color": "rgb(238, 243, 247)",
+        "backgroundColor": "rgba(255, 255, 255, 0.09)",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "aside",
+        "cls": "support-panel",
+        "text": "Client Support Center\n        ",
+        "color": "rgb(238, 243, 247)",
+        "border": "1px solid rgba(148, 231, 96, 0.22)",
+        "borderRadius": "20px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "div",
+        "cls": "sp-head",
+        "text": "Client Support Center\n        ",
+        "color": "rgb(238, 243, 247)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "span",
+        "cls": "live",
+        "color": "rgb(159, 177, 194)",
+        "backgroundColor": "rgb(148, 231, 96)",
+        "borderRadius": "50%",
+        "fontSize": "12.48px"
+      },
+      {
+        "tag": "a",
+        "cls": "support-row",
+        "text": "Remote Support",
+        "color": "rgb(238, 243, 247)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "12px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "span",
+        "cls": "ic",
+        "color": "rgb(148, 231, 96)",
+        "backgroundColor": "rgba(148, 231, 96, 0.13)",
+        "borderRadius": "9px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(148, 231, 96)",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(159, 177, 194)",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "a",
+        "cls": "support-row",
+        "text": "Open a Support Ticket",
+        "color": "rgb(238, 243, 247)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "12px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "a",
+        "cls": "support-row",
+        "text": "Pay Your Invoice",
+        "color": "rgb(238, 243, 247)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "12px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "a",
+        "cls": "support-row",
+        "text": "Client Portal",
+        "color": "rgb(238, 243, 247)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "12px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "a",
+        "cls": "support-row",
+        "text": "Call Support",
+        "color": "rgb(238, 243, 247)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "12px",
+        "fontSize": "16px"
+      }
+    ]
+  },
+  {
+    "index": 2,
+    "heading": "Everything your business needs to stay connected.",
+    "html": "<section class=\"sec\" id=\"services\"> <div class=\"wrap\"> <div class=\"sec-head\"> <span class=\"eyebrow\">What we do</span> <h2>Everything your business needs to stay connected.</h2> <p class=\"lead\">Voice, data, internet, and IT — designed, provisioned, and supported by one local team.</p> </div> <div class=\"cards\"> <div class=\"card\"> <div class=\"ic\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z\"></path></svg></div> <h3>Hosted VoIP</h3> <p>A full cloud phone system with multi-location extension dialing, auto-attendants, and voicemail-to-email — no on-site PBX to buy or maintain.</p> </div> <div class=\"card\"> <div class=\"ic\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><line x1=\"4\" y1=\"21\" x2=\"4\" y2=\"14\"></line><line x1=\"4\" y1=\"10\" x2=\"4\" y2=\"3\"></line><line x1=\"12\" y1=\"21\" x2=\"12\" y2=\"12\"></line><line x1=\"12\" y1=\"8\" x2=\"12\" y2=\"3\"></line><line x1=\"20\" y1=\"21\" x2=\"20\" y2=\"16\"></line><line x1=\"20\" y1=\"12\" x2=\"20\" y2=\"3\"></line><line x1=\"1\" y1=\"14\" x2=\"7\" y2=\"14\"></line><line x1=\"9\" y1=\"8\" x2=\"15\" y2=\"8\"></line><line x1=\"17\" y1=\"16\" x2=\"23\" y2=\"16\"></line></svg></div> <h3>Tailored Solutions</h3> <p>No two businesses run the same. We design and build a communications and IT system around how yours actually works — not a one-size-fits-all package.</p> </div> <div class=\"card\"> <div class=\"ic\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 13a10 10 0 0 1 14 0\"></path><path d=\"M8.5 16.5a5 5 0 0 1 7 0\"></path><path d=\"M2 8.82a15 15 0 0 1 20 0\"></path><line x1=\"12\" y1=\"20\" x2=\"12.01\" y2=\"20\"></line></svg></div> <h3>Business Internet &amp; Fiber</h3> <p>Dedicated high-speed connectivity — up to 1&nbsp;Gbps on fiber — built for business uptime, not best-effort. Redundant options available.</p> </div> <div class=\"card\"> <div class=\"ic\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M6 9V2h12v7\"></path><path d=\"M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2\"></path><rect x=\"6\" y=\"14\" width=\"12\" height=\"8\" rx=\"1\"></rect></svg></div> <h3>Virtual Fax (FaxBridge)</h3> <p>Send and receive faxes by email and web — no machine, no dedicated line. Reliable and compliant for healthcare, legal, and finance.</p> <a class=\"card-link\" href=\"https://gonetexpress.netlify.app/faxbridge/\">Learn about FaxBridge →</a> </div> <div class=\"card\"> <div class=\"ic\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"></path><path d=\"M9 12l2 2 4-4\"></path></svg></div> <h3>Managed IT</h3> <p>Network management, security, and responsive support from a local team — so your technology just works and someone's always accountable.</p> </div> <div class=\"card\"> <div class=\"ic\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 20h.01\"></path><path d=\"M2 8.82a15 15 0 0 1 20 0\"></path><path d=\"M5 12.859a10 10 0 0 1 14 0\"></path><path d=\"M8.5 16.429a5 5 0 0 1 7 0\"></path></svg></div> <h3>4G LTE Failover</h3> <p>Automatic wireless backup keeps you online when the wired line goes down. Your phones keep ringing and your business keeps running.</p> </div> </div> </div> </section>",
+    "elementStyles": [
+      {
+        "tag": "h2",
+        "text": "Everything your business needs",
+        "color": "rgb(238, 243, 247)",
+        "fontSize": "44px",
+        "fontWeight": "800"
+      },
+      {
+        "tag": "div",
+        "cls": "card",
+        "text": "Hosted VoIP\n        A full clo",
+        "color": "rgb(238, 243, 247)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "16px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "div",
+        "cls": "ic",
+        "color": "rgb(148, 231, 96)",
+        "backgroundColor": "rgba(148, 231, 96, 0.12)",
+        "borderRadius": "11px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(148, 231, 96)",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "text": "Hosted VoIP",
+        "color": "rgb(238, 243, 247)",
+        "fontSize": "18.24px",
+        "fontWeight": "700"
+      },
+      {
+        "tag": "div",
+        "cls": "card",
+        "text": "Tailored Solutions\n        No ",
+        "color": "rgb(238, 243, 247)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "16px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "text": "Tailored Solutions",
+        "color": "rgb(238, 243, 247)",
+        "fontSize": "18.24px",
+        "fontWeight": "700"
+      },
+      {
+        "tag": "div",
+        "cls": "card",
+        "text": "Business Internet & Fiber\n    ",
+        "color": "rgb(238, 243, 247)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "16px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "path",
+        "color": "rgb(148, 231, 96)",
+        "fontSize": "16px",
+        "lineWidth": 18,
+        "lineHeight": 4
+      },
+      {
+        "tag": "h3",
+        "text": "Business Internet & Fiber",
+        "color": "rgb(238, 243, 247)",
+        "fontSize": "18.24px",
+        "fontWeight": "700"
+      },
+      {
+        "tag": "div",
+        "cls": "card",
+        "text": "Virtual Fax (FaxBridge)\n      ",
+        "color": "rgb(238, 243, 247)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "16px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "text": "Virtual Fax (FaxBridge)",
+        "color": "rgb(238, 243, 247)",
+        "fontSize": "18.24px",
+        "fontWeight": "700"
+      },
+      {
+        "tag": "a",
+        "cls": "card-link",
+        "text": "Learn about FaxBridge →",
+        "color": "rgb(148, 231, 96)",
+        "fontSize": "14.4px",
+        "fontWeight": "650"
+      },
+      {
+        "tag": "div",
+        "cls": "card",
+        "text": "Managed IT\n        Network man",
+        "color": "rgb(238, 243, 247)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "16px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "text": "Managed IT",
+        "color": "rgb(238, 243, 247)",
+        "fontSize": "18.24px",
+        "fontWeight": "700"
+      },
+      {
+        "tag": "div",
+        "cls": "card",
+        "text": "4G LTE Failover\n        Automa",
+        "color": "rgb(238, 243, 247)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "16px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h3",
+        "text": "4G LTE Failover",
+        "color": "rgb(238, 243, 247)",
+        "fontSize": "18.24px",
+        "fontWeight": "700"
+      }
+    ]
+  },
+  {
+    "index": 3,
+    "heading": "One provider instead of four.",
+    "html": "<section class=\"sec why\" id=\"why\"> <div class=\"wrap\"> <div class=\"grid2\"> <div> <span class=\"eyebrow\">Why Net Express</span> <h2>One provider instead of four.</h2> <p class=\"lead\" style=\"margin-top:16px\">Most businesses juggle separate vendors for phone, internet, fax, and IT — four bills, four support numbers, and finger-pointing when something breaks. We deliver all of it as a single, integrated service, backed by a local Michigan team that's accountable end to end.</p> <div class=\"cta-row\"><a class=\"btn btn-primary\" href=\"https://gonetexpress.netlify.app/#contact\">Talk to a specialist</a></div> </div> <ul class=\"checklist\"> <li><span class=\"check\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"></polyline></svg></span> One monthly bill</li> <li><span class=\"check\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"></polyline></svg></span> One number for support</li> <li><span class=\"check\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"></polyline></svg></span> Keep your phone numbers</li> <li><span class=\"check\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"></polyline></svg></span> No PBX hardware to buy</li> <li><span class=\"check\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"></polyline></svg></span> Multi-location dialing</li> <li><span class=\"check\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"></polyline></svg></span> Local, US-based team</li> </ul> </div> </div> </section>",
+    "elementStyles": [
+      {
+        "tag": "h2",
+        "text": "One provider instead of four.",
+        "color": "rgb(238, 243, 247)",
+        "fontSize": "44px",
+        "fontWeight": "800"
+      },
+      {
+        "tag": "a",
+        "cls": "btn",
+        "text": "Talk to a specialist",
+        "color": "rgb(10, 26, 46)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "borderRadius": "10px",
+        "fontSize": "15.2px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "span",
+        "cls": "check",
+        "color": "rgb(148, 231, 96)",
+        "backgroundColor": "rgba(148, 231, 96, 0.15)",
+        "borderRadius": "6px",
+        "fontSize": "15.68px"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(148, 231, 96)",
+        "fontSize": "15.68px"
+      }
+    ]
+  },
+  {
+    "index": 4,
+    "heading": "Proudly serving Michigan &amp; the Midwest.",
+    "html": "<section class=\"sec areas\" id=\"areas\"> <div class=\"wrap\"> <div class=\"grid2\"> <div> <span class=\"eyebrow\">Service area</span> <h2>Proudly serving Michigan &amp; the Midwest.</h2> <p class=\"lead\" style=\"margin-top:16px\">Headquartered in Clarkston, we support businesses from single storefronts to multi-location enterprises across the region — with the responsiveness of a local partner and the reach of a full-service carrier.</p> <div class=\"area-tags\"> <span class=\"tag\">Clarkston</span><span class=\"tag\">Metro Detroit</span><span class=\"tag\">Oakland County</span> <span class=\"tag\">Flint</span><span class=\"tag\">Grand Rapids</span><span class=\"tag\">Lansing</span> <span class=\"tag\">Ann Arbor</span><span class=\"tag\">&amp; the Midwest</span> </div> </div> <div class=\"area-card\"> <div class=\"big\">1 Gbps</div> <div class=\"lbl\">dedicated fiber speeds available</div> <div class=\"hr\"></div> <div class=\"addr\"><strong style=\"color:#fff\">Net Express HQ</strong><br>6825 Dixie Hwy<br>Clarkston, MI 48346</div> </div> </div> </div> </section>",
+    "elementStyles": [
+      {
+        "tag": "h2",
+        "text": "Proudly serving Michigan & the",
+        "color": "rgb(238, 243, 247)",
+        "fontSize": "44px",
+        "fontWeight": "800"
+      },
+      {
+        "tag": "span",
+        "cls": "tag",
+        "text": "Clarkston",
+        "color": "rgb(184, 197, 210)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "999px",
+        "fontSize": "14.4px"
+      },
+      {
+        "tag": "span",
+        "cls": "tag",
+        "text": "Metro Detroit",
+        "color": "rgb(184, 197, 210)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "999px",
+        "fontSize": "14.4px"
+      },
+      {
+        "tag": "span",
+        "cls": "tag",
+        "text": "Oakland County",
+        "color": "rgb(184, 197, 210)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "999px",
+        "fontSize": "14.4px"
+      },
+      {
+        "tag": "span",
+        "cls": "tag",
+        "text": "Flint",
+        "color": "rgb(184, 197, 210)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "999px",
+        "fontSize": "14.4px"
+      },
+      {
+        "tag": "span",
+        "cls": "tag",
+        "text": "Grand Rapids",
+        "color": "rgb(184, 197, 210)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "999px",
+        "fontSize": "14.4px"
+      },
+      {
+        "tag": "span",
+        "cls": "tag",
+        "text": "Lansing",
+        "color": "rgb(184, 197, 210)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "999px",
+        "fontSize": "14.4px"
+      },
+      {
+        "tag": "span",
+        "cls": "tag",
+        "text": "Ann Arbor",
+        "color": "rgb(184, 197, 210)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "999px",
+        "fontSize": "14.4px"
+      },
+      {
+        "tag": "span",
+        "cls": "tag",
+        "text": "& the Midwest",
+        "color": "rgb(184, 197, 210)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "999px",
+        "fontSize": "14.4px"
+      },
+      {
+        "tag": "div",
+        "cls": "area-card",
+        "text": "1 Gbps\n        dedicated fiber",
+        "color": "rgb(238, 243, 247)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "18px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "div",
+        "cls": "hr",
+        "color": "rgb(238, 243, 247)",
+        "backgroundColor": "rgba(255, 255, 255, 0.09)",
+        "fontSize": "16px",
+        "lineWidth": 411,
+        "lineHeight": 1
+      }
+    ]
+  },
+  {
+    "index": 5,
+    "html": "<section class=\"sec reviews\" id=\"reviews\"> <div class=\"wrap\"> <div class=\"quote\"> <div class=\"stars\" style=\"color:#f5b301\">★★★★★</div> <blockquote>“When we started looking at VoIP options, most providers wanted us to rip out our Avaya PBX and start from scratch. Net Express met us where we were and made the switch painless.”</blockquote> <div class=\"who\"><b>Michael Torres</b> &nbsp;·&nbsp; 5.0 on Google Reviews</div> </div> </div> </section>"
+  },
+  {
+    "index": 6,
+    "heading": "Frequently asked questions",
+    "html": "<section class=\"sec faq\" id=\"faq\"> <div class=\"wrap\"> <div class=\"sec-head\" style=\"max-width:640px;margin:0 auto 44px;text-align:center\"> <span class=\"eyebrow\" style=\"justify-content:center\">Questions</span> <h2>Frequently asked questions</h2> <p class=\"lead\" style=\"margin:14px auto 0\">Everything you need to know about switching to Net Express.</p> </div> <div class=\"faqlist\"> <details class=\"faq-item\"> <summary>What does Net Express do?<span class=\"chev\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"></polyline></svg></span></summary> <div class=\"ans\">Net Express is a single-source provider for business phone, internet, and IT. We deliver Hosted VoIP, high-speed business internet and fiber, virtual fax, managed IT, and 4G LTE failover — all from one local Michigan team, on one bill.</div> </details> <details class=\"faq-item\"> <summary>Can I keep my existing phone numbers?<span class=\"chev\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"></polyline></svg></span></summary> <div class=\"ans\">Yes. We port your current business numbers to our network, so your customers keep reaching you at the numbers they already know — with no interruption.</div> </details> <details class=\"faq-item\"> <summary>Do I need to buy a phone system or PBX hardware?<span class=\"chev\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"></polyline></svg></span></summary> <div class=\"ans\">No. Our Hosted VoIP runs in the cloud, so there's no on-site PBX to purchase or maintain — you get auto-attendants, voicemail-to-email, and multi-location extension dialing without the hardware.</div> </details> <details class=\"faq-item\"> <summary>What areas do you serve?<span class=\"chev\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"></polyline></svg></span></summary> <div class=\"ans\">We're headquartered in Clarkston, Michigan and serve businesses across Michigan and the Midwest — from single storefronts to multi-location enterprises.</div> </details> <details class=\"faq-item\"> <summary>What is FaxBridge?<span class=\"chev\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"></polyline></svg></span></summary> <div class=\"ans\">FaxBridge internet-enables your existing fax machine. Plug it in and send or receive faxes over your internet connection instead of a dedicated phone line, with every fax stored securely in the cloud — no new equipment needed.</div> </details> <details class=\"faq-item\"> <summary>What happens to my phones if the internet goes down?<span class=\"chev\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"></polyline></svg></span></summary> <div class=\"ans\">Our 4G LTE failover automatically switches to a wireless connection if your wired line drops, so your phones keep ringing and your business stays online.</div> </details> <details class=\"faq-item\"> <summary>How do billing and support work?<span class=\"chev\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"6 9 12 15 18 9\"></polyline></svg></span></summary> <div class=\"ans\">One provider, one monthly bill, and one number to call. Our US-based support is available 24/7, backed by a local Michigan team that's accountable from setup through day-to-day service.</div> </details> </div> </div> </section>",
+    "elementStyles": [
+      {
+        "tag": "h2",
+        "text": "Frequently asked questions",
+        "color": "rgb(238, 243, 247)",
+        "fontSize": "44px",
+        "fontWeight": "800"
+      },
+      {
+        "tag": "details",
+        "cls": "faq-item",
+        "text": "What does Net Express do?\n    ",
+        "color": "rgb(238, 243, 247)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "12px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(148, 231, 96)",
+        "fontSize": "16.32px",
+        "fontWeight": "650"
+      },
+      {
+        "tag": "details",
+        "cls": "faq-item",
+        "text": "Can I keep my existing phone n",
+        "color": "rgb(238, 243, 247)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "12px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "details",
+        "cls": "faq-item",
+        "text": "Do I need to buy a phone syste",
+        "color": "rgb(238, 243, 247)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "12px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "details",
+        "cls": "faq-item",
+        "text": "What areas do you serve?\n     ",
+        "color": "rgb(238, 243, 247)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "12px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "details",
+        "cls": "faq-item",
+        "text": "What is FaxBridge?\n        Fax",
+        "color": "rgb(238, 243, 247)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "12px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "details",
+        "cls": "faq-item",
+        "text": "What happens to my phones if t",
+        "color": "rgb(238, 243, 247)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "12px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "details",
+        "cls": "faq-item",
+        "text": "How do billing and support wor",
+        "color": "rgb(238, 243, 247)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "12px",
+        "fontSize": "16px"
+      }
+    ]
+  },
+  {
+    "index": 7,
+    "heading": "Let's simplify your business communications.",
+    "html": "<section class=\"sec contact\" id=\"contact\"> <div class=\"wrap\"> <div class=\"grid2\"> <div> <span class=\"eyebrow\">Get connected</span> <h2>Let's simplify your business communications.</h2> <p class=\"lead\" style=\"margin-top:16px\">Talk to a Michigan-based specialist. We'll design the right phone, internet, and IT setup for your business — and handle the switch.</p> <div class=\"cta-row\"> <a class=\"btn btn-primary btn-lg\" href=\"tel:+18553132300\">Call (855) 313-2300</a> <a class=\"btn btn-ghost btn-lg\" href=\"mailto:support@gonetexpress.com\">Email us</a> </div> </div> <div class=\"contact-card\"> <div class=\"crow\"><span class=\"ic\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z\"></path></svg></span><div><div class=\"k\">Call us</div><a class=\"v\" href=\"tel:+18553132300\">(855) 313-2300</a></div></div> <div class=\"crow\"><span class=\"ic\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"4\" width=\"20\" height=\"16\" rx=\"2\"></rect><path d=\"m22 7-10 5L2 7\"></path></svg></span><div><div class=\"k\">Email</div><a class=\"v\" href=\"mailto:support@gonetexpress.com\">support@gonetexpress.com</a></div></div> <div class=\"crow\"><span class=\"ic\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z\"></path><circle cx=\"12\" cy=\"10\" r=\"3\"></circle></svg></span><div><div class=\"k\">Visit</div><div class=\"v\" style=\"font-weight:600\">6825 Dixie Hwy, Clarkston, MI 48346</div></div></div> </div> </div> </div> </section>",
+    "elementStyles": [
+      {
+        "tag": "h2",
+        "text": "Let's simplify your business c",
+        "color": "rgb(238, 243, 247)",
+        "fontSize": "44px",
+        "fontWeight": "800"
+      },
+      {
+        "tag": "a",
+        "cls": "btn",
+        "text": "Call (855) 313-2300",
+        "color": "rgb(10, 26, 46)",
+        "backgroundColor": "rgb(255, 255, 255)",
+        "borderRadius": "10px",
+        "fontSize": "16px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "a",
+        "cls": "btn",
+        "text": "Email us",
+        "color": "rgb(230, 236, 242)",
+        "border": "1px solid rgba(255, 255, 255, 0.2)",
+        "borderRadius": "10px",
+        "fontSize": "16px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "div",
+        "cls": "contact-card",
+        "text": "Call us(855) 313-2300\n        ",
+        "color": "rgb(238, 243, 247)",
+        "backgroundColor": "rgba(255, 255, 255, 0.035)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "borderRadius": "18px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "div",
+        "cls": "crow",
+        "text": "Call us(855) 313-2300",
+        "color": "rgb(238, 243, 247)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "span",
+        "cls": "ic",
+        "color": "rgb(148, 231, 96)",
+        "backgroundColor": "rgba(148, 231, 96, 0.12)",
+        "borderRadius": "10px",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(148, 231, 96)",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "a",
+        "cls": "v",
+        "text": "(855) 313-2300",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "16.8px",
+        "fontWeight": "600"
+      },
+      {
+        "tag": "div",
+        "cls": "crow",
+        "text": "Emailsupport@gonetexpress.com",
+        "color": "rgb(238, 243, 247)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "a",
+        "cls": "v",
+        "text": "support@gonetexpress.com",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "16.8px",
+        "fontWeight": "600"
+      }
+    ]
+  },
+  {
+    "index": 8,
+    "heading": "Site footer (port into Footer.astro)",
+    "widgetTypes": [
+      "footer"
+    ],
+    "html": "<footer> <div class=\"wrap\"> <div class=\"fcols\"> <div> <img class=\"flogo\" src=\"https://gonetexpress.netlify.app/netexpress-logo.png\" alt=\"Net Express\" width=\"333\" height=\"61\"> <p class=\"fdesc\">Your single-source Michigan provider for business phone, data, internet, and IT. One provider, one bill, one support line.</p> </div> <div> <h4>Services</h4> <ul> <li><a href=\"https://gonetexpress.netlify.app/#services\">Hosted VoIP</a></li> <li><a href=\"https://gonetexpress.netlify.app/#services\">Tailored Solutions</a></li> <li><a href=\"https://gonetexpress.netlify.app/#services\">Internet &amp; Fiber</a></li> <li><a href=\"https://gonetexpress.netlify.app/faxbridge/\">Virtual Fax (FaxBridge)</a></li> <li><a href=\"https://gonetexpress.netlify.app/#services\">Managed IT</a></li> </ul> </div> <div> <h4>Company</h4> <ul> <li><a href=\"https://gonetexpress.netlify.app/#why\">Why Net Express</a></li> <li><a href=\"https://gonetexpress.netlify.app/#areas\">Service Area</a></li> <li><a href=\"https://gonetexpress.netlify.app/#reviews\">Reviews</a></li> <li><a href=\"https://gonetexpress.netlify.app/#faq\">FAQ</a></li> <li><a href=\"https://gonetexpress.netlify.app/#contact\">Contact</a></li> </ul> </div> <div class=\"fc-contact\"> <h4>Contact</h4> <div><a href=\"tel:+18553132300\">Toll free (855) 313-2300</a></div> <div><a href=\"tel:+12483132300\">Local (248) 313-2300</a></div> <div><a href=\"mailto:support@gonetexpress.com\">support@gonetexpress.com</a></div> <div style=\"margin-top:8px\">6825 Dixie Hwy<br>Clarkston, MI 48346</div> </div> </div> <div class=\"copy\"> <div>© 2026 Net Express. All rights reserved.</div> <div>Business phone · internet · IT · Michigan &amp; the Midwest</div> </div> </div> <div style=\"border-top:1px solid rgba(128,128,128,.2);margin-top:16px;padding-top:14px;text-align:center\"><a href=\"https://twalkerco.com/\" style=\"display:inline-flex;align-items:center;gap:8px;font-size:12px;line-height:1;opacity:.7;text-decoration:none;color:inherit\"><svg width=\"16\" height=\"16\" viewBox=\"10.5 13 463.773 374\" aria-hidden=\"true\" style=\"flex:none\"><path d=\"M 10.5 13 L 185.339 387 L 253.738 262.342 L 235.916 262.342 L 167.622 119.279 C 136.362 53.785 76.06 13 10.5 13 L 10.5 13 Z\" fill=\"#E3AF5B\"></path><path d=\"M 190.957 13 L 365.797 387 L 434.196 262.342 L 416.378 262.342 L 348.083 119.279 C 316.819 53.785 256.518 13 190.957 13 L 190.957 13 Z\" fill=\"#E3AF5B\"></path><path d=\"M 368.553 13.832 L 474.273 13.832 L 419.603 129.925 L 368.553 13.832 Z\" fill=\"#E3AF5B\"></path></svg><span>Web Design and SEO by twalkerco</span></a></div> </footer>",
+    "elementStyles": [
+      {
+        "tag": "img",
+        "cls": "flogo",
+        "color": "rgb(238, 243, 247)",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "h4",
+        "text": "Services",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12.8px",
+        "fontWeight": "700"
+      },
+      {
+        "tag": "a",
+        "text": "Hosted VoIP",
+        "color": "rgb(159, 177, 194)",
+        "fontSize": "14.72px"
+      },
+      {
+        "tag": "a",
+        "text": "Tailored Solutions",
+        "color": "rgb(159, 177, 194)",
+        "fontSize": "14.72px"
+      },
+      {
+        "tag": "a",
+        "text": "Internet & Fiber",
+        "color": "rgb(159, 177, 194)",
+        "fontSize": "14.72px"
+      },
+      {
+        "tag": "a",
+        "text": "Virtual Fax (FaxBridge)",
+        "color": "rgb(159, 177, 194)",
+        "fontSize": "14.72px"
+      },
+      {
+        "tag": "a",
+        "text": "Managed IT",
+        "color": "rgb(159, 177, 194)",
+        "fontSize": "14.72px"
+      },
+      {
+        "tag": "h4",
+        "text": "Company",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12.8px",
+        "fontWeight": "700"
+      },
+      {
+        "tag": "a",
+        "text": "Why Net Express",
+        "color": "rgb(159, 177, 194)",
+        "fontSize": "14.72px"
+      },
+      {
+        "tag": "a",
+        "text": "Service Area",
+        "color": "rgb(159, 177, 194)",
+        "fontSize": "14.72px"
+      },
+      {
+        "tag": "a",
+        "text": "Reviews",
+        "color": "rgb(159, 177, 194)",
+        "fontSize": "14.72px"
+      },
+      {
+        "tag": "a",
+        "text": "FAQ",
+        "color": "rgb(159, 177, 194)",
+        "fontSize": "14.72px"
+      },
+      {
+        "tag": "a",
+        "text": "Contact",
+        "color": "rgb(159, 177, 194)",
+        "fontSize": "14.72px"
+      },
+      {
+        "tag": "h4",
+        "text": "Contact",
+        "color": "rgb(255, 255, 255)",
+        "fontSize": "12.8px",
+        "fontWeight": "700"
+      },
+      {
+        "tag": "a",
+        "text": "Toll free (855) 313-2300",
+        "color": "rgb(159, 177, 194)",
+        "fontSize": "14.72px"
+      },
+      {
+        "tag": "a",
+        "text": "Local (248) 313-2300",
+        "color": "rgb(159, 177, 194)",
+        "fontSize": "14.72px"
+      },
+      {
+        "tag": "a",
+        "text": "support@gonetexpress.com",
+        "color": "rgb(159, 177, 194)",
+        "fontSize": "14.72px"
+      },
+      {
+        "tag": "div",
+        "cls": "copy",
+        "text": "© 2026 Net Express. All rights",
+        "color": "rgb(159, 177, 194)",
+        "border": "1px solid rgba(255, 255, 255, 0.09)",
+        "fontSize": "13.6px"
+      },
+      {
+        "tag": "div",
+        "text": "Web Design and SEO by twalkerc",
+        "color": "rgb(238, 243, 247)",
+        "border": "1px solid rgba(128, 128, 128, 0.2)",
+        "fontSize": "16px"
+      },
+      {
+        "tag": "a",
+        "text": "Web Design and SEO by twalkerc",
+        "color": "rgb(238, 243, 247)",
+        "fontSize": "12px"
+      },
+      {
+        "tag": "svg",
+        "color": "rgb(238, 243, 247)",
+        "fontSize": "12px"
+      }
+    ]
+  }
+]

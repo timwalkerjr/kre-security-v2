@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://pagesmith-cdn.com/726747c3/images/netexpress-logo-320.webp",
+    "altText": "Net Express",
+    "context": "-",
+    "isLogo": true,
+    "originalWidth": 333,
+    "originalHeight": 61,
+    "hasTransparency": true,
+    "contentTone": "mixed",
+    "variants": [
+      {
+        "url": "https://pagesmith-cdn.com/726747c3/images/netexpress-logo-320.webp",
+        "width": 320
+      }
+    ]
+  }
+]

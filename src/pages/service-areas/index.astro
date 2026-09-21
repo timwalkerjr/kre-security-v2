@@ -1,0 +1,236 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { SITE } from '@/config/site';
+
+const serviceAreas = await getCollection('serviceAreas', ({ data }) => !data.draft);
+
+// Sort so Clarkston / Headquarter is first or alphabetical
+const sortedAreas = serviceAreas.sort((a, b) => {
+  if (a.data.name.toLowerCase().includes('clarkston')) return -1;
+  if (b.data.name.toLowerCase().includes('clarkston')) return 1;
+  return a.data.name.localeCompare(b.data.name);
+});
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Net Express Business Phone, Internet & IT Service Coverage',
+    description: 'Business phone, internet, cloud fax, and IT service coverage across Michigan and in Reading, Pennsylvania.',
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'Net Express',
+      telephone: '+1-855-313-2300',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '6825 Dixie Hwy',
+        addressLocality: 'Clarkston',
+        addressRegion: 'MI',
+        postalCode: '48346',
+        addressCountry: 'US',
+      },
+    },
+    areaServed: sortedAreas.map(a => a.data.name),
+    url: new URL('/service-areas', SITE.url).toString(),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: SITE.url,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Service Areas',
+        item: new URL('/service-areas', SITE.url).toString(),
+      },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Michigan & Reading, PA Service Areas | Net Express"
+  description="Explore Net Express business phone, internet, FaxBridge, and IT services across Michigan and in Reading, PA. Check service availability for your address."
+  jsonLd={jsonLd}
+>
+  <!-- Hero Section -->
+  <section class="relative isolate py-16 lg:py-20 border-b border-white/[0.08]" data-ps="src/pages/service-areas/index.astro:k3wvqi">
+    <div class="max-w-[1180px] mx-auto px-6" data-ps="src/pages/service-areas/index.astro:rpaqrp">
+      
+      <!-- Eyebrow -->
+      <div class="flex items-center gap-2 mb-3" data-ps="src/pages/service-areas/index.astro:rpaqrq">
+        <span class="w-4 h-[2px] bg-[#94e760]" data-ps="src/pages/service-areas/index.astro:3jggox"></span>
+        <span class="text-[#94e760] text-[13.6px] font-semibold tracking-wider uppercase" data-ps="src/pages/service-areas/index.astro:3jggow">
+          Service Areas & Coverage
+        </span>
+      </div>
+
+      <h1 class="text-[38px] sm:text-[50px] font-extrabold text-white leading-[1.08] tracking-[-1.5px] max-w-[880px] mb-5" data-ps="src/pages/service-areas/index.astro:f61gf1">
+        Business Phone, Internet & IT in Michigan & Reading, PA
+      </h1>
+      
+      <p class="text-[#9fb1c2] text-[18px] sm:text-[19.5px] leading-relaxed max-w-[760px] mb-8" data-ps="src/pages/service-areas/index.astro:xejiu9">
+        Headquartered in Clarkston, Michigan, Net Express serves businesses across Michigan and in Reading, Pennsylvania. Contact us to confirm service options for your business address.
+      </p>
+
+      <!-- Quick Highlights Bar -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-5 bg-white/[0.03] border border-white/[0.08] rounded-[16px] max-w-[900px]" data-ps="src/pages/service-areas/index.astro:rpaqrr">
+        <div data-ps="src/pages/service-areas/index.astro:rpaqrs">
+          <div class="text-[#94e760] font-extrabold text-[22px]" data-ps="src/pages/service-areas/index.astro:rpaqrt">5 Gbps</div>
+          <div class="text-[#9fb1c2] text-[13px]" data-ps="src/pages/service-areas/index.astro:rpaqru">Fiber Speeds Available</div>
+        </div>
+        <div data-ps="src/pages/service-areas/index.astro:rpaqsg">
+          <div class="text-white font-extrabold text-[22px]" data-ps="src/pages/service-areas/index.astro:rpaqsh">100%</div>
+          <div class="text-[#9fb1c2] text-[13px]" data-ps="src/pages/service-areas/index.astro:rpaqsi">Michigan-Based Support</div>
+        </div>
+        <div data-ps="src/pages/service-areas/index.astro:rpaqsj">
+          <div class="text-white font-extrabold text-[22px]" data-ps="src/pages/service-areas/index.astro:rpaqsk">99.99%</div>
+          <div class="text-[#9fb1c2] text-[13px]" data-ps="src/pages/service-areas/index.astro:rpaqsl">VoIP Uptime Target</div>
+        </div>
+        <div data-ps="src/pages/service-areas/index.astro:rpaqsm">
+          <div class="text-[#94e760] font-extrabold text-[22px]" data-ps="src/pages/service-areas/index.astro:rpaqsn">Single</div>
+          <div class="text-[#9fb1c2] text-[13px]" data-ps="src/pages/service-areas/index.astro:rpaqso">Provider & Bill</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Service Area Directory Grid -->
+  <section class="py-16" data-ps="src/pages/service-areas/index.astro:k3wvqj">
+    <div class="max-w-[1180px] mx-auto px-6" data-ps="src/pages/service-areas/index.astro:rpaqsp">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4" data-ps="src/pages/service-areas/index.astro:rpaqtb">
+        <div data-ps="src/pages/service-areas/index.astro:rpaqtc">
+          <h2 class="text-[30px] sm:text-[36px] font-extrabold text-white mb-2" data-ps="src/pages/service-areas/index.astro:tugdmn">
+            Communities & Regions We Serve
+          </h2>
+          <p class="text-[#9fb1c2] text-[16px] m-0" data-ps="src/pages/service-areas/index.astro:xejiua">
+            Click on any location below to view local phone numbers, fiber coverage, and service capabilities.
+          </p>
+        </div>
+        <div class="text-[14px] text-[#c4d1dd]" data-ps="src/pages/service-areas/index.astro:rpaqtd">
+          HQ: <strong class="text-white">Clarkston, MI</strong>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-ps="src/pages/service-areas/index.astro:rpaqte">
+        {sortedAreas.map((area, __psIdx) => (
+          <article class="flex flex-col bg-white/[0.03] border border-white/[0.08] hover:border-[#94e760]/50 rounded-[20px] p-7 transition-all hover:-translate-y-1 hover:shadow-xl" data-ps={`src/pages/service-areas/index.astro:m5tvkb-${__psIdx}`}>
+            
+            <div class="flex items-center justify-between mb-4" data-ps={`src/pages/service-areas/index.astro:rpaqtf-${__psIdx}`}>
+              <span class="bg-[#94e760]/15 text-[#94e760] border border-[#94e760]/30 text-[12px] font-bold px-3 py-1 rounded-full uppercase tracking-wider" data-ps={`src/pages/service-areas/index.astro:3jggov-${__psIdx}`}>
+                {area.data.regionType}
+              </span>
+              <span class="text-[#9fb1c2] text-[13px] font-medium" data-ps={`src/pages/service-areas/index.astro:3jggou-${__psIdx}`}>
+                {area.data.state}
+              </span>
+            </div>
+
+            <h3 class="text-[24px] font-extrabold text-white mb-2" data-ps={`src/pages/service-areas/index.astro:qi8r4w-${__psIdx}`}>
+              <a href={`/service-areas/${area.id}`} class="hover:text-[#94e760] transition-colors no-underline text-white" data-ps={`src/pages/service-areas/index.astro:uimmhh-${__psIdx}`}>
+                {area.data.name}
+              </a>
+            </h3>
+
+            <p class="text-[#9fb1c2] text-[14.5px] leading-relaxed mb-6 flex-grow" data-ps={`src/pages/service-areas/index.astro:xejiub-${__psIdx}`}>
+              {area.data.description}
+            </p>
+
+            <!-- Local Specs / Badges -->
+            <div class="space-y-2 py-4 border-t border-b border-white/[0.06] mb-6 text-[13.5px]" data-ps={`src/pages/service-areas/index.astro:rpaqtg-${__psIdx}`}>
+              <div class="flex items-center justify-between" data-ps={`src/pages/service-areas/index.astro:rpaqth-${__psIdx}`}>
+                <span class="text-[#9fb1c2]" data-ps={`src/pages/service-areas/index.astro:3jggot-${__psIdx}`}>Fiber Internet:</span>
+                <span class="text-white font-semibold" data-ps={`src/pages/service-areas/index.astro:3jggos-${__psIdx}`}>{area.data.fiberAvailable ? 'Up to ' + area.data.maxSpeed : 'Check availability'}</span>
+              </div>
+              <div class="flex items-center justify-between" data-ps={`src/pages/service-areas/index.astro:rpaqti-${__psIdx}`}>
+                <span class="text-[#9fb1c2]" data-ps={`src/pages/service-areas/index.astro:3jggor-${__psIdx}`}>Installation:</span>
+                <span class="text-white font-semibold" data-ps={`src/pages/service-areas/index.astro:3jggo5-${__psIdx}`}>{area.data.deliveryTime}</span>
+              </div>
+              <div class="flex items-center justify-between" data-ps={`src/pages/service-areas/index.astro:rpaqtj-${__psIdx}`}>
+                <span class="text-[#9fb1c2]" data-ps={`src/pages/service-areas/index.astro:3jggo4-${__psIdx}`}>Direct Line:</span>
+                <span class="text-[#94e760] font-semibold" data-ps={`src/pages/service-areas/index.astro:3jggo3-${__psIdx}`}>{area.data.localPhone}</span>
+              </div>
+            </div>
+
+            <a
+              href={`/service-areas/${area.id}`}
+              class="w-full text-center bg-white/[0.06] hover:bg-white text-white hover:text-[#0a1a2e] font-semibold text-[14.5px] py-2.5 rounded-[10px] transition-all no-underline"
+             data-ps={`src/pages/service-areas/index.astro:uimmhg-${__psIdx}`}>
+              View {area.data.name} Telecom Services &rarr;
+            </a>
+
+          </article>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Michigan Coverage Map / Callout Section -->
+  <section class="py-16 bg-[#071625] border-t border-white/[0.08]" data-ps="src/pages/service-areas/index.astro:k3wvqk">
+    <div class="max-w-[1180px] mx-auto px-6" data-ps="src/pages/service-areas/index.astro:rpaqtk">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center" data-ps="src/pages/service-areas/index.astro:j82jy8">
+        
+        <div class="lg:col-span-7" data-ps="src/pages/service-areas/index.astro:j82jy9">
+          <div class="flex items-center gap-2 mb-3" data-ps="src/pages/service-areas/index.astro:j82jya">
+            <span class="w-3.5 h-[2px] bg-[#94e760]" data-ps="src/pages/service-areas/index.astro:3jggo2"></span>
+            <span class="text-[#94e760] text-[13px] font-bold uppercase tracking-wider" data-ps="src/pages/service-areas/index.astro:3jggo1">Multi-Location Support</span>
+          </div>
+          <h2 class="text-[32px] sm:text-[40px] font-extrabold text-white leading-tight mb-4" data-ps="src/pages/service-areas/index.astro:tugdmm">
+            Do You Have Multiple Facilities Across Michigan?
+          </h2>
+          <p class="text-[#9fb1c2] text-[16.5px] leading-relaxed mb-6" data-ps="src/pages/service-areas/index.astro:xejiuc">
+            Net Express seamlessly connects multi-site businesses with private SD-WAN network tunneling, centralized 4-digit internal extension dialing between branches, and a single consolidated invoice.
+          </p>
+          <ul class="space-y-3 text-[15px] text-[#d6e2ed] mb-8 list-none p-0">
+            <li class="flex items-center gap-2.5" data-ps="src/pages/service-areas/index.astro:t3hh6o">
+              <span class="w-2 h-2 rounded-full bg-[#94e760]" data-ps="src/pages/service-areas/index.astro:3jggo0"></span>
+              <span data-ps="src/pages/service-areas/index.astro:3jggnz">Centralized phone auto-attendant with department routing across all locations</span>
+            </li>
+            <li class="flex items-center gap-2.5" data-ps="src/pages/service-areas/index.astro:t3hh6n">
+              <span class="w-2 h-2 rounded-full bg-[#94e760]" data-ps="src/pages/service-areas/index.astro:3jggny"></span>
+              <span data-ps="src/pages/service-areas/index.astro:3jggnx">Dedicated fiber & backup 5G connections managed under one account</span>
+            </li>
+            <li class="flex items-center gap-2.5" data-ps="src/pages/service-areas/index.astro:t3hh6m">
+              <span class="w-2 h-2 rounded-full bg-[#94e760]" data-ps="src/pages/service-areas/index.astro:3jggnw"></span>
+              <span data-ps="src/pages/service-areas/index.astro:3jggna">One phone number for support — talk directly to Michigan engineers</span>
+            </li>
+          </ul>
+          <a
+            href="/#contact"
+            class="bg-white text-[#0a1a2e] font-bold text-[15.5px] px-[26px] py-[13px] rounded-[10px] hover:bg-[#eef3f7] transition-all no-underline inline-block shadow"
+           data-ps="src/pages/service-areas/index.astro:uimmhf">
+            Connect Multi-Location Offices
+          </a>
+        </div>
+
+        <div class="lg:col-span-5" data-ps="src/pages/service-areas/index.astro:j82jyb">
+          <div class="bg-white/[0.035] border border-white/[0.09] rounded-[22px] p-8 text-center" data-ps="src/pages/service-areas/index.astro:j82jyc">
+            <div class="text-[#94e760] font-extrabold text-[44px] leading-none mb-2" data-ps="src/pages/service-areas/index.astro:j82jyd">
+              Clarkston HQ
+            </div>
+            <p class="text-[#c4d1dd] text-[16px] font-medium mb-6" data-ps="src/pages/service-areas/index.astro:xejiud">
+              6825 Dixie Hwy, Clarkston, MI 48346
+            </p>
+            <div class="p-4 bg-[#091a2c] rounded-[14px] border border-white/[0.08] text-left space-y-2 text-[14px] mb-6" data-ps="src/pages/service-areas/index.astro:j82jye">
+              <div class="text-[#9fb1c2]" data-ps="src/pages/service-areas/index.astro:j82jyf">Toll Free: <a href="tel:+18553132300" class="text-white font-bold no-underline hover:text-[#94e760]" data-ps="src/pages/service-areas/index.astro:uimmhe">(855) 313-2300</a></div>
+              <div class="text-[#9fb1c2]" data-ps="src/pages/service-areas/index.astro:j82jyg">Local Line: <a href="tel:+12483132300" class="text-white font-bold no-underline hover:text-[#94e760]" data-ps="src/pages/service-areas/index.astro:uimmgs">(248) 313-2300</a></div>
+            </div>
+            <a href="/#contact" class="text-[#94e760] font-semibold text-[14.5px] hover:underline no-underline" data-ps="src/pages/service-areas/index.astro:uimmgq">
+              Request On-Site Network Survey &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</BaseLayout>

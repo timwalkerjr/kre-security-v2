@@ -1,0 +1,59 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ContactCta from '@/components/home/ContactCta.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: 'Contact Net Express | Business Phone, Internet & IT Support',
+    description: 'Get in touch with Net Express for business phone systems, dedicated fiber internet, virtual fax, and managed IT in Michigan.',
+    url: new URL('/contact', SITE.url).toString(),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'Net Express',
+    description: SITE.description,
+    url: SITE.url,
+    telephone: '+1-855-313-2300',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '6825 Dixie Hwy',
+      addressLocality: 'Clarkston',
+      addressRegion: 'MI',
+      postalCode: '48346',
+      addressCountry: 'US',
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: SITE.url,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Contact',
+        item: new URL('/contact', SITE.url).toString(),
+      },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Contact Net Express | Business Phone, Internet & IT in Michigan"
+  description="Contact Net Express for Michigan business phone systems (Hosted VoIP), dedicated fiber internet, virtual fax, and managed IT. One provider, one bill, one support line."
+  jsonLd={jsonLd}
+>
+  <div class="pt-8" data-ps="src/pages/contact.astro:lx8n1i">
+    <ContactCta />
+  </div>
+</BaseLayout>

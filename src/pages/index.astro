@@ -1,0 +1,55 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Hero from '@/components/home/Hero.astro';
+import TrustBar from '@/components/home/TrustBar.astro';
+import Services from '@/components/home/Services.astro';
+import WhyUs from '@/components/home/WhyUs.astro';
+import ServiceArea from '@/components/home/ServiceArea.astro';
+import Testimonial from '@/components/home/Testimonial.astro';
+import Faq from '@/components/home/Faq.astro';
+import ContactCta from '@/components/home/ContactCta.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Net Express',
+  description: SITE.description,
+  url: SITE.url,
+  telephone: '+1-855-313-2300',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '6825 Dixie Hwy',
+    addressLocality: 'Clarkston',
+    addressRegion: 'MI',
+    postalCode: '48346',
+    addressCountry: 'US',
+  },
+  areaServed: [
+    'Clarkston',
+    'Metro Detroit',
+    'Oakland County',
+    'Flint',
+    'Grand Rapids',
+    'Lansing',
+    'Ann Arbor',
+    'Michigan',
+    'Reading, Pennsylvania',
+  ],
+};
+---
+
+<BaseLayout
+  title={SITE.title}
+  description={SITE.description}
+  jsonLd={jsonLd}
+>
+  <Hero />
+  <TrustBar />
+  <Services />
+  <WhyUs />
+  <ServiceArea />
+  <Testimonial />
+  <Faq />
+  <ContactCta />
+</BaseLayout>

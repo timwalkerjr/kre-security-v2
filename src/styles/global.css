@@ -1,0 +1,109 @@
+@import 'tailwindcss';
+@import './fonts.css';
+@plugin "@tailwindcss/typography";
+
+:root {
+  --nav-height: 68px;
+
+  --color-background: hsl(211, 66%, 10%); /* #091a2c */
+  --color-foreground: hsl(206, 43%, 95%); /* #edf3f8 */
+  --color-muted-foreground: hsl(209, 23%, 69%); /* #9eb1c2 */
+  --color-border: hsl(210, 30%, 18%); /* #202e3c */
+  --color-surface: hsl(210, 48%, 13%); /* #112131 */
+  --color-primary: hsl(0, 0%, 100%); /* #ffffff */
+  --color-primary-foreground: hsl(213, 64%, 11%); /* #0a1a2e */
+  --color-primary-hover: hsl(206, 43%, 92%); /* #e2ecf3 */
+  --color-secondary: hsl(210, 40%, 16%); /* #182939 */
+  --color-secondary-foreground: hsl(206, 43%, 95%); /* #edf3f8 */
+  --color-secondary-hover: hsl(210, 40%, 22%); /* #22384f */
+  --color-dark-background: hsl(209, 68%, 7%); /* #06121e */
+  --color-dark-foreground: hsl(0, 0%, 100%); /* #ffffff */
+  --color-dark-muted-foreground: hsl(209, 23%, 69%); /* #9eb1c2 */
+  --color-dark-border: hsl(210, 30%, 15%); /* #1b2632 */
+  --color-accent: hsl(97, 75%, 64%); /* #94e760 */
+    --text-h1: clamp(2rem, 0.9rem + 3.6vw, 4rem);
+    --text-h2: clamp(1.625rem, 1.1rem + 1.8vw, 2.5rem);
+    --text-h3: clamp(1.25rem, 1.05rem + 0.7vw, 1.625rem);
+}
+
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --color-muted-foreground: var(--color-muted-foreground);
+  --color-border: var(--color-border);
+  --color-surface: var(--color-surface);
+
+  --color-primary: var(--color-primary);
+  --color-primary-foreground: var(--color-primary-foreground);
+  --color-primary-hover: var(--color-primary-hover);
+
+  --color-secondary: var(--color-secondary);
+  --color-secondary-foreground: var(--color-secondary-foreground);
+  --color-secondary-hover: var(--color-secondary-hover);
+
+  --color-dark-background: var(--color-dark-background);
+  --color-dark-foreground: var(--color-dark-foreground);
+  --color-dark-muted-foreground: var(--color-dark-muted-foreground);
+  --color-dark-border: var(--color-dark-border);
+  --color-dark: var(--color-dark-background);
+  --color-dark-muted: var(--color-dark-muted-foreground);
+
+  --color-accent: var(--color-accent);
+  --color-success: var(--color-accent);
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+
+  --text-h1: var(--text-h1);
+  --text-h1--line-height: 1.02;
+  --text-h2: var(--text-h2);
+  --text-h2--line-height: 1.08;
+  --text-h3: var(--text-h3);
+  --text-h3--line-height: 1.4;
+}
+
+/* Prevent horizontal scrolling on all devices */
+html,
+body {
+  overflow-x: clip;
+}
+
+html {
+  scroll-padding-top: var(--nav-height);
+  scroll-behavior: smooth;
+}
+
+/* Apply theme colors globally & subtle high-tech radial glow + grid */
+body {
+  background-color: #091a2c;
+  background-image: 
+    radial-gradient(55% 65% at 80% 25%, rgba(46, 104, 168, 0.22), rgba(0, 0, 0, 0) 62%),
+    radial-gradient(38% 46% at 74% 42%, rgba(97, 149, 63, 0.14), rgba(0, 0, 0, 0) 62%),
+    radial-gradient(60% 60% at 12% 85%, rgba(20, 52, 86, 0.35), rgba(0, 0, 0, 0) 68%),
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 60px 60px, 60px 60px;
+  background-attachment: fixed;
+  color: #edf3f8;
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  text-wrap: balance;
+  hyphens: manual;
+  min-width: 0;
+}
+
+p,
+li {
+  text-wrap: pretty;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}

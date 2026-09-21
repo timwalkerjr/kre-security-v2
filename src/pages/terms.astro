@@ -1,0 +1,199 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Container from '@/components/Container.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Terms and Conditions | Net Express',
+  description: 'Terms and Conditions and Service Contract agreement for Net Express, Inc. telecom and data services.',
+  url: `${SITE.url}/terms/`,
+};
+---
+
+<BaseLayout
+  title="Terms & Conditions | Net Express"
+  description="Read the terms and conditions and service contract agreement for Net Express business phone, internet, and telecom services."
+  jsonLd={jsonLd}
+>
+  <main class="py-16 sm:py-24" data-ps="src/pages/terms.astro:main">
+    <Container class="max-w-4xl">
+      <!-- Breadcrumb / Header -->
+      <div class="mb-10 text-center sm:text-left" data-ps="src/pages/terms.astro:header">
+        <a href="/" class="inline-flex items-center gap-2 text-sm text-[#9fb1c2] hover:text-[#94e760] transition-colors mb-4 no-underline" data-ps="src/pages/terms.astro:sdl527">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Back to Home
+        </a>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4" data-ps="src/pages/terms.astro:ihpkj4">
+          Terms and Conditions
+        </h1>
+        <p class="text-lg text-[#9fb1c2]" data-ps="src/pages/terms.astro:zhj1qe">
+          Net Express, Inc. Service Contract & Agreement
+        </p>
+        
+        <div class="mt-6 inline-flex items-center gap-3" data-ps="src/pages/terms.astro:cskznz">
+          <a
+            href="https://pagesmith-cdn.com/726747c3/files/TandC.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-white/5 border border-white/15 rounded-lg hover:border-[#94e760] hover:text-[#94e760] transition-all no-underline"
+           data-ps="src/pages/terms.astro:sdl526">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Download Printable Version (PDF)
+          </a>
+        </div>
+      </div>
+
+      <!-- Legal Content Card -->
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-2xl p-6 sm:p-10 text-[#edf3f8] leading-relaxed space-y-8" data-ps="src/pages/terms.astro:content">
+        
+        <div class="border-b border-white/[0.08] pb-6" data-ps="src/pages/terms.astro:cskzny">
+          <p class="text-base sm:text-lg text-[#cbd5e1] font-medium" data-ps="src/pages/terms.astro:zhj1qd">
+            This Confirmation of Service Order ("Order") serves as a confirmation of Customer's agreement to purchase Telecom Service ("Service") under a term plan according to prices, quantities, terms and conditions set forth below.
+          </p>
+        </div>
+
+        <section class="space-y-3" data-ps="src/pages/terms.astro:ylc9tr">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2" data-ps="src/pages/terms.astro:x64hrm">
+            <span class="w-1.5 h-5 bg-[#94e760] rounded-full inline-block" data-ps="src/pages/terms.astro:h9xpbm"></span>
+            Rates
+          </h2>
+          <p class="text-[#9fb1c2] text-[15.5px]" data-ps="src/pages/terms.astro:zhj1qc">
+            Monthly Charges are based on term rate plans in effect at the time Service is ordered and are set forth on the Proposal. Rates will not increase above Monthly Charges set forth on the Proposal for Service between the locations listed on the proposal. Monthly charges may change if a Service location is moved.
+          </p>
+        </section>
+
+        <section class="space-y-3" data-ps="src/pages/terms.astro:ylc9tq">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2" data-ps="src/pages/terms.astro:x64hrl">
+            <span class="w-1.5 h-5 bg-[#94e760] rounded-full inline-block" data-ps="src/pages/terms.astro:h9xpbn"></span>
+            Term and Expiration
+          </h2>
+          <p class="text-[#9fb1c2] text-[15.5px]" data-ps="src/pages/terms.astro:zhj1qb">
+            The Service term is 36 months. The parties agree that the expiration of the initial term or any subsequent renewal term, this agreement shall be renewed for a further term of 12 months on the same terms and conditions as contained in the original agreement, unless written notice is given by 1 party to the other party of its intention not to renew the agreement at least 60 days before the expiration of the initial term or any subsequent renewal term.
+          </p>
+        </section>
+
+        <section class="space-y-3" data-ps="src/pages/terms.astro:ylc9tp">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2" data-ps="src/pages/terms.astro:x64hrk">
+            <span class="w-1.5 h-5 bg-[#94e760] rounded-full inline-block" data-ps="src/pages/terms.astro:h9xpbo"></span>
+            Term Plan Change
+          </h2>
+          <p class="text-[#9fb1c2] text-[15.5px]" data-ps="src/pages/terms.astro:zhj1qa">
+            Prior to the completion of the selected Service term plan, Customer may renew or change to a different term plan without incurring early termination charges, provided the new term plan (i) is for an equal or greater dollar value as that number ordered herein and (ii) is greater in length than the months remaining on the Service term plan ordered herein. Monthly charges for the new term plan will be based on rates in effect at the time the new plan is ordered.
+          </p>
+        </section>
+
+        <section class="space-y-3" data-ps="src/pages/terms.astro:ylc9to">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2" data-ps="src/pages/terms.astro:x64hrj">
+            <span class="w-1.5 h-5 bg-[#94e760] rounded-full inline-block" data-ps="src/pages/terms.astro:h9xpbp"></span>
+            Service Upgrade
+          </h2>
+          <p class="text-[#9fb1c2] text-[15.5px]" data-ps="src/pages/terms.astro:zhj1q9">
+            Customer may upgrade Service to a higher speed Service without incurring early termination charges provided that the Upgrade Services (i) under a term plan that is equal to or greater in length than the number of months remaining in the term plans ordered herein and (ii) is installed within the locations herein. Non-Recurring Charges (NRC's) will apply to the Upgraded Service.
+          </p>
+        </section>
+
+        <section class="space-y-3" data-ps="src/pages/terms.astro:ylc9tn">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2" data-ps="src/pages/terms.astro:x64hri">
+            <span class="w-1.5 h-5 bg-[#94e760] rounded-full inline-block" data-ps="src/pages/terms.astro:h9xpbq"></span>
+            Move
+          </h2>
+          <p class="text-[#9fb1c2] text-[15.5px]" data-ps="src/pages/terms.astro:zhj1pn">
+            In the event the Customer moves one end of service to a new location, Customer will not incur early termination charges provided termination of the old circuit and installation of the new circuit are ordered to occur concurrently. NRC's may apply at the new location. Any changes to the Monthly Charges will be based on rates in effect at that time. Revised Monthly Charges will be automatically applied for the months remaining in the Service term plan.
+          </p>
+        </section>
+
+        <section class="space-y-3" data-ps="src/pages/terms.astro:ylc9tm">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2" data-ps="src/pages/terms.astro:x64hrh">
+            <span class="w-1.5 h-5 bg-[#94e760] rounded-full inline-block" data-ps="src/pages/terms.astro:h9xpbr"></span>
+            Early Termination
+          </h2>
+          <p class="text-[#9fb1c2] text-[15.5px]" data-ps="src/pages/terms.astro:zhj1pm">
+            In the event the Customer terminates Service prior to the expiration of the Service term plan, said Customer will be liable for the remaining months of Service at 100% of the monthly recurring rate to fulfill this agreement.
+          </p>
+        </section>
+
+        <section class="space-y-3" data-ps="src/pages/terms.astro:lsparm">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2" data-ps="src/pages/terms.astro:x64hrg">
+            <span class="w-1.5 h-5 bg-[#94e760] rounded-full inline-block" data-ps="src/pages/terms.astro:h9xpbs"></span>
+            Cancellation
+          </h2>
+          <p class="text-[#9fb1c2] text-[15.5px]" data-ps="src/pages/terms.astro:zhj1pl">
+            In the event Customer cancels Service prior to the installation date of the Service, Customer will be liable for all Non-Recurring Charges and one (1) month's Service.
+          </p>
+        </section>
+
+        <section class="space-y-3" data-ps="src/pages/terms.astro:lsparn">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2" data-ps="src/pages/terms.astro:x64hrf">
+            <span class="w-1.5 h-5 bg-[#94e760] rounded-full inline-block" data-ps="src/pages/terms.astro:h9xpbt"></span>
+            Assignment
+          </h2>
+          <p class="text-[#9fb1c2] text-[15.5px]" data-ps="src/pages/terms.astro:zhj1pk">
+            Customer shall not assign or otherwise transfer any rights or obligations under this Order without prior written consent of Net Express, Inc. which consent shall not be unreasonable withheld or delayed. Any such assignments without the written consent of Net Express, Inc. will be void.
+          </p>
+        </section>
+
+        <section class="space-y-3" data-ps="src/pages/terms.astro:lsparo">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2" data-ps="src/pages/terms.astro:x64hre">
+            <span class="w-1.5 h-5 bg-[#94e760] rounded-full inline-block" data-ps="src/pages/terms.astro:h9xpbu"></span>
+            Customer Liability
+          </h2>
+          <p class="text-[#9fb1c2] text-[15.5px]" data-ps="src/pages/terms.astro:zhj1pj">
+            Customer understands that Net Express, Inc. is a private network, and agrees that they will not use it to resell or otherwise provide services which may conflict with Net Express, Inc. and their user terms now or anytime in the future. Customer agrees that Net Express, Inc. is not responsible for any sites or service provided by other websites, email providers, and/or Internet Service Providers (including but not limited to Hotmail, MSN, EBay, Yahoo, etc.). Customer understands that they are receiving a direct Internet connection and that security, content filtering, and virus protection are their sole responsibility.
+          </p>
+        </section>
+
+        <section class="space-y-3" data-ps="src/pages/terms.astro:lsparp">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2" data-ps="src/pages/terms.astro:x64hrd">
+            <span class="w-1.5 h-5 bg-[#94e760] rounded-full inline-block" data-ps="src/pages/terms.astro:h9xpcg"></span>
+            Liability
+          </h2>
+          <p class="text-[#9fb1c2] text-[15.5px]" data-ps="src/pages/terms.astro:zhj1pi">
+            The liability of Net Express, Inc., its affiliates, successors, agents or "assigns" for damages to Service interruptions or defects shall not exceed the prorated amount of Monthly Charges for the time Service was affected.
+          </p>
+        </section>
+
+        <section class="space-y-3" data-ps="src/pages/terms.astro:lsparq">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2" data-ps="src/pages/terms.astro:x64hqr">
+            <span class="w-1.5 h-5 bg-[#94e760] rounded-full inline-block" data-ps="src/pages/terms.astro:h9xpch"></span>
+            Term Start Date
+          </h2>
+          <p class="text-[#9fb1c2] text-[15.5px]" data-ps="src/pages/terms.astro:zhj1ph">
+            The term agreement will begin on the day of the number port.
+          </p>
+        </section>
+
+        <section class="space-y-3" data-ps="src/pages/terms.astro:lsparr">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2" data-ps="src/pages/terms.astro:x64hqq">
+            <span class="w-1.5 h-5 bg-[#94e760] rounded-full inline-block" data-ps="src/pages/terms.astro:h9xpci"></span>
+            Line Activation Fee and Equipment Charges
+          </h2>
+          <p class="text-[#9fb1c2] text-[15.5px]" data-ps="src/pages/terms.astro:zhj1pg">
+            The Line Activation Fee applies only to the cost of the circuit to be installed in the Smart Jack or Modem. The customer is liable for all Equipment Charges (detailed below) required for installation of service at their location. The Customer accepts responsibility for the installation of the physical line from the Smart Jack or Modem to the T1 router unless they choose to have a Net Express, Inc. technician perform this work at an additional cost based upon the current labor and materials rate at the time of installation.
+          </p>
+        </section>
+
+        <section class="space-y-3" data-ps="src/pages/terms.astro:lspars">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2" data-ps="src/pages/terms.astro:x64hqp">
+            <span class="w-1.5 h-5 bg-[#94e760] rounded-full inline-block" data-ps="src/pages/terms.astro:h9xpcj"></span>
+            Porting & Authorization
+          </h2>
+          <p class="text-[#9fb1c2] text-[15.5px]" data-ps="src/pages/terms.astro:zhj1pf">
+            The undersigned hereby authorizes Advanced VoIP Data LLC (AVD) D.B.A. Net Express VoIP to port the telephone number(s) listed below away from the current carrier. The undersigned also declares that he/she is the owner of such numbers or authorized to control these numbers. This includes authorization for AVD to request Customer Service Records, or CSR's for the telephone numbers in order to facilitate successful porting.
+          </p>
+        </section>
+
+        <div class="border-t border-white/[0.08] pt-6 mt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-[#9fb1c2]" data-ps="src/pages/terms.astro:cskznx">
+          <p data-ps="src/pages/terms.astro:zhj1pe">Questions regarding terms? Call <a href="tel:+18553132300" class="text-white hover:text-[#94e760] transition-colors font-medium no-underline" data-ps="src/pages/terms.astro:sdl525">(855) 313-2300</a></p>
+          <a href="/privacy/" class="text-[#9fb1c2] hover:text-[#94e760] transition-colors underline" data-ps="src/pages/terms.astro:sdl51j">View Privacy Policy</a>
+        </div>
+
+      </div>
+    </Container>
+  </main>
+</BaseLayout>

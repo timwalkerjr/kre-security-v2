@@ -1,0 +1,23 @@
+---
+import { getCollection, render } from 'astro:content';
+import ArticleLayout from '@/layouts/ArticleLayout.astro';
+
+export async function getStaticPaths() {
+  const articleEntries = await getCollection('articles', ({ data }) => {
+    return data.draft !== true;
+  });
+
+  return articleEntries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+const mdxFilePath = `src/content/articles/${entry.id}.mdx`;
+---
+
+<ArticleLayout frontmatter={entry.data} mdxFilePath={mdxFilePath} headings={headings}>
+  <Content />
+</ArticleLayout>

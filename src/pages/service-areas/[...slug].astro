@@ -1,0 +1,256 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { SITE } from '@/config/site';
+
+export async function getStaticPaths() {
+  const areaEntries = await getCollection('serviceAreas', ({ data }) => {
+    return data.draft !== true;
+  });
+
+  return areaEntries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+const { data } = entry;
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Business Phone, Fiber Internet & Managed IT',
+    name: `${data.name} Business Telecom & IT Services - Net Express`,
+    description: data.description,
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'Net Express',
+      telephone: data.localPhone || '+1-855-313-2300',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '6825 Dixie Hwy',
+        addressLocality: 'Clarkston',
+        addressRegion: 'MI',
+        postalCode: '48346',
+        addressCountry: 'US',
+      },
+      geo: data.geoLat && data.geoLng ? {
+        '@type': 'GeoCoordinates',
+        latitude: data.geoLat,
+        longitude: data.geoLng,
+      } : undefined,
+    },
+    areaServed: {
+      '@type': 'AdministrativeArea',
+      name: `${data.name}, ${data.state}`,
+    },
+    url: new URL(Astro.url.pathname, SITE.url).toString(),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: SITE.url,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Service Areas',
+        item: new URL('/service-areas', SITE.url).toString(),
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: data.name,
+        item: new URL(Astro.url.pathname, SITE.url).toString(),
+      },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title={`${data.title} | Net Express`}
+  description={data.description}
+  jsonLd={jsonLd}
+>
+  <!-- Area Hero -->
+  <header class="relative isolate py-16 lg:py-20 border-b border-white/[0.08] overflow-hidden" data-ps="src/pages/service-areas/[...slug].astro:fpgv9r">
+    <div class="max-w-[1180px] mx-auto px-6" data-ps="src/pages/service-areas/[...slug].astro:qc5bte">
+      
+      <!-- Breadcrumbs -->
+      <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-[14px] text-[#9fb1c2] mb-6" data-ps="src/pages/service-areas/[...slug].astro:ohrjie">
+        <a href="/" class="hover:text-white transition-colors no-underline" data-ps="src/pages/service-areas/[...slug].astro:tm45vy">Home</a>
+        <span class="text-white/30" data-ps="src/pages/service-areas/[...slug].astro:ck5y9l">/</span>
+        <a href="/service-areas" class="hover:text-white transition-colors no-underline" data-ps="src/pages/service-areas/[...slug].astro:tm45vx">Service Areas</a>
+        <span class="text-white/30" data-ps="src/pages/service-areas/[...slug].astro:ck5y9k">/</span>
+        <span class="text-[#eef3f7] font-medium" data-ps="src/pages/service-areas/[...slug].astro:ck5y9j">{data.name}</span>
+      </nav>
+
+      <!-- Badges -->
+      <div class="flex flex-wrap items-center gap-3 mb-4" data-ps="src/pages/service-areas/[...slug].astro:qc5btd">
+        <span class="bg-[#94e760]/15 text-[#94e760] border border-[#94e760]/30 text-[13px] font-semibold px-3 py-1 rounded-full uppercase tracking-wider" data-ps="src/pages/service-areas/[...slug].astro:ck5y9i">
+          {data.regionType} Coverage • {data.state}
+        </span>
+        {data.fiberAvailable && (
+          <span class="bg-white/10 text-white text-[13px] font-medium px-3 py-1 rounded-full border border-white/20" data-ps="src/pages/service-areas/[...slug].astro:ck5y9h">
+            ⚡ Up to {data.maxSpeed} Dedicated Fiber Available
+          </span>
+        )}
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-[36px] sm:text-[48px] lg:text-[54px] font-extrabold text-white leading-[1.1] tracking-[-1.5px] max-w-[950px] mb-6" data-ps="src/pages/service-areas/[...slug].astro:ddrkb">
+        {data.headline || `Business Phone, Dedicated Fiber & IT in ${data.name}, ${data.state}`}
+      </h1>
+
+      <p class="text-[19px] sm:text-[21px] text-[#c4d1dd] leading-[1.5] max-w-[840px] mb-8" data-ps="src/pages/service-areas/[...slug].astro:yb1zee">
+        {data.leadText || data.description}
+      </p>
+
+      <!-- Key Action CTA Buttons -->
+      <div class="flex flex-wrap items-center gap-4 pt-2" data-ps="src/pages/service-areas/[...slug].astro:qc5btc">
+        <a
+          href="/#contact"
+          class="bg-white text-[#0a1a2e] font-bold text-[16px] px-[28px] py-[14px] rounded-[10px] hover:bg-[#eef3f7] transition-all no-underline shadow"
+         data-ps="src/pages/service-areas/[...slug].astro:tm45vw">
+          Get a Quote for {data.name}
+        </a>
+        <a
+          href={`tel:${data.localPhone.replace(/[^0-9+]/g, '')}`}
+          class="border border-white/20 hover:border-[#94e760] text-white font-semibold text-[16px] px-[26px] py-[14px] rounded-[10px] transition-all no-underline inline-flex items-center gap-2"
+         data-ps="src/pages/service-areas/[...slug].astro:tm45vv">
+          <svg class="w-4 h-4 text-[#94e760]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          Call Local: {data.localPhone}
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Area Overview Grid & Body Content -->
+  <main class="max-w-[1180px] mx-auto px-6 py-14" data-ps="src/pages/service-areas/[...slug].astro:uoabil">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12" data-ps="src/pages/service-areas/[...slug].astro:qc5btb">
+      
+      <!-- Left Column: MDX Content & Services (8 cols) -->
+      <div class="lg:col-span-8 space-y-10" data-ps="src/pages/service-areas/[...slug].astro:qc5bta">
+        
+        <!-- Services Available Box -->
+        <div class="bg-white/[0.03] border border-white/[0.08] rounded-[20px] p-7 sm:p-8" data-ps="src/pages/service-areas/[...slug].astro:qc5bt9">
+          <h2 class="text-white text-[22px] font-bold mb-4 flex items-center gap-2" data-ps="src/pages/service-areas/[...slug].astro:eb15na">
+            <span class="w-3 h-[2px] bg-[#94e760]" data-ps="src/pages/service-areas/[...slug].astro:ck5y9g"></span>
+            Telecom & IT Solutions Deployed in {data.name}
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5" data-ps="src/pages/service-areas/[...slug].astro:qc5bt8">
+            {data.primaryServices.map((service, __psIdx) => (
+              <div class="flex items-center gap-3 p-3 bg-white/[0.02] border border-white/[0.05] rounded-[12px] text-[#edf3f8] text-[14.5px]" data-ps={`src/pages/service-areas/[...slug].astro:qc5bt7-${__psIdx}`}>
+                <span class="w-2 h-2 rounded-full bg-[#94e760] shrink-0" data-ps={`src/pages/service-areas/[...slug].astro:ck5y9f-${__psIdx}`}></span>
+                <span data-ps={`src/pages/service-areas/[...slug].astro:ck5y9e-${__psIdx}`}>{service}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Rendered MDX Content -->
+        <article
+          class="prose prose-invert prose-lg max-w-none text-[#d6e2ed] prose-headings:text-white prose-headings:font-bold prose-a:text-[#94e760] hover:prose-a:underline prose-li:text-[#d6e2ed]"
+          data-mdx-file={`src/content/service-areas/${entry.id}.mdx`}
+          data-mdx-type="serviceAreas"
+         data-ps="src/pages/service-areas/[...slug].astro:1blb7b">
+          <Content />
+        </article>
+
+        <!-- Neighboring Service Areas (if present) -->
+        {data.neighboringAreas && data.neighboringAreas.length > 0 && (
+          <div class="p-6 bg-white/[0.02] border border-white/[0.06] rounded-[16px]" data-ps="src/pages/service-areas/[...slug].astro:qc5bt6">
+            <h3 class="text-white text-[16px] font-bold mb-3" data-ps="src/pages/service-areas/[...slug].astro:szg2uw">Nearby Michigan Service Areas</h3>
+            <div class="flex flex-wrap gap-2" data-ps="src/pages/service-areas/[...slug].astro:qc5bsk">
+              {data.neighboringAreas.map((neighbor, __psIdx) => (
+                <span class="bg-white/[0.04] border border-white/[0.08] text-[#c4d1dd] text-[13.5px] px-3 py-1 rounded-md" data-ps={`src/pages/service-areas/[...slug].astro:ck5y9d-${__psIdx}`}>
+                  {neighbor}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+      </div>
+
+      <!-- Right Column: Local Summary Card & Contact (4 cols) -->
+      <aside class="lg:col-span-4 space-y-8" data-ps="src/pages/service-areas/[...slug].astro:fwxuhu">
+        
+        <!-- Local Contact & Specs Card -->
+        <div class="p-6 bg-white/[0.035] border border-white/[0.09] rounded-[20px] backdrop-blur-sm shadow-xl" data-ps="src/pages/service-areas/[...slug].astro:qc5bsj">
+          <div class="flex items-center gap-2 mb-4 pb-4 border-b border-white/[0.08]" data-ps="src/pages/service-areas/[...slug].astro:qc5bsi">
+            <div class="w-3 h-3 rounded-full bg-[#94e760]" data-ps="src/pages/service-areas/[...slug].astro:qc5bsh"></div>
+            <h3 class="text-white text-[16px] font-bold m-0" data-ps="src/pages/service-areas/[...slug].astro:szg2uv">{data.name} Local Branch Support</h3>
+          </div>
+
+          <div class="space-y-4 text-[14.5px]" data-ps="src/pages/service-areas/[...slug].astro:qc5bsg">
+            <div data-ps="src/pages/service-areas/[...slug].astro:qc5bsf">
+              <div class="text-[#9fb1c2] text-[12.5px] uppercase tracking-wider mb-0.5" data-ps="src/pages/service-areas/[...slug].astro:qc5bse">Local Phone</div>
+              <a href={`tel:${data.localPhone.replace(/[^0-9+]/g, '')}`} class="text-white font-bold text-[16px] hover:text-[#94e760] no-underline" data-ps="src/pages/service-areas/[...slug].astro:tm45vu">
+                {data.localPhone}
+              </a>
+            </div>
+
+            <div data-ps="src/pages/service-areas/[...slug].astro:qc5bsd">
+              <div class="text-[#9fb1c2] text-[12.5px] uppercase tracking-wider mb-0.5" data-ps="src/pages/service-areas/[...slug].astro:qc5bsc">Toll-Free Support</div>
+              <a href={`tel:${data.tollFreePhone.replace(/[^0-9+]/g, '')}`} class="text-white font-bold text-[16px] hover:text-[#94e760] no-underline" data-ps="src/pages/service-areas/[...slug].astro:tm45vt">
+                {data.tollFreePhone}
+              </a>
+            </div>
+
+            <div data-ps="src/pages/service-areas/[...slug].astro:qc5bsb">
+              <div class="text-[#9fb1c2] text-[12.5px] uppercase tracking-wider mb-0.5" data-ps="src/pages/service-areas/[...slug].astro:3qe0wj">Fiber Speed Availability</div>
+              <div class="text-[#94e760] font-bold" data-ps="src/pages/service-areas/[...slug].astro:3qe0wk">{data.maxSpeed} Symmetrical</div>
+            </div>
+
+            <div data-ps="src/pages/service-areas/[...slug].astro:3qe0wl">
+              <div class="text-[#9fb1c2] text-[12.5px] uppercase tracking-wider mb-0.5" data-ps="src/pages/service-areas/[...slug].astro:3qe0wm">Installation Timeline</div>
+              <div class="text-white" data-ps="src/pages/service-areas/[...slug].astro:3qe0wn">{data.deliveryTime}</div>
+            </div>
+
+            {data.zipCodes && data.zipCodes.length > 0 && (
+              <div data-ps="src/pages/service-areas/[...slug].astro:3qe0wo">
+                <div class="text-[#9fb1c2] text-[12.5px] uppercase tracking-wider mb-1" data-ps="src/pages/service-areas/[...slug].astro:3qe0wp">Key Zip Codes Served</div>
+                <div class="text-[#c4d1dd] text-[13px]" data-ps="src/pages/service-areas/[...slug].astro:3qe0wq">{data.zipCodes.join(', ')}</div>
+              </div>
+            )}
+          </div>
+
+          <div class="mt-6 pt-6 border-t border-white/[0.08]" data-ps="src/pages/service-areas/[...slug].astro:3qe0wr">
+            <a
+              href="/#contact"
+              class="block w-full text-center bg-white text-[#0a1a2e] font-bold text-[15px] py-3 rounded-[10px] hover:bg-[#eef3f7] transition-all no-underline shadow"
+             data-ps="src/pages/service-areas/[...slug].astro:tm45vs">
+              Request Free On-Site Quote
+            </a>
+          </div>
+        </div>
+
+        <!-- Single Provider Callout -->
+        <div class="p-6 bg-gradient-to-br from-[#0b2138] to-[#071626] border border-[#94e760]/30 rounded-[20px]" data-ps="src/pages/service-areas/[...slug].astro:3qe0ws">
+          <h4 class="text-white text-[17px] font-bold mb-2" data-ps="src/pages/service-areas/[...slug].astro:rd91wn">The Net Express Promise</h4>
+          <p class="text-[#9fb1c2] text-[14px] leading-relaxed mb-4" data-ps="src/pages/service-areas/[...slug].astro:yb1zf0">
+            One provider, one bill, one local support number. No finger-pointing between your phone vendor, ISP, and IT contractor.
+          </p>
+          <a href="/#why" class="text-[#94e760] font-semibold text-[13.5px] hover:underline no-underline inline-flex items-center gap-1" data-ps="src/pages/service-areas/[...slug].astro:tm45vr">
+            Why Net Express &rarr;
+          </a>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+</BaseLayout>

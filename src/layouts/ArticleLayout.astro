@@ -1,0 +1,324 @@
+---
+import '@/styles/global.css';
+import Navigation from '@/components/Navigation.astro';
+import Footer from '@/components/Footer.astro';
+import SEOHead from '@/components/SEOHead.astro';
+import { SITE } from '@/config/site';
+
+export interface Props {
+  frontmatter: {
+    title: string;
+    description: string;
+    pubDate: Date;
+    updatedDate?: Date;
+    author?: string;
+    authorRole?: string;
+    authorAvatar?: string;
+    category?: string;
+    tags?: string[];
+    featured?: boolean;
+    draft?: boolean;
+    image?: string;
+    imageAlt?: string;
+    ogImage?: string;
+    schemaType?: 'Article' | 'NewsArticle' | 'TechArticle' | 'BlogPosting';
+    canonicalUrl?: string;
+    readingTime?: string;
+    toc?: boolean;
+    [key: string]: any;
+  };
+  mdxFilePath?: string;
+  headings?: Array<{ depth: number; slug: string; text: string }>;
+}
+
+const { frontmatter, mdxFilePath = '', headings = [] } = Astro.props;
+
+const socialImage = frontmatter.ogImage || frontmatter.image;
+const schemaType = frontmatter.schemaType || 'Article';
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': schemaType,
+    headline: frontmatter.title,
+    name: frontmatter.title,
+    description: frontmatter.description,
+    datePublished: frontmatter.pubDate?.toISOString?.(),
+    dateModified: (frontmatter.updatedDate || frontmatter.pubDate)?.toISOString?.(),
+    author: {
+      '@type': 'Organization',
+      name: frontmatter.author || SITE.name,
+      url: SITE.url,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE.name,
+      url: SITE.url,
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://pagesmith-cdn.com/726747c3/images/netexpress-logo-320.webp',
+      },
+    },
+    image: socialImage
+      ? socialImage.startsWith('http')
+        ? socialImage
+        : new URL(socialImage, SITE.url).toString()
+      : undefined,
+    url: new URL(Astro.url.pathname, SITE.url).toString(),
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': new URL(Astro.url.pathname, SITE.url).toString(),
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: SITE.url,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Articles',
+        item: new URL('/articles', SITE.url).toString(),
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: frontmatter.title,
+        item: new URL(Astro.url.pathname, SITE.url).toString(),
+      },
+    ],
+  },
+];
+
+const hasHeadings = headings && headings.filter(h => h.depth === 2 || h.depth === 3).length >= 2;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://pagesmith-cdn.com" crossorigin />
+    <link rel="preload" href="/_pagesmith/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin />
+    <SEOHead
+      title={`${frontmatter.title} | Net Express`}
+      description={frontmatter.description}
+      image={socialImage}
+      type="article"
+      publishedTime={frontmatter.pubDate?.toISOString?.()}
+      modifiedTime={frontmatter.updatedDate?.toISOString?.()}
+      canonicalUrl={frontmatter.canonicalUrl}
+      jsonLd={jsonLd}
+    />
+  </head>
+  <body class="min-h-screen bg-[#091a2c] text-[#edf3f8]" data-ps="src/layouts/ArticleLayout.astro:hs0ps">
+    <Navigation />
+
+    <!-- Article Header & Hero Banner -->
+    <header class="relative pt-12 pb-10 border-b border-white/[0.08] overflow-hidden" data-ps="src/layouts/ArticleLayout.astro:vhs3jf">
+      <div class="max-w-[1180px] mx-auto px-6" data-ps="src/layouts/ArticleLayout.astro:r84wc5">
+        <!-- Breadcrumb -->
+        <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-[14px] text-[#9fb1c2] mb-6" data-ps="src/layouts/ArticleLayout.astro:t2ion4">
+          <a href="/" class="hover:text-white transition-colors no-underline" data-ps="src/layouts/ArticleLayout.astro:8go40u">Home</a>
+          <span class="text-white/30" data-ps="src/layouts/ArticleLayout.astro:zhuqj3">/</span>
+          <a href="/articles" class="hover:text-white transition-colors no-underline" data-ps="src/layouts/ArticleLayout.astro:8go40v">Articles</a>
+          <span class="text-white/30" data-ps="src/layouts/ArticleLayout.astro:zhuqj2">/</span>
+          <span class="text-[#eef3f7] truncate max-w-[300px]" data-ps="src/layouts/ArticleLayout.astro:zhuqj1">{frontmatter.title}</span>
+        </nav>
+
+        <!-- Category & Featured Badges -->
+        <div class="flex flex-wrap items-center gap-3 mb-4" data-ps="src/layouts/ArticleLayout.astro:r84wc6">
+          {frontmatter.category && (
+            <span class="bg-[#94e760]/15 text-[#94e760] border border-[#94e760]/30 text-[13px] font-semibold px-3 py-1 rounded-full uppercase tracking-wider" data-ps="src/layouts/ArticleLayout.astro:zhuqj0">
+              {frontmatter.category}
+            </span>
+          )}
+          {frontmatter.featured && (
+            <span class="bg-white/10 text-white text-[13px] font-medium px-3 py-1 rounded-full border border-white/20" data-ps="src/layouts/ArticleLayout.astro:zhuqiz">
+              Featured Guide
+            </span>
+          )}
+        </div>
+
+        <!-- Article H1 Headline -->
+        <h1 class="text-[36px] sm:text-[46px] lg:text-[52px] font-extrabold text-white leading-[1.12] tracking-[-1.5px] max-w-[960px] mb-6" data-ps="src/layouts/ArticleLayout.astro:bt5ykw">
+          {frontmatter.title}
+        </h1>
+
+        <!-- Lead Description -->
+        <p class="text-[19px] sm:text-[21px] text-[#c4d1dd] leading-[1.5] max-w-[860px] mb-8" data-ps="src/layouts/ArticleLayout.astro:1cq7co">
+          {frontmatter.description}
+        </p>
+
+        <!-- Metadata Bar -->
+        <div class="flex flex-wrap items-center gap-6 text-[14.5px] text-[#9fb1c2] pt-6 border-t border-white/[0.08]" data-ps="src/layouts/ArticleLayout.astro:r84wc7">
+          <div class="flex items-center gap-2.5" data-ps="src/layouts/ArticleLayout.astro:r84wc8">
+            <div class="w-8 h-8 rounded-full bg-[#112131] border border-white/20 flex items-center justify-center text-white font-bold text-[13px]" data-ps="src/layouts/ArticleLayout.astro:r84wc9">
+              NE
+            </div>
+            <div data-ps="src/layouts/ArticleLayout.astro:r84wca">
+              <span class="text-white font-medium" data-ps="src/layouts/ArticleLayout.astro:zhuqiy">{frontmatter.author || 'Net Express Telecom Team'}</span>
+              {frontmatter.authorRole && <span class="text-white/50 block text-[12.5px]" data-ps="src/layouts/ArticleLayout.astro:zhuqix">{frontmatter.authorRole}</span>}
+            </div>
+          </div>
+
+          <span class="hidden sm:inline text-white/20" data-ps="src/layouts/ArticleLayout.astro:zhuqib">•</span>
+
+          <time datetime={frontmatter.pubDate?.toISOString()}>
+            Published {frontmatter.pubDate?.toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            })}
+          </time>
+
+          {frontmatter.readingTime && (
+            <>
+              <span class="hidden sm:inline text-white/20" data-ps="src/layouts/ArticleLayout.astro:zhuqia">•</span>
+              <span class="inline-flex items-center gap-1.5" data-ps="src/layouts/ArticleLayout.astro:zhuqi9">
+                <svg class="w-4 h-4 text-[#94e760]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                {frontmatter.readingTime}
+              </span>
+            </>
+          )}
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Layout (Article body + Sidebar) -->
+    <main class="max-w-[1180px] mx-auto px-6 py-12" data-ps="src/layouts/ArticleLayout.astro:7qlj9v">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12" data-ps="src/layouts/ArticleLayout.astro:r84wcb">
+        
+        <!-- Main Article Column (8 cols) -->
+        <article
+          class="lg:col-span-8"
+          data-mdx-file={mdxFilePath}
+          data-mdx-type="articles"
+         data-ps="src/layouts/ArticleLayout.astro:sirsqq">
+          {frontmatter.image && (
+            <figure class="mb-10 rounded-[18px] overflow-hidden border border-white/[0.1] bg-[#112131]">
+              <img
+                src={frontmatter.image}
+                alt={frontmatter.imageAlt || frontmatter.title}
+                class="w-full h-auto object-cover max-h-[480px]"
+                loading="eager" data-ps="src/layouts/ArticleLayout.astro:opvrzx" />
+              {frontmatter.imageAlt && (
+                <figcaption class="text-[13px] text-[#9fb1c2] p-3 text-center border-t border-white/[0.06]">
+                  {frontmatter.imageAlt}
+                </figcaption>
+              )}
+            </figure>
+          )}
+
+          <!-- Prose Body -->
+          <div class="prose prose-invert prose-lg max-w-none text-[#d6e2ed] prose-headings:text-white prose-headings:font-bold prose-headings:tracking-tight prose-a:text-[#94e760] hover:prose-a:underline prose-strong:text-white prose-li:text-[#d6e2ed] prose-code:text-[#94e760] prose-code:bg-white/[0.05] prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-blockquote:border-l-[#94e760] prose-blockquote:bg-white/[0.02] prose-blockquote:py-1 prose-blockquote:px-5 prose-blockquote:rounded-r" data-ps="src/layouts/ArticleLayout.astro:r84wcc">
+            <slot />
+          </div>
+
+          <!-- Tags & Share Footer -->
+          {frontmatter.tags && frontmatter.tags.length > 0 && (
+            <div class="mt-12 pt-8 border-t border-white/[0.09]" data-ps="src/layouts/ArticleLayout.astro:363rt8">
+              <h4 class="text-white text-[13px] font-bold uppercase tracking-wider mb-3" data-ps="src/layouts/ArticleLayout.astro:w82t2i">Topic Tags</h4>
+              <div class="flex flex-wrap gap-2" data-ps="src/layouts/ArticleLayout.astro:363rt9">
+                {frontmatter.tags.map((tag, __psIdx) => (
+                  <span class="bg-white/[0.04] border border-white/[0.09] text-[#b8c5d2] text-[13.5px] px-3 py-1 rounded-md" data-ps={`src/layouts/ArticleLayout.astro:zhuqi8-${__psIdx}`}>
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <!-- Author Box -->
+          <div class="mt-10 p-6 sm:p-8 bg-white/[0.03] border border-white/[0.08] rounded-[18px] flex flex-col sm:flex-row items-start sm:items-center gap-5" data-ps="src/layouts/ArticleLayout.astro:363rta">
+            <div class="w-14 h-14 rounded-full bg-[#14283d] border border-[#94e760]/40 flex items-center justify-center text-[#94e760] font-extrabold text-[18px] shrink-0" data-ps="src/layouts/ArticleLayout.astro:363rtb">
+              NE
+            </div>
+            <div data-ps="src/layouts/ArticleLayout.astro:363rtc">
+              <h3 class="text-white font-bold text-[18px] mb-1" data-ps="src/layouts/ArticleLayout.astro:hjnvub">{frontmatter.author || 'Net Express Telecom Solutions'}</h3>
+              <p class="text-[#9fb1c2] text-[14.5px] leading-relaxed m-0" data-ps="src/layouts/ArticleLayout.astro:1cq7cp">
+                Michigan's trusted business phone, fiber internet, cloud faxing, and managed IT services partner. Local support, carrier-grade reliability.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Right Sidebar (4 cols) -->
+        <aside class="lg:col-span-4" data-ps="src/layouts/ArticleLayout.astro:5sroyg">
+          <div class="lg:sticky lg:top-24 space-y-6" data-ps="src/layouts/ArticleLayout.astro:363rth">
+            <!-- Table of Contents (if present) -->
+            {hasHeadings && frontmatter.toc !== false && (
+              <details class="p-6 bg-[#0c2136] border border-white/[0.09] rounded-[18px] shadow-lg group" data-ps="src/layouts/ArticleLayout.astro:363rtd">
+                <summary class="text-white text-[15px] font-bold uppercase tracking-wider flex items-center justify-between gap-2 cursor-pointer list-none [&::-webkit-details-marker]:hidden" data-ps="src/layouts/ArticleLayout.astro:hjnvua">
+                  <span class="flex items-center gap-2" data-ps="src/layouts/ArticleLayout.astro:zhuqi7">
+                    <span class="w-2.5 h-[2px] bg-[#94e760]" data-ps="src/layouts/ArticleLayout.astro:uxk403"></span>
+                    In This Article
+                  </span>
+                  <svg class="w-4 h-4 text-[#9fb1c2] shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <nav aria-label="Table of contents" class="mt-4" data-ps="src/layouts/ArticleLayout.astro:t2ion5">
+                  <ul class="space-y-2.5 text-[14.5px] list-none p-0 m-0">
+                    {headings.filter(h => h.depth === 2 || h.depth === 3).map((h, __psIdx) => (
+                      <li class={h.depth === 3 ? 'pl-3' : ''} data-ps={`src/layouts/ArticleLayout.astro:24a26j-${__psIdx}`}>
+                        <a
+                          href={`#${h.slug}`}
+                          class="text-[#9fb1c2] hover:text-[#94e760] transition-colors no-underline block leading-snug"
+                         data-ps={`src/layouts/ArticleLayout.astro:8go40w-${__psIdx}`}>
+                          {h.text}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+              </details>
+            )}
+
+            <!-- Fast Quote / Consultation Card -->
+            <div class="p-6 bg-gradient-to-b from-[#0c2238] to-[#071626] border border-[#94e760]/30 rounded-[18px] text-center shadow-xl" data-ps="src/layouts/ArticleLayout.astro:363rte">
+              <div class="inline-block p-3 rounded-full bg-[#94e760]/10 text-[#94e760] mb-4" data-ps="src/layouts/ArticleLayout.astro:363rtf">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+              <h3 class="text-white text-[19px] font-bold mb-2" data-ps="src/layouts/ArticleLayout.astro:hjnvu9">Upgrade Your Business Phone & Internet</h3>
+              <p class="text-[#9fb1c2] text-[14px] leading-relaxed mb-6" data-ps="src/layouts/ArticleLayout.astro:1cq7cq">
+                Get custom Michigan enterprise pricing with one bill and single-call local support.
+              </p>
+              <a
+                href="/#contact"
+                class="block w-full bg-white text-[#0a1a2e] font-bold text-[15px] py-3 rounded-[10px] hover:bg-[#eef3f7] transition-all no-underline shadow"
+               data-ps="src/layouts/ArticleLayout.astro:8go41i">
+                Request Custom Quote
+              </a>
+              <div class="mt-4 text-[13.5px] text-[#9fb1c2]" data-ps="src/layouts/ArticleLayout.astro:363rtg">
+                Call directly: <a href="tel:+18553132300" class="text-white font-bold hover:text-[#94e760] no-underline" data-ps="src/layouts/ArticleLayout.astro:8go41j">(855) 313-2300</a>
+              </div>
+            </div>
+
+            <!-- Explore Service Areas Link Card -->
+            <div class="p-6 bg-[#0c2136] border border-white/[0.08] rounded-[18px]" data-ps="src/layouts/ArticleLayout.astro:363rth">
+              <h4 class="text-white text-[15px] font-bold mb-2" data-ps="src/layouts/ArticleLayout.astro:w82t1w">Michigan Service Coverage</h4>
+              <p class="text-[#9fb1c2] text-[13.5px] mb-4" data-ps="src/layouts/ArticleLayout.astro:1cq7cr">
+                Explore our high-speed fiber availability and hosted VoIP solutions across Michigan counties and cities.
+              </p>
+              <a href="/service-areas" class="text-[#94e760] font-semibold text-[14px] hover:underline inline-flex items-center gap-1.5 no-underline" data-ps="src/layouts/ArticleLayout.astro:8go41k">
+                View All Service Areas &rarr;
+              </a>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </main>
+
+    <Footer />
+  </body>
+</html>

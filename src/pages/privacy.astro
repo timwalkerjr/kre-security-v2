@@ -1,0 +1,176 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Container from '@/components/Container.astro';
+import { SITE } from '@/config/site';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Privacy Policy | Net Express',
+  description: 'Privacy Policy for Net Express, Inc. and Advanced VoIP Data, LLC.',
+  url: `${SITE.url}/privacy/`,
+};
+---
+
+<BaseLayout
+  title="Privacy Policy | Net Express"
+  description="Read the privacy policy for Net Express and Advanced VoIP Data, LLC."
+  jsonLd={jsonLd}
+>
+  <main class="py-16 sm:py-24" data-ps="src/pages/privacy.astro:main">
+    <Container class="max-w-4xl">
+      <!-- Breadcrumb / Header -->
+      <div class="mb-10 text-center sm:text-left" data-ps="src/pages/privacy.astro:header">
+        <a href="/" class="inline-flex items-center gap-2 text-sm text-[#9fb1c2] hover:text-[#94e760] transition-colors mb-4 no-underline" data-ps="src/pages/privacy.astro:ivfty5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Back to Home
+        </a>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-4" data-ps="src/pages/privacy.astro:g0keby">
+          Privacy Policy
+        </h1>
+        <p class="text-lg text-[#9fb1c2]" data-ps="src/pages/privacy.astro:brhx95">
+          Advanced VoIP Data, LLC / Net Express
+        </p>
+      </div>
+
+      <!-- Legal Content Card -->
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-2xl p-6 sm:p-10 text-[#edf3f8] leading-relaxed space-y-8" data-ps="src/pages/privacy.astro:content">
+        
+        <!-- Collecting and Using Your Personal Data -->
+        <section class="space-y-6" data-ps="src/pages/privacy.astro:section-collecting">
+          <h2 class="text-2xl font-bold text-white flex items-center gap-2" data-ps="src/pages/privacy.astro:h2-collecting">
+            <span class="w-1.5 h-6 bg-[#94e760] rounded-full inline-block" data-ps="src/pages/privacy.astro:yc005v"></span>
+            Collecting and Using Your Personal Data
+          </h2>
+
+          <div class="space-y-4 text-[15.5px] text-[#cbd5e1]" data-ps="src/pages/privacy.astro:esgoob">
+            <h3 class="text-lg font-semibold text-white" data-ps="src/pages/privacy.astro:smlsqz">Types of Data Collected and Device Permissions</h3>
+            
+            <p class="text-[#9fb1c2]" data-ps="src/pages/privacy.astro:brhx8e">
+              Among the types of Personal Data that Advanced VoIP Data, LLC collects, by itself or through third parties, there are: Usage Data; Contacts permission; Camera permission; Precise location permission (non-continuous); Microphone permission; Phone permission; Storage permission; geographic position; Data communicated while using the service; app information; device logs; device information.
+            </p>
+
+            <ul class="list-disc pl-5 text-[#9fb1c2] space-y-2">
+              <li data-ps="src/pages/privacy.astro:d77z3h">Personal Data may be freely provided by the User, or, in the case of Usage Data, collected automatically when using NetExpress app.</li>
+              <li data-ps="src/pages/privacy.astro:d77z3g">Unless specified otherwise, all Data requested by the NetExpress app is mandatory and failure to provide this Data may make it impossible for Advanced VoIP Data, LLC to provide its services. Users who are uncertain about which Personal Data is mandatory are welcome to contact us at any time.</li>
+              <li data-ps="src/pages/privacy.astro:d77z3f">Depending on the User's specific device, Advanced VoIP Data, LLC may request certain permissions that allow it to access the User's device Data as described below.</li>
+            </ul>
+
+            <!-- Permissions Breakdown -->
+            <div class="grid gap-4 mt-6" data-ps="src/pages/privacy.astro:esgooc">
+              <div class="bg-white/[0.02] border border-white/[0.06] p-4 rounded-xl" data-ps="src/pages/privacy.astro:esgood">
+                <h4 class="text-white font-semibold mb-1" data-ps="src/pages/privacy.astro:rq3c0f">Camera permission</h4>
+                <p class="text-[#9fb1c2] text-sm m-0" data-ps="src/pages/privacy.astro:brhx8f">Used for accessing the camera or capturing images and video from the device.</p>
+              </div>
+
+              <div class="bg-white/[0.02] border border-white/[0.06] p-4 rounded-xl" data-ps="src/pages/privacy.astro:esgooe">
+                <h4 class="text-white font-semibold mb-1" data-ps="src/pages/privacy.astro:rq3c0g">Contacts permission</h4>
+                <p class="text-[#9fb1c2] text-sm m-0" data-ps="src/pages/privacy.astro:brhx91">Used for accessing contacts and profiles on the User's device, including the changing of entries.</p>
+              </div>
+
+              <div class="bg-white/[0.02] border border-white/[0.06] p-4 rounded-xl" data-ps="src/pages/privacy.astro:esgoof">
+                <h4 class="text-white font-semibold mb-1" data-ps="src/pages/privacy.astro:rq3c0h">Microphone permission</h4>
+                <p class="text-[#9fb1c2] text-sm m-0" data-ps="src/pages/privacy.astro:brhx92">Used for accessing and recording microphone audio from the User's device.</p>
+              </div>
+
+              <div class="bg-white/[0.02] border border-white/[0.06] p-4 rounded-xl" data-ps="src/pages/privacy.astro:esgoog">
+                <h4 class="text-white font-semibold mb-1" data-ps="src/pages/privacy.astro:rq3c0i">Phone permission</h4>
+                <p class="text-[#9fb1c2] text-sm m-0" data-ps="src/pages/privacy.astro:brhx93">Used for accessing a host of typical features associated with telephony. This enables, for instance, read-only access to the "phone state," which means it enables access to the phone number of the device, current mobile network information, or the status of any ongoing calls.</p>
+              </div>
+
+              <div class="bg-white/[0.02] border border-white/[0.06] p-4 rounded-xl" data-ps="src/pages/privacy.astro:esgooh">
+                <h4 class="text-white font-semibold mb-1" data-ps="src/pages/privacy.astro:rq3c0j">Precise location permission (non-continuous)</h4>
+                <p class="text-[#9fb1c2] text-sm m-0" data-ps="src/pages/privacy.astro:brhx94">Used for accessing the User's precise device location to allow users to share their location with other users. The geographic location of the User is determined in a manner that isn't continuous. This means that it is impossible for Advanced VoIP Data, LLC to derive the exact position of the User on a continuous basis.</p>
+              </div>
+
+              <div class="bg-white/[0.02] border border-white/[0.06] p-4 rounded-xl" data-ps="src/pages/privacy.astro:esgooi">
+                <h4 class="text-white font-semibold mb-1" data-ps="src/pages/privacy.astro:rq3c0k">Storage permission</h4>
+                <p class="text-[#9fb1c2] text-sm m-0" data-ps="src/pages/privacy.astro:brhx95">Used for accessing shared external storage, including the reading and adding of any items.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Purpose of Processing -->
+        <section class="space-y-3" data-ps="src/pages/privacy.astro:section-purpose">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2" data-ps="src/pages/privacy.astro:dy6vje">
+            <span class="w-1.5 h-5 bg-[#94e760] rounded-full inline-block" data-ps="src/pages/privacy.astro:yc005w"></span>
+            The Purpose of Processing
+          </h2>
+          <p class="text-[#9fb1c2] text-[15.5px]" data-ps="src/pages/privacy.astro:brhx96">
+            The Data concerning the User is collected to allow Advanced VoIP Data, LLC to provide its Service, comply with its legal obligations, respond to enforcement requests, protect its rights and interests (or those of its Users or third parties), detect any malicious or fraudulent activity, as well as the following: Device permissions for Personal Data access, Hosting and backend infrastructure, Infrastructure monitoring, Location-based interactions, Contacting the User, Registration and authentication and Managing contacts and sending messages.
+          </p>
+        </section>
+
+        <!-- Sharing and Disclosure -->
+        <section class="space-y-3" data-ps="src/pages/privacy.astro:section-sharing">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2" data-ps="src/pages/privacy.astro:dy6vjd">
+            <span class="w-1.5 h-5 bg-[#94e760] rounded-full inline-block" data-ps="src/pages/privacy.astro:yc005x"></span>
+            Sharing and Disclosure of Personal Information to Third Parties
+          </h2>
+          <p class="text-[#9fb1c2] text-[15.5px]" data-ps="src/pages/privacy.astro:brhx97">
+            Any personal information that we collect (as identified in the "Personal Data We Collect" section) may be shared with business partners, contractors, vendors, and authorized third-party agents either with Your consent or for business or legal purposes and in accordance with applicable law to:
+          </p>
+          <ul class="list-disc pl-5 text-[#9fb1c2] text-[15.5px] space-y-1.5">
+            <li data-ps="src/pages/privacy.astro:d77z3e">Conduct analytics in order to improve the user experience of our Apps and Services.</li>
+            <li data-ps="src/pages/privacy.astro:d77z3d">Provide support and technical services.</li>
+            <li data-ps="src/pages/privacy.astro:d77z3c">Operate, deliver, improve, and customize our Apps and Services.</li>
+          </ul>
+        </section>
+
+        <!-- Retention Time -->
+        <section class="space-y-3" data-ps="src/pages/privacy.astro:section-retention">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2" data-ps="src/pages/privacy.astro:ghm1gv">
+            <span class="w-1.5 h-5 bg-[#94e760] rounded-full inline-block" data-ps="src/pages/privacy.astro:yc005y"></span>
+            Retention Time
+          </h2>
+          <p class="text-[#9fb1c2] text-[15.5px]" data-ps="src/pages/privacy.astro:brhx98">
+            We process Personal Data and store it for as long as required to fulfil for which the information was originally collected. Therefore Personal Data that was collected for purposes related to the performance of a contract between Advanced VoIP Data, LLC and the User shall be retained until such contract has been fully performed.
+          </p>
+          <ul class="list-disc pl-5 text-[#9fb1c2] text-[15.5px] space-y-1.5">
+            <li data-ps="src/pages/privacy.astro:d77z3b">We may retain Personal Data for a longer period whenever required to do so for the performance of a legal obligation or upon order of an authority.</li>
+            <li data-ps="src/pages/privacy.astro:d77z3a">Once the retention period expires, Personal Data will be deleted or anonymized.</li>
+          </ul>
+        </section>
+
+        <!-- SMS Privacy Notice -->
+        <section class="space-y-3 bg-white/[0.02] border border-[#94e760]/20 rounded-xl p-5 sm:p-6" data-ps="src/pages/privacy.astro:section-sms">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2" data-ps="src/pages/privacy.astro:ghm1gm">
+            <span class="w-1.5 h-5 bg-[#94e760] rounded-full inline-block" data-ps="src/pages/privacy.astro:exjhuy"></span>
+            SMS Privacy Notice
+          </h2>
+          <p class="text-[#cbd5e1] text-[15.5px]" data-ps="src/pages/privacy.astro:najb01">
+            All the above categories exclude text messaging originator opt in data and consent; this information will not be shared with any third parties.
+          </p>
+          <p class="text-[#cbd5e1] text-[15.5px]" data-ps="src/pages/privacy.astro:najb02">
+            We will not share your opt-in to an SMS campaign with any third party for purposes unrelated to providing you with the services of that campaign.
+          </p>
+          <p class="text-[#cbd5e1] text-[15.5px]" data-ps="src/pages/privacy.astro:najb03">
+            We may share your Personal Data, including your SMS opt-in or consent status, with third parties that help us provide our messaging services, including but not limited to platform providers, phone companies, and any other vendors who assist us in the delivery of text messages.
+          </p>
+        </section>
+
+        <!-- Updates & Contact -->
+        <section class="space-y-3" data-ps="src/pages/privacy.astro:section-updates">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2" data-ps="src/pages/privacy.astro:ghm1gu">
+            <span class="w-1.5 h-5 bg-[#94e760] rounded-full inline-block" data-ps="src/pages/privacy.astro:yc005z"></span>
+            Updates
+          </h2>
+          <p class="text-[#9fb1c2] text-[15.5px]" data-ps="src/pages/privacy.astro:brhx99">
+            Our Privacy Policy may change from time to time and all updates will be posted on this page.
+          </p>
+          <p class="text-[#9fb1c2] text-[15.5px]" data-ps="src/pages/privacy.astro:brhx9a">
+            If you feel that we are not abiding by this privacy policy, you should contact us immediately via telephone at <a href="tel:+12483132300" class="text-[#94e760] hover:underline font-medium" data-ps="src/pages/privacy.astro:ivfty0">248-313-2300</a> or via email at <a href="mailto:support@gonetexpress.com" class="text-[#94e760] hover:underline font-medium" data-ps="src/pages/privacy.astro:ivfty1">support@gonetexpress.com</a>.
+          </p>
+        </section>
+
+        <div class="border-t border-white/[0.08] pt-6 mt-8 flex flex-col sm:flex-row justify-end items-center gap-4 text-sm text-[#9fb1c2]" data-ps="src/pages/privacy.astro:bottom-links">
+          <a href="/terms/" class="text-[#9fb1c2] hover:text-[#94e760] transition-colors underline" data-ps="src/pages/privacy.astro:ivfty2">View Terms & Conditions</a>
+        </div>
+
+      </div>
+    </Container>
+  </main>
+</BaseLayout>

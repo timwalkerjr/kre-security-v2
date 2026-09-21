@@ -1,0 +1,257 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { SITE } from '@/config/site';
+
+const articles = await getCollection('articles', ({ data }) => !data.draft);
+const sortedArticles = articles.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const featuredArticle = sortedArticles.find(a => a.data.featured) || sortedArticles[0];
+const otherArticles = sortedArticles.filter(a => a !== featuredArticle);
+
+// Extract unique categories
+const categories = Array.from(new Set(sortedArticles.map(a => a.data.category).filter(Boolean)));
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Business Telecom & IT Articles | Net Express',
+    description: 'Expert guides, telecom insights, and Michigan business technology resources by Net Express.',
+    url: new URL('/articles', SITE.url).toString(),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: sortedArticles.map((article, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: article.data.title,
+      url: new URL(`/articles/${article.id}`, SITE.url).toString(),
+    })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: SITE.url,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Articles',
+        item: new URL('/articles', SITE.url).toString(),
+      },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Telecom, VoIP & Business IT Articles | Net Express"
+  description="Explore expert telecom insights, hosted VoIP guides, fiber internet comparisons, and enterprise IT tips for Michigan businesses from Net Express."
+  jsonLd={jsonLd}
+>
+  <!-- Hero Section -->
+  <section class="relative isolate py-16 lg:py-20 border-b border-white/[0.08]" data-ps="src/pages/articles/index.astro:bgwyc7">
+    <div class="max-w-[1180px] mx-auto px-6" data-ps="src/pages/articles/index.astro:ik200q">
+      
+      <!-- Eyebrow -->
+      <div class="flex items-center gap-2 mb-3" data-ps="src/pages/articles/index.astro:ik200r">
+        <span class="w-4 h-[2px] bg-[#94e760]" data-ps="src/pages/articles/index.astro:fc33a0"></span>
+        <span class="text-[#94e760] text-[13.6px] font-semibold tracking-wider uppercase" data-ps="src/pages/articles/index.astro:fc33a1">
+          Articles & Knowledge Hub
+        </span>
+      </div>
+
+      <h1 class="text-[38px] sm:text-[50px] font-extrabold text-white leading-[1.08] tracking-[-1.5px] max-w-[850px] mb-5" data-ps="src/pages/articles/index.astro:l6rugn">
+        Telecom Insights & Practical IT Guides
+      </h1>
+      
+      <p class="text-[#9fb1c2] text-[18px] sm:text-[19.5px] leading-relaxed max-w-[720px] mb-8" data-ps="src/pages/articles/index.astro:5ffeov">
+        Actionable articles on Hosted VoIP, dedicated fiber internet, cloud fax compliance, and simplifying business connectivity across Michigan.
+      </p>
+
+      <!-- Category Filter Pills -->
+      {categories.length > 0 && (
+        <div class="flex flex-wrap gap-2.5 pt-2" data-ps="src/pages/articles/index.astro:ik200s">
+          <span class="bg-white text-[#0a1a2e] font-semibold text-[13.5px] px-4 py-1.5 rounded-full shadow-sm" data-ps="src/pages/articles/index.astro:fc33a2">
+            All Articles ({sortedArticles.length})
+          </span>
+          {categories.map((cat, __psIdx) => (
+            <span class="bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.09] text-[#c4d1dd] text-[13.5px] px-4 py-1.5 rounded-full transition-colors" data-ps={`src/pages/articles/index.astro:fc33a3-${__psIdx}`}>
+              {cat}
+            </span>
+          ))}
+        </div>
+      )}
+
+    </div>
+  </section>
+
+  <!-- Featured Article (if available) -->
+  {featuredArticle && (
+    <section class="py-12 bg-white/[0.015] border-b border-white/[0.06]" data-ps="src/pages/articles/index.astro:bgwyc6">
+      <div class="max-w-[1180px] mx-auto px-6" data-ps="src/pages/articles/index.astro:ik200t">
+        <div class="text-[12.8px] font-bold uppercase tracking-[1.28px] text-[#94e760] mb-4" data-ps="src/pages/articles/index.astro:ik200u">
+          ★ Featured Guide
+        </div>
+
+        <a
+          href={`/articles/${featuredArticle.id}`}
+          class="group block bg-gradient-to-br from-[#0c2338]/90 to-[#081827] border border-white/[0.1] hover:border-[#94e760]/50 rounded-[22px] p-6 sm:p-10 transition-all hover:-translate-y-1 hover:shadow-2xl no-underline"
+         data-ps="src/pages/articles/index.astro:cjdbd2">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" data-ps="src/pages/articles/index.astro:ik200v">
+            <div class="lg:col-span-8" data-ps="src/pages/articles/index.astro:ik200w">
+              <div class="flex items-center gap-3 text-[13.5px] text-[#9fb1c2] mb-3" data-ps="src/pages/articles/index.astro:ik200x">
+                <span class="bg-[#94e760]/15 text-[#94e760] font-semibold px-2.5 py-0.5 rounded text-[12px] uppercase" data-ps="src/pages/articles/index.astro:fc33a4">
+                  {featuredArticle.data.category}
+                </span>
+                <span data-ps="src/pages/articles/index.astro:fc33a5">•</span>
+                <time datetime={featuredArticle.data.pubDate?.toISOString()}>
+                  {featuredArticle.data.pubDate?.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                  })}
+                </time>
+                {featuredArticle.data.readingTime && (
+                  <>
+                    <span data-ps="src/pages/articles/index.astro:fc33a6">•</span>
+                    <span data-ps="src/pages/articles/index.astro:fc33as">{featuredArticle.data.readingTime}</span>
+                  </>
+                )}
+              </div>
+
+              <h2 class="text-[26px] sm:text-[34px] font-extrabold text-white group-hover:text-[#94e760] transition-colors leading-tight mb-4" data-ps="src/pages/articles/index.astro:6icx90">
+                {featuredArticle.data.title}
+              </h2>
+
+              <p class="text-[#9fb1c2] text-[16.5px] leading-relaxed mb-6" data-ps="src/pages/articles/index.astro:5ffeow">
+                {featuredArticle.data.description}
+              </p>
+
+              <span class="inline-flex items-center gap-2 text-white font-semibold text-[15px] group-hover:text-[#94e760] transition-colors" data-ps="src/pages/articles/index.astro:fc33at">
+                Read Full Article <span class="group-hover:translate-x-1 transition-transform" data-ps="src/pages/articles/index.astro:fc33au">&rarr;</span>
+              </span>
+            </div>
+
+            <div class="lg:col-span-4" data-ps="src/pages/articles/index.astro:ik200y">
+              {featuredArticle.data.image ? (
+                <div class="rounded-[16px] overflow-hidden border border-white/[0.1] bg-[#112131] aspect-[16/10] shadow-lg" data-ps="src/pages/articles/index.astro:9ri099">
+                  <img
+                    src={featuredArticle.data.image}
+                    alt={featuredArticle.data.imageAlt || featuredArticle.data.title}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="eager" data-ps="src/pages/articles/index.astro:k3qye1" />
+                </div>
+              ) : (
+                <div class="bg-white/[0.04] border border-white/[0.08] rounded-[16px] p-6 text-center" data-ps="src/pages/articles/index.astro:ik200z">
+                  <div class="w-12 h-12 rounded-full bg-[#94e760]/15 text-[#94e760] flex items-center justify-center mx-auto mb-3" data-ps="src/pages/articles/index.astro:9ri091">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  </div>
+                  <div class="text-white font-bold text-[16px] mb-1" data-ps="src/pages/articles/index.astro:9ri092">Author: {featuredArticle.data.author}</div>
+                  <div class="text-[#9fb1c2] text-[13px]" data-ps="src/pages/articles/index.astro:9ri093">Net Express Michigan Engineering & Support</div>
+                </div>
+              )}
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+  )}
+
+  <!-- Articles Grid -->
+  <section class="py-16" data-ps="src/pages/articles/index.astro:bgwyc5">
+    <div class="max-w-[1180px] mx-auto px-6" data-ps="src/pages/articles/index.astro:9ri094">
+      <h2 class="text-[28px] font-extrabold text-white mb-8" data-ps="src/pages/articles/index.astro:6icx91">
+        Latest Published Articles
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-ps="src/pages/articles/index.astro:9ri095">
+        {otherArticles.map((article, __psIdx) => (
+          <article class="flex flex-col bg-white/[0.03] border border-white/[0.08] hover:border-[#94e760]/40 rounded-[18px] overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all" data-ps={`src/pages/articles/index.astro:9ezyie-${__psIdx}`}>
+            {article.data.image && (
+              <a href={`/articles/${article.id}`} class="block aspect-[16/9] overflow-hidden bg-[#112131] border-b border-white/[0.06]" data-ps={`src/pages/articles/index.astro:dcd4nq-${__psIdx}`}>
+                <img
+                  src={article.data.image}
+                  alt={article.data.imageAlt || article.data.title}
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy" data-ps={`src/pages/articles/index.astro:k3qye0-${__psIdx}`} />
+              </a>
+            )}
+            <div class="p-7 flex flex-col flex-grow" data-ps={`src/pages/articles/index.astro:9ri09a-${__psIdx}`}>
+              <div class="flex items-center justify-between text-[13px] text-[#9fb1c2] mb-3" data-ps={`src/pages/articles/index.astro:9ri096-${__psIdx}`}>
+                <span class="text-[#94e760] font-semibold uppercase tracking-wider text-[11.5px] bg-[#94e760]/10 px-2 py-0.5 rounded" data-ps={`src/pages/articles/index.astro:fc33av-${__psIdx}`}>
+                  {article.data.category}
+                </span>
+                <time datetime={article.data.pubDate?.toISOString()}>
+                  {article.data.pubDate?.toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric'
+                  })}
+                </time>
+              </div>
+
+              <h3 class="text-[20px] font-bold text-white mb-3 leading-snug" data-ps={`src/pages/articles/index.astro:861zyl-${__psIdx}`}>
+                <a href={`/articles/${article.id}`} class="hover:text-[#94e760] transition-colors no-underline text-white" data-ps={`src/pages/articles/index.astro:cjdbd3-${__psIdx}`}>
+                  {article.data.title}
+                </a>
+              </h3>
+
+              <p class="text-[#9fb1c2] text-[14.8px] leading-relaxed mb-6 flex-grow" data-ps={`src/pages/articles/index.astro:5ffeox-${__psIdx}`}>
+                {article.data.description}
+              </p>
+
+              <div class="pt-4 border-t border-white/[0.06] flex items-center justify-between text-[13.5px]" data-ps={`src/pages/articles/index.astro:9ri097-${__psIdx}`}>
+                <span class="text-[#9fb1c2]" data-ps={`src/pages/articles/index.astro:fc33aw-${__psIdx}`}>{article.data.readingTime || '5 min read'}</span>
+                <a href={`/articles/${article.id}`} class="text-[#94e760] font-semibold hover:underline no-underline inline-flex items-center gap-1" data-ps={`src/pages/articles/index.astro:cjdbdp-${__psIdx}`}>
+                  Read Article &rarr;
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      {sortedArticles.length === 0 && (
+        <div class="text-center py-16 bg-white/[0.02] border border-white/[0.08] rounded-[18px]" data-ps="src/pages/articles/index.astro:9ri098">
+          <p class="text-[#9fb1c2] text-[16px]" data-ps="src/pages/articles/index.astro:5ffeoy">No articles published yet. Check back soon.</p>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="py-16 bg-[#061421] border-t border-white/[0.08]" data-ps="src/pages/articles/index.astro:bgwyc4">
+    <div class="max-w-[1180px] mx-auto px-6 text-center" data-ps="src/pages/articles/index.astro:9ri099">
+      <h2 class="text-[32px] sm:text-[40px] font-extrabold text-white mb-4" data-ps="src/pages/articles/index.astro:6icx92">
+        Need Help Evaluating Your Telecom Infrastructure?
+      </h2>
+      <p class="text-[#9fb1c2] text-[17px] max-w-[650px] mx-auto mb-8" data-ps="src/pages/articles/index.astro:5ffeoz">
+        Speak with a Michigan telecom engineer for an honest audit of your phone lines, internet contracts, and IT setup.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4" data-ps="src/pages/articles/index.astro:9ri09a">
+        <a
+          href="/#contact"
+          class="bg-white text-[#0a1a2e] font-semibold text-[16px] px-[28px] py-[14px] rounded-[10px] hover:bg-[#eef3f7] transition-all no-underline shadow"
+         data-ps="src/pages/articles/index.astro:cjdbdq">
+          Request Free Telecom Audit
+        </a>
+        <a
+          href="tel:+18553132300"
+          class="border border-white/20 text-white font-semibold text-[16px] px-[28px] py-[14px] rounded-[10px] hover:border-[#94e760] transition-all no-underline"
+         data-ps="src/pages/articles/index.astro:cjdbdr">
+          Call (855) 313-2300
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
