@@ -25,6 +25,8 @@ export const SITE = {
     scheduling: 'scheduling@kresecurity.com',
     employment: 'employment@kresecurity.com',
   },
+  adobeSignApplication:
+    'https://na4.documents.adobe.com/public/esignWidget?wid=CBFCIBAA3AAABLblqZhDVu8TUeWmiMKm9oE1_hjixjqhIuSb3EtQyMD2mPlOX7QUF0PNlNIISYZ0f9woOk40*',
   phone: {
     primary: '610-562-0971',
     primaryTel: '+16105620971',
