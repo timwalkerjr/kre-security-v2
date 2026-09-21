@@ -1,0 +1,32 @@
+---
+import PageHero from '@/components/pages/PageHero.astro';
+import { designAsset } from '@/config/site';
+---
+
+<PageHero
+  eyebrow="Home & Business Protection"
+  title="In-Home Security Systems"
+  primaryHref="/contact/"
+  primaryLabel="Contact Us Today"
+  secondaryHref="/security-checks/"
+  secondaryLabel="Home Security Checks"
+>
+  <Fragment slot="lead">
+    <p class="m-0">
+      KRE Security LLC. can secure your home or business in the best possible way. We are community oriented and always willing to help you in any situation.
+    </p>
+    <p class="m-0">
+      We work with a variety of wireless alarm systems with multiple features. All systems are user friendly and easy to install. We can customize the system to your particular needs for your home, business, etc.
+    </p>
+  </Fragment>
+  <Fragment slot="media">
+    <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden p-2">
+      <img
+        src={designAsset('/images/lib/39725c_95e787849bb94eb49f4b5e5f7b344a54-mv2-320.webp')}
+        alt="Home security systems and private security"
+        class="w-full max-w-[320px] h-auto object-cover rounded-[12px] mx-auto"
+        loading="eager"
+      />
+    </div>
+  </Fragment>
+</PageHero>

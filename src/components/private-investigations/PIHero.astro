@@ -1,0 +1,32 @@
+---
+import PageHero from '@/components/pages/PageHero.astro';
+import { SITE, designAsset } from '@/config/site';
+---
+
+<PageHero
+  eyebrow="Dispatch Status: Active"
+  title="Qualified Pennsylvania Private Investigators & Process Services"
+  primaryHref="/#contact"
+  primaryLabel="Contact Us to Get Started"
+  secondaryHref={`tel:${SITE.phone.primaryTel}`}
+  secondaryLabel={SITE.phone.primary}
+>
+  <Fragment slot="lead">
+    <p class="m-0">
+      Our professional private investigators use a number of surveillance and investigative techniques to gather accurate information on any subject or situation in question.
+    </p>
+    <p class="m-0">
+      Our private investigators have a keen eye, excellent observation skills, and an analytical mind to uncover facts and evidence for our valued customers. We perform cases locally and nationally.
+    </p>
+  </Fragment>
+  <Fragment slot="media">
+    <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden">
+      <img
+        src={designAsset('/images/lib/9e94c3243314391af0e112ab0e3dc4a2-320.webp')}
+        alt="PA Private Investigators in Montgomery PA"
+        class="w-full h-auto object-cover"
+        loading="eager"
+      />
+    </div>
+  </Fragment>
+</PageHero>

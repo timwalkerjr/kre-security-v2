@@ -1,0 +1,35 @@
+---
+import PageHero from '@/components/pages/PageHero.astro';
+import { SITE, designAsset } from '@/config/site';
+---
+
+<PageHero
+  eyebrow="Dispatch Status: Active"
+  title="Event Staffing & Security Guard Services"
+  primaryHref="/#contact"
+  primaryLabel="Contact Us to Get Started"
+  secondaryHref={`tel:${SITE.phone.primaryTel}`}
+  secondaryLabel={SITE.phone.primary}
+>
+  <Fragment slot="lead">
+    <p class="m-0">
+      KRE has over 30 years of specialized event staffing services we bring to our clients — a separate division from our security protection team.
+    </p>
+    <p class="m-0">
+      We are a local, well trusted, respected security company who has been providing a vast portion of security needs to schools, businesses and residences in eastern PA. Any large or small scale event needs can be handled by KRE with custom services tailored to our clients 24/7.
+    </p>
+  </Fragment>
+  <Fragment slot="media">
+    <div class="grid grid-cols-2 gap-3">
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden">
+        <img src={designAsset('/images/lib/IMG_2754-320.webp')} alt="Event security staffing" class="w-full h-40 object-cover" loading="eager" />
+      </div>
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden">
+        <img src={designAsset('/images/lib/39725c_5cd7e3e1e5d84cc6a46b497a37fc813c-mv2-320.webp')} alt="School safety services" class="w-full h-40 object-cover" loading="eager" />
+      </div>
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden col-span-2">
+        <img src={designAsset('/images/lib/traffic-control_JPG-320.webp')} alt="Traffic control services" class="w-full h-36 object-cover" loading="eager" />
+      </div>
+    </div>
+  </Fragment>
+</PageHero>
