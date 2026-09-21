@@ -1,0 +1,88 @@
+---
+import { designAsset } from '@/config/site';
+
+const investigations = [
+  'Accident Investigation', 'Accident Reconstruction', 'Activity Checks',
+  'Adoptions / Biological Parents', 'Aerial Photography', 'Arson Investigation',
+  'Assets Investigation', 'Attempt To Locate', 'Audio/Video Forensics',
+  'Aviation Issues', 'Background Investigation', 'Banking Community',
+  'Blood Stain Analysis', 'Cellular Forensics', 'Cheating Spouse',
+  'Child Abuse Investigation', 'Child Custody Investigations', 'Civil Investigation/Litigation Support',
+  'Civil Litigation Support', 'Cohabitation/Alimony Investigations', 'Computer Forensics',
+  'Computer Forensics Investigations', 'Corporate Investigation', 'Court Record Research',
+  'Covert CCTV Installation', 'Criminal Defense Investigations', 'Crisis Management',
+  'CTPAT Compliance', 'Custody & Support Issues', 'Database Searches',
+  'De-Bugging Services', 'DMV Information', 'Domestic Investigation',
+  'Drug Investigation', 'Due Diligence', 'Employment/Pre-Employment Issues',
+  'Environmental Issues/Investigation', 'Ethics Issues', 'Expert Witness',
+  'Explosives', 'Financial Investigation', 'Fingerprinting',
+  'Forensic Accounting', 'Genealogy Research', 'General Investigations',
+  'GPS Tracking', 'Homicide/Death Investigation', 'Insurance/Fraud Investigation',
+  'International Investigation', 'Interviews/Witness Locates', 'Major Theft',
+  'Marine Related Issues', 'Medical Malpractice', 'Missing Persons',
+  'Nursing Home Abuse', 'Paranormal Investigation', 'Personal Injury Investigation',
+  'Photography', 'Polygraph', 'Post Conviction Relief Act',
+  'Process Services', 'Product Counterfeiting', 'Product Diversion',
+  'Product Liability', 'Protective Service', 'Real Estate Investigation',
+  'Risk Management', 'School Security', 'Security Consulting/Training',
+  'Security Officer Deployment', 'Security Surveys', 'Sex Crimes',
+  'Statement Analysis', 'Surveillance Investigations', 'Technical Countermeasures',
+  'Undercover Operations', 'White Collar Crime', 'Workers Compensation Investigation',
+];
+
+const gallery = [
+  { src: '/images/lib/39725c_a272516e4fa8439bbe716d944eb3148f-mv2-249.webp', alt: 'Private investigator Bucks County' },
+  { src: '/images/lib/39725c_e230718b9ea643a2afff68600a7065bc-mv2-249.webp', alt: 'Domestic violence private investigator Lehigh' },
+  { src: '/images/lib/39725c_40dd4740abfa44788b33dd10823d839c-mv2-249.webp', alt: 'Private investigator for cheating spouse Berks' },
+  { src: '/images/lib/39725c_0ca781b46edd4907a9d6131400942c17-mv2-249.webp', alt: 'Financial private investigators' },
+  { src: '/images/lib/39725c_3cd3d8abc8494c5aa9c9bffb7cc11482-mv2-249.webp', alt: 'Fingerprinting and private investigators' },
+  { src: '/images/lib/39725c_6e1e4fcc3dd940518701cf28ecf5d704-mv2-249.webp', alt: 'Homicide private investigators' },
+  { src: '/images/lib/39725c_5dfd99ec32d24f7eaac23656994d7dfb-mv2-249.webp', alt: 'Major theft private investigators' },
+  { src: '/images/lib/39725c_4de679ce448340d3959138760475687a-mv2-249.webp', alt: 'School private investigators' },
+  { src: '/images/lib/39725c_e0319929c0654d17a6db72fdb9808be7-mv2-249.webp', alt: 'Surveillance private investigators' },
+];
+---
+
+<section class="relative isolate py-[72px] border-t border-white/[0.06]" data-ps="src/components/private-investigations/PIServices.astro:section">
+  <div class="max-w-[1180px] mx-auto px-6">
+    <div class="max-w-2xl mb-10">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="w-4 h-[2px] bg-[#f5bd14]"></span>
+        <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase">Investigation Types</span>
+      </div>
+      <h2 class="text-[32px] sm:text-[36px] font-extrabold text-[#f5f5f4] leading-[1.08] mb-4">
+        Providing Private Investigation Services For The Following:
+      </h2>
+      <p class="text-[#a8a29e] text-[16px] leading-[26px] m-0">
+        Our comprehensive investigation capabilities span local and national cases, tailored to each client's specific needs.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 mb-12">
+      {investigations.map((item) => (
+        <div class="flex items-center gap-2 p-3 bg-white/[0.035] border border-white/[0.09] rounded-[10px] hover:border-[#f5bd14]/40 transition-colors">
+          <span class="w-1.5 h-1.5 bg-[#f5bd14] shrink-0 rounded-full"></span>
+          <span class="text-[#f5f5f4] text-[12px]">{item}</span>
+        </div>
+      ))}
+    </div>
+
+    <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-2 mb-12">
+      {gallery.map((img) => (
+        <div class="aspect-square overflow-hidden rounded-[10px] border border-white/[0.09]">
+          <img src={designAsset(img.src)} alt={img.alt} class="w-full h-full object-cover" loading="lazy" />
+        </div>
+      ))}
+    </div>
+
+    <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-7 flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
+      <div>
+        <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-1">KRE Investigations Division</p>
+        <p class="text-[#f5f5f4] text-[18px] m-0">Ready to discuss your case? Contact us today.</p>
+      </div>
+      <a href="/#contact" class="bg-[#f5bd14] text-[#0a0a0a] font-bold text-[14px] px-8 py-3 rounded-[10px] no-underline hover:bg-[#e0ab10] whitespace-nowrap">
+        Contact Us to Get Started
+      </a>
+    </div>
+  </div>
+</section>
