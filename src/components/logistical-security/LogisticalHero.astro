@@ -1,0 +1,34 @@
+---
+import PageHero from '@/components/pages/PageHero.astro';
+import { designAsset } from '@/config/site';
+---
+
+<PageHero
+  eyebrow="Logistics Division: Active Since 1990"
+  title="Logistical Business Security"
+  primaryHref="/contact/"
+  primaryLabel="Contact Us Today to Get Started"
+>
+  <Fragment slot="lead">
+    <p class="m-0">
+      KRE Security specializes in providing security and logistical services for the transportation industry across the Eastern PA region since 1990, serving the I-78 Lehigh, Berks, and Lebanon Counties corridors.
+    </p>
+  </Fragment>
+  <Fragment slot="media">
+    <div class="space-y-4">
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden p-2">
+        <img
+          src={designAsset('/images/lib/20220228_124814-320.webp')}
+          alt="KRE Security logistical security operations"
+          class="w-full max-w-[320px] h-auto object-cover rounded-[12px] mx-auto"
+          loading="eager"
+        />
+      </div>
+      <div class="border-l-2 border-[#f5bd14] pl-4">
+        <p class="text-[#a8a29e] text-[12px] font-bold uppercase tracking-widest m-0">
+          Eastern PA | I-78 Corridor | Lehigh · Berks · Lebanon
+        </p>
+      </div>
+    </div>
+  </Fragment>
+</PageHero>
