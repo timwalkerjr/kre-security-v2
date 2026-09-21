@@ -1,0 +1,96 @@
+---
+import { designAsset } from '@/config/site';
+
+const roles = [
+  { title: 'School Police Officers (SPOs):', desc: 'Law enforcement officers employed or contracted by schools.' },
+  { title: 'School Resource Officers (SROs):', desc: 'Officers stationed in schools through agreements with law enforcement agencies.' },
+  { title: 'School Security Guards:', desc: 'Personnel responsible for routine safety and security duties in schools.' },
+];
+
+const services = [
+  { tag: 'Training', title: 'Certified Training Programs', desc: 'We provide the Basic School Resource Officer Course of Instruction approved by the National Association of School Resource Officers (NASRO) or equivalent courses.' },
+  { tag: 'Compliance', title: 'Credential Verification', desc: 'Assistance with background checks and certifications under the Lethal Weapons Training Act (Act 235).' },
+  { tag: 'Tailored', title: 'Customized Security Solutions', desc: 'Tailored security plans to meet the unique needs of your school or district.' },
+  { tag: 'Continuous', title: 'Ongoing Support', desc: 'Annual in-service training and compliance updates to ensure your security personnel remain certified and prepared.' },
+];
+---
+
+<section class="relative isolate py-[72px] border-t border-white/[0.06]" data-ps="src/components/act-67-certified-services/Act67Content.astro:section">
+  <div class="max-w-[1180px] mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-12 mb-16 items-start">
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-4 h-[2px] bg-[#f5bd14]"></span>
+          <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase">Pennsylvania Law</span>
+        </div>
+        <h2 class="text-[32px] font-extrabold text-[#f5f5f4] leading-[1.08] mb-6">What is ACT 67?</h2>
+        <p class="text-[#a8a29e] text-[16px] leading-[26px] mb-6">
+          ACT 67 of 2019 is a Pennsylvania law that enhances school safety by establishing clear training and credentialing requirements for school security personnel, including:
+        </p>
+        <ul class="space-y-4 m-0 p-0 list-none">
+          {roles.map((role) => (
+            <li class="flex gap-3 items-start">
+              <span class="mt-1.5 w-2 h-2 bg-[#f5bd14] shrink-0 rounded-full"></span>
+              <div>
+                <span class="text-[#f5f5f4] text-[14px] font-bold">{role.title}</span>
+                <span class="text-[#a8a29e] text-[14px] ml-1">{role.desc}</span>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <p class="text-[#a8a29e] text-[14px] leading-[22px] mt-6 mb-0">
+          ACT 67 ensures that only qualified and trained individuals are authorized to carry firearms and perform security duties in educational settings.
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-3">
+        <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden">
+          <img src={designAsset('/images/lib/IMG_2754-320.webp')} alt="ACT 67 training" class="w-full h-40 object-cover" loading="lazy" />
+        </div>
+        <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden">
+          <img src={designAsset('/images/lib/Training-course-320.webp')} alt="Training course" class="w-full h-40 object-cover" loading="lazy" />
+        </div>
+        <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden col-span-2">
+          <img src={designAsset('/images/lib/Modern-School-Building-320.webp')} alt="Modern School Building" class="w-full h-40 object-cover" loading="lazy" />
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-16">
+      <div class="mb-8">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-4 h-[2px] bg-[#f5bd14]"></span>
+          <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase">Authorized Vendor</span>
+        </div>
+        <h2 class="text-[32px] font-extrabold text-[#f5f5f4] leading-[1.08] mb-4">Our ACT 67 Services</h2>
+        <p class="text-[#a8a29e] text-[16px] max-w-2xl m-0">
+          As an authorized vendor, KRE Security offers comprehensive services to help schools comply with ACT 67 requirements.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-5">
+        {services.map((service) => (
+          <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-6">
+            <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-2">{service.tag}</p>
+            <h3 class="text-[18px] font-bold text-[#f5f5f4] mb-3">{service.title}</h3>
+            <p class="text-[#a8a29e] text-[14px] leading-[22px] m-0">{service.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden p-2">
+        <img src={designAsset('/images/lib/Classroom-768.webp')} alt="Classroom" class="w-full h-auto object-cover rounded-[12px]" loading="lazy" />
+      </div>
+      <div>
+        <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-3">Get Started Today</p>
+        <h2 class="text-[28px] font-extrabold text-[#f5f5f4] mb-4">Ensure Your School is ACT 67 Compliant</h2>
+        <p class="text-[#a8a29e] text-[16px] leading-[26px] mb-8">
+          Contact us to learn more about our ACT 67 services or to schedule a consultation. KRE Security is your trusted partner for certified school safety.
+        </p>
+        <a href="/contact/" class="inline-block bg-[#f5bd14] text-[#0a0a0a] font-bold text-[14px] px-8 py-4 rounded-[10px] no-underline hover:bg-[#e0ab10]">
+          Contact Us Today to Get Started
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
