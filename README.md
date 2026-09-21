@@ -2,7 +2,7 @@
 
 Black + gold rebuild of [kresecurity.com](https://www.kresecurity.com/) on the Pagesmith Astro chassis in this repo. Tim imports commits into Pagesmith — keep the Cloudflare adapter, `data-ps` attributes, and `/_pagesmith/fonts` wiring.
 
-Layout and IA come from [the Netlify Astro design](https://kre-security.netlify.app/). The home hero uses the two-column + action-card pattern and folds in the live yellow-header content (hiring, dispatch, training, regional phones). Eastern PA Educators stays visible; its destination URL is not set yet.
+Layout and IA come from [the Netlify Astro design](https://kre-security.netlify.app/). The home page is hero (two-column + action card) → services grid → license/veteran/dispatch → 5 benefits → 22-county coverage → Formspree quote (`mljrgzln`). Eastern PA Educators stays visible; its destination URL is not set yet.
 
 ## Local
 

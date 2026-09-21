@@ -1,117 +1,64 @@
 ---
-// What We Do / Services Section
+const services = [
+  { title: 'Event Staffing', slug: 'school-event-staff' },
+  { title: 'School Security', slug: 'school-security' },
+  { title: 'Security Guards', slug: 'security-guards-pa' },
+  { title: 'ACT 67 Certified Services', slug: 'act-67-certified-services' },
+  { title: 'Private Investigations', slug: 'private-investigations' },
+  { title: 'In-Home Security', slug: 'in-home-security' },
+  { title: 'Security Checks', slug: 'security-checks' },
+  { title: 'First Aid Training', slug: 'first-aid-training' },
+  { title: 'Vehicle Patrol', slug: 'vehicle-patrol' },
+  { title: 'Logistical Security', slug: 'logistical-security' },
+  { title: 'Armed Security', slug: 'armed-security-pa' },
+  { title: 'Warehouses & Distribution Centers', slug: 'warehouse-distribution-security' },
+  { title: 'Event Traffic Control', slug: 'event-traffic-control' },
+  { title: 'Process Services', slug: 'process-services' },
+  { title: 'Fire Watch', slug: 'fire-watch' },
+  { title: 'Armed Money Escorts', slug: 'armed-money-escorts' },
+];
 ---
 
-<section id="services" class="relative isolate py-[92px]" data-ps="src/components/home/Services.astro:section">
+<section id="services" class="relative isolate py-[72px] lg:py-[92px]" data-ps="src/components/home/Services.astro:section">
   <div class="max-w-[1180px] mx-auto px-6" data-ps="src/components/home/Services.astro:container">
-    
-    <!-- Section Header -->
-    <div class="max-w-[720px] text-left" data-ps="src/components/home/Services.astro:header">
+    <div class="max-w-[720px]" data-ps="src/components/home/Services.astro:header">
       <div class="flex items-center gap-2 mb-3" data-ps="src/components/home/Services.astro:eyebrow">
-        <span class="w-4 h-[2px] bg-[#94e760]" data-ps="src/components/home/Services.astro:4ny1y8"></span>
-        <span class="text-[#94e760] text-[13.6px] font-semibold tracking-wider uppercase" data-ps="src/components/home/Services.astro:4ny1y7">
-          What we do
+        <span class="w-4 h-[2px] bg-[#f5bd14]" data-ps="src/components/home/Services.astro:4ny1y8"></span>
+        <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase" data-ps="src/components/home/Services.astro:4ny1y7">
+          Service portfolio
         </span>
       </div>
-      <h2 class="text-[36px] font-extrabold text-[#eef3f7] leading-[1.08] tracking-[-1.1px] mb-4" data-ps="src/components/home/Services.astro:h2">
-        Everything your business needs to stay connected.
+      <h2 class="text-[36px] font-extrabold text-[#f5f5f4] leading-[1.08] tracking-[-1.1px] mb-4" data-ps="src/components/home/Services.astro:h2">
+        “Your Total Security Professional”
       </h2>
-      <p class="text-[#9fb1c2] text-[17.28px] leading-[28.51px]" data-ps="src/components/home/Services.astro:p">
-        Voice, data, internet, and IT — designed, provisioned, and supported by one local team.
+      <p class="text-[#a8a29e] text-[17.28px] leading-[28.51px]" data-ps="src/components/home/Services.astro:p">
+        Comprehensive, professional, and responsive protection solutions tailored to your specific operational needs.
       </p>
     </div>
 
-    <!-- 6 Services Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[24px] mt-[48px]" data-ps="src/components/home/Services.astro:grid">
-      
-      <!-- Card 1: Hosted VoIP -->
-      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-[32px] hover:border-[#94e760]/40 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,0,0,0.3)] transition-all flex flex-col justify-between" data-ps="src/components/home/Services.astro:card-1">
-        <div data-ps="src/components/home/Services.astro:p9g3e3">
-          <div class="bg-[#94e760]/12 text-[#94e760] w-12 h-12 rounded-[11px] flex items-center justify-center mb-5" data-ps="src/components/home/Services.astro:p9g3e4">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] mt-[48px]" data-ps="src/components/home/Services.astro:grid">
+      {services.map((service, index) => (
+        <a
+          href={`/${service.slug}/`}
+          class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-[24px] hover:border-[#f5bd14]/40 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,0,0,0.3)] transition-all no-underline flex flex-col justify-between min-h-[168px] group"
+          data-ps={`src/components/home/Services.astro:card-${index + 1}`}
+        >
+          <div data-ps={`src/components/home/Services.astro:card-body-${index + 1}`}>
+            <div class="text-[#f5bd14] text-[10.5px] font-bold tracking-[0.18em] uppercase mb-3" data-ps={`src/components/home/Services.astro:code-${index + 1}`}>
+              CMD-SEC-0{index + 1}
+            </div>
+            <h3 class="text-[17px] font-bold text-[#f5f5f4] leading-snug" data-ps={`src/components/home/Services.astro:title-${index + 1}`}>
+              {service.title}
+            </h3>
+          </div>
+          <div class="mt-6 flex items-center gap-2 text-[12px] font-semibold text-[#a8a29e] group-hover:text-[#f5bd14] transition-colors uppercase tracking-wider" data-ps={`src/components/home/Services.astro:cta-${index + 1}`}>
+            View protocol
+            <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
             </svg>
           </div>
-          <h3 class="text-[18.24px] font-bold text-[#eef3f7] mb-2.5" data-ps="src/components/home/Services.astro:bvanrx">Hosted VoIP</h3>
-          <p class="text-[#9fb1c2] text-[15.36px] leading-[25px]" data-ps="src/components/home/Services.astro:amfv7s">
-            A full cloud phone system with multi-location extension dialing, auto-attendants, and voicemail-to-email — no on-site PBX to buy or maintain.
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 2: Tailored Solutions -->
-      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-[32px] hover:border-[#94e760]/40 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,0,0,0.3)] transition-all flex flex-col justify-between" data-ps="src/components/home/Services.astro:card-2">
-        <div data-ps="src/components/home/Services.astro:p9g3e5">
-          <div class="bg-[#94e760]/12 text-[#94e760] w-12 h-12 rounded-[11px] flex items-center justify-center mb-5" data-ps="src/components/home/Services.astro:8cm2h1">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-            </svg>
-          </div>
-          <h3 class="text-[18.24px] font-bold text-[#eef3f7] mb-2.5" data-ps="src/components/home/Services.astro:bvanry">Tailored Solutions</h3>
-          <p class="text-[#9fb1c2] text-[15.36px] leading-[25px]" data-ps="src/components/home/Services.astro:amfv7t">
-            No two businesses run the same. We design and build a communications and IT system around how yours actually works — not a one-size-fits-all package.
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 3: Business Internet & Fiber -->
-      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-[32px] hover:border-[#94e760]/40 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,0,0,0.3)] transition-all flex flex-col justify-between" data-ps="src/components/home/Services.astro:card-3">
-        <div data-ps="src/components/home/Services.astro:8cm2h0">
-          <div class="bg-[#94e760]/12 text-[#94e760] w-12 h-12 rounded-[11px] flex items-center justify-center mb-5" data-ps="src/components/home/Services.astro:8cm2gz">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
-            </svg>
-          </div>
-          <h3 class="text-[18.24px] font-bold text-[#eef3f7] mb-2.5" data-ps="src/components/home/Services.astro:bvanrz">Business Internet & Fiber</h3>
-          <p class="text-[#9fb1c2] text-[15.36px] leading-[25px]" data-ps="src/components/home/Services.astro:amfv7u">Dedicated high-speed connectivity — up to 5 Gbps on fiber — built for business uptime, not best-effort. Redundant options available.</p>
-        </div>
-      </div>
-
-      <!-- Card 4: Virtual Fax (FaxBridge) -->
-      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-[32px] hover:border-[#94e760]/40 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,0,0,0.3)] transition-all flex flex-col justify-between" data-ps="src/components/home/Services.astro:card-4">
-        <div data-ps="src/components/home/Services.astro:8cm2gy">
-          <div class="bg-[#94e760]/12 text-[#94e760] w-12 h-12 rounded-[11px] flex items-center justify-center mb-5" data-ps="src/components/home/Services.astro:8cm2gx">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-          </div>
-          <h3 class="text-[18.24px] font-bold text-[#eef3f7] mb-2.5" data-ps="src/components/home/Services.astro:bvans0">Virtual Fax (FaxBridge)</h3>
-          <p class="text-[#9fb1c2] text-[15.36px] leading-[25px]" data-ps="src/components/home/Services.astro:amfv7v">
-            Send and receive faxes by email and web — no machine, no dedicated line. Reliable and compliant for healthcare, legal, and finance.
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 5: Managed IT -->
-      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-[32px] hover:border-[#94e760]/40 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,0,0,0.3)] transition-all flex flex-col justify-between" data-ps="src/components/home/Services.astro:card-5">
-        <div data-ps="src/components/home/Services.astro:8cm2gv">
-          <div class="bg-[#94e760]/12 text-[#94e760] w-12 h-12 rounded-[11px] flex items-center justify-center mb-5" data-ps="src/components/home/Services.astro:8cm2gu">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
-          </div>
-          <h3 class="text-[18.24px] font-bold text-[#eef3f7] mb-2.5" data-ps="src/components/home/Services.astro:bvans1">Managed IT</h3>
-          <p class="text-[#9fb1c2] text-[15.36px] leading-[25px]" data-ps="src/components/home/Services.astro:amfv7w">
-            Network management, security, and responsive support from a local team — so your technology just works and someone's always accountable.
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 6: 5G Failover -->
-      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-[32px] hover:border-[#94e760]/40 hover:-translate-y-1 hover:shadow-[0_14px_40px_rgba(0,0,0,0.3)] transition-all flex flex-col justify-between" data-ps="src/components/home/Services.astro:card-6">
-        <div data-ps="src/components/home/Services.astro:8cm2gt">
-          <div class="bg-[#94e760]/12 text-[#94e760] w-12 h-12 rounded-[11px] flex items-center justify-center mb-5" data-ps="src/components/home/Services.astro:8cm2gs">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-          </div>
-          <h3 class="text-[18.24px] font-bold text-[#eef3f7] mb-2.5" data-ps="src/components/home/Services.astro:bvans2">5G Failover</h3>
-          <p class="text-[#9fb1c2] text-[15.36px] leading-[25px]" data-ps="src/components/home/Services.astro:amfv8i">
-            Automatic wireless backup keeps you online when the wired line goes down. Your phones keep ringing and your business keeps running.
-          </p>
-        </div>
-      </div>
-
+        </a>
+      ))}
     </div>
   </div>
 </section>

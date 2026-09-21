@@ -1,6 +1,11 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Hero from '@/components/home/Hero.astro';
+import Services from '@/components/home/Services.astro';
+import Trust from '@/components/home/Trust.astro';
+import Advantages from '@/components/home/Advantages.astro';
+import Coverage from '@/components/home/Coverage.astro';
+import QuoteForm from '@/components/home/QuoteForm.astro';
 import { SITE } from '@/config/site';
 
 const jsonLd = {
@@ -29,4 +34,9 @@ const jsonLd = {
   jsonLd={jsonLd}
 >
   <Hero />
+  <Services />
+  <Trust />
+  <Advantages />
+  <Coverage />
+  <QuoteForm />
 </BaseLayout>
