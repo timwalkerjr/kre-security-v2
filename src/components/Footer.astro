@@ -1,103 +1,64 @@
 ---
-// Net Express Footer Component
+import { SITE } from '@/config/site';
 ---
-
-<footer class="bg-[#06131f] text-[#9fb1c2] pt-[64px] pb-[28px]" data-ps="src/components/Footer.astro:footer">
+<footer class="bg-black text-[#a8a29e] pt-[64px] pb-[28px] border-t border-white/[0.08]" data-ps="src/components/Footer.astro:footer">
   <div class="max-w-[1180px] mx-auto px-6" data-ps="src/components/Footer.astro:container">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12" data-ps="src/components/Footer.astro:grid">
-      
-      <!-- Col 1: Brand (5 cols) -->
       <div class="lg:col-span-5" data-ps="src/components/Footer.astro:brand">
-        <a href="/#home" class="inline-block mb-4 no-underline" data-ps="src/components/Footer.astro:7gqbzq">
-          <img
-            src="https://pagesmith-cdn.com/726747c3/images/netexpress-logo-320.webp"
-            alt="Net Express"
-            width="169"
-            height="31"
-            class="h-[31px] w-[169px] object-contain"
-            loading="lazy" data-ps="src/components/Footer.astro:4qdjex" />
+        <a href="/" class="inline-flex items-center gap-3 mb-4 no-underline" data-ps="src/components/Footer.astro:7gqbzq">
+          <img src={SITE.logo} alt="KRE Security LLC." width="40" height="48" class="h-10 w-auto object-contain" loading="lazy" data-ps="src/components/Footer.astro:4qdjex" />
+          <span class="flex flex-col leading-none" data-ps="src/components/Footer.astro:brand-type">
+            <span class="text-white font-extrabold text-[15px] tracking-wide" data-ps="src/components/Footer.astro:brand-name">KRE SECURITY</span>
+            <span class="text-[#f5bd14] font-bold text-[10px] tracking-[0.18em] mt-1" data-ps="src/components/Footer.astro:brand-llc">LLC.</span>
+          </span>
         </a>
-        <p class="text-[#9fb1c2] text-[14.72px] leading-[25px] max-w-[320px] m-0" data-ps="src/components/Footer.astro:tagline">
-          Your single-source Michigan provider for business phone, data, internet, and IT. One provider, one bill, one support line.
-        </p>
+        <p class="text-[#a8a29e] text-[14.72px] leading-[25px] max-w-[360px] m-0" data-ps="src/components/Footer.astro:tagline">{SITE.tagline} {SITE.veteranLine}. {SITE.license}.</p>
+        <div class="mt-5 flex items-center gap-4" data-ps="src/components/Footer.astro:socials">
+          <a href={SITE.socials.facebook} target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#f5bd14] transition-colors" aria-label="KRE Security Facebook" data-ps="src/components/Footer.astro:facebook"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></a>
+          <a href={SITE.socials.facebook_investigations} target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#f5bd14] transition-colors" aria-label="KRE Investigations Facebook" data-ps="src/components/Footer.astro:facebook-inv"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></a>
+        </div>
       </div>
-
-      <!-- Col 2: Services (2 cols) -->
       <div class="lg:col-span-2" data-ps="src/components/Footer.astro:services">
-        <h4 class="text-white text-[12.8px] font-bold uppercase tracking-[1.28px] mb-4" data-ps="src/components/Footer.astro:fy3jb4">
-          Services
-        </h4>
+        <h4 class="text-white text-[12.8px] font-bold uppercase tracking-[1.28px] mb-4" data-ps="src/components/Footer.astro:fy3jb4">Services</h4>
         <ul class="list-none p-0 m-0 space-y-2.5 text-[14.4px]">
-          <li data-ps="src/components/Footer.astro:wyji5n"><a href="/#services" class="text-[#9fb1c2] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:7gqbzr">Hosted VoIP</a></li>
-          <li data-ps="src/components/Footer.astro:wyji5o"><a href="/#services" class="text-[#9fb1c2] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:7gqc0d">Tailored Solutions</a></li>
-          <li data-ps="src/components/Footer.astro:wyji5p"><a href="/#services" class="text-[#9fb1c2] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:7gqc0e">Internet & Fiber</a></li>
-          <li data-ps="src/components/Footer.astro:wyji5q"><a href="/#services" class="text-[#9fb1c2] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:7gqc0f">Virtual Fax (FaxBridge)</a></li>
-          <li data-ps="src/components/Footer.astro:wyji5r"><a href="/#services" class="text-[#9fb1c2] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:7gqc0g">Managed IT</a></li>
+          <li data-ps="src/components/Footer.astro:wyji5n"><a href="/security-guards-pa/" class="text-[#a8a29e] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:7gqbzr">Security Guards</a></li>
+          <li data-ps="src/components/Footer.astro:wyji5o"><a href="/school-security/" class="text-[#a8a29e] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:7gqc0d">School Security</a></li>
+          <li data-ps="src/components/Footer.astro:wyji5p"><a href="/act-67-certified-services/" class="text-[#a8a29e] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:7gqc0e">ACT 67 Training</a></li>
+          <li data-ps="src/components/Footer.astro:wyji5q"><a href="/first-aid-training/" class="text-[#a8a29e] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:7gqc0f">First Aid Training</a></li>
+          <li data-ps="src/components/Footer.astro:wyji5r"><a href="/employment/" class="text-[#a8a29e] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:7gqc0g">Job Openings</a></li>
         </ul>
       </div>
-
-      <!-- Col 3: Company (2 cols) -->
       <div class="lg:col-span-2" data-ps="src/components/Footer.astro:company">
-        <h4 class="text-white text-[12.8px] font-bold uppercase tracking-[1.28px] mb-4" data-ps="src/components/Footer.astro:fy3jb3">
-          Company
-        </h4>
+        <h4 class="text-white text-[12.8px] font-bold uppercase tracking-[1.28px] mb-4" data-ps="src/components/Footer.astro:fy3jb3">Company</h4>
         <ul class="list-none p-0 m-0 space-y-2.5 text-[14.4px]">
-          <li data-ps="src/components/Footer.astro:wyji5s"><a href="/#why" class="text-[#9fb1c2] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:7gqc0h">Why Net Express</a></li>
-          <li data-ps="src/components/Footer.astro:wyji6e"><a href="/service-areas" class="text-[#9fb1c2] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:7gqc0i">Service Areas</a></li>
-          <li data-ps="src/components/Footer.astro:footer-articles"><a href="/articles" class="text-[#9fb1c2] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:footer-articles-link">Articles & Guides</a></li>
-          <li data-ps="src/components/Footer.astro:wyji6f"><a href="/#reviews" class="text-[#9fb1c2] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:7gqc0j">Reviews</a></li>
-          <li data-ps="src/components/Footer.astro:wyji6g"><a href="/#faq" class="text-[#9fb1c2] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:7gqc0k">FAQ</a></li>
-          <li data-ps="src/components/Footer.astro:wyji6h"><a href="/#contact" class="text-[#9fb1c2] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:7gqc0l">Contact</a></li>
+          <li data-ps="src/components/Footer.astro:wyji5s"><a href="/security-services-pa/" class="text-[#a8a29e] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:7gqc0h">About</a></li>
+          <li data-ps="src/components/Footer.astro:wyji6e"><a href="/contact/" class="text-[#a8a29e] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:7gqc0i">Contact</a></li>
+          <li data-ps="src/components/Footer.astro:footer-articles"><a href="/blog/" class="text-[#a8a29e] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:footer-articles-link">News</a></li>
+          <li data-ps="src/components/Footer.astro:wyji6f"><a href="/security-company-faq/" class="text-[#a8a29e] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:7gqc0j">FAQ</a></li>
+          <li data-ps="src/components/Footer.astro:wyji6g"><a href="/employee-application/" class="text-[#a8a29e] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:7gqc0k">Employment Application</a></li>
+          <li data-ps="src/components/Footer.astro:wyji6h"><a href="/sitemap/" class="text-[#a8a29e] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:7gqc0l">Sitemap</a></li>
         </ul>
       </div>
-
-      <!-- Col 4: Contact (3 cols) -->
       <div class="lg:col-span-3" data-ps="src/components/Footer.astro:contact">
-        <h4 class="text-white text-[12.8px] font-bold uppercase tracking-[1.28px] mb-4" data-ps="src/components/Footer.astro:fy3jb2">
-          Contact
-        </h4>
+        <h4 class="text-white text-[12.8px] font-bold uppercase tracking-[1.28px] mb-4" data-ps="src/components/Footer.astro:fy3jb2">Dispatch</h4>
         <ul class="list-none p-0 m-0 space-y-2.5 text-[14.4px]">
-          <li data-ps="src/components/Footer.astro:wyji6i"><a href="tel:+18553132300" class="text-[#9fb1c2] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:7gqc0m">Toll free (855) 313-2300</a></li>
-          <li data-ps="src/components/Footer.astro:wyji6j"><a href="tel:+12483132300" class="text-[#9fb1c2] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:8o2pe">Local (248) 313-2300</a></li>
-          <li class="pt-1 text-[#9fb1c2]" data-ps="src/components/Footer.astro:wyji6l">
-            6825 Dixie Hwy<br />
-            Clarkston, MI 48346
-          </li>
+          <li data-ps="src/components/Footer.astro:wyji6i"><a href={`tel:${SITE.phone.primaryTel}`} class="text-[#a8a29e] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:7gqc0m">24-hour {SITE.phone.primary}</a></li>
+          {SITE.offices.map((office) => (
+            <li data-ps="src/components/Footer.astro:wyji6j"><a href={`tel:${office.tel}`} class="text-[#a8a29e] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:8o2pe">{office.label}: {office.phone}</a></li>
+          ))}
+          <li class="pt-1 text-[#a8a29e]" data-ps="src/components/Footer.astro:wyji6l">{SITE.address.streetAddress}<br />{SITE.address.addressLocality}, {SITE.address.addressRegion} {SITE.address.postalCode}</li>
         </ul>
       </div>
-
     </div>
-
-    <!-- Bottom Bar -->
-    <div class="border-t border-white/[0.09] pt-6 mt-12 flex flex-col sm:flex-row justify-between items-center gap-4 text-[13.6px] text-[#9fb1c2]" data-ps="src/components/Footer.astro:bottom-bar">
-      <div class="flex flex-wrap items-center justify-center sm:justify-start gap-x-4 gap-y-1" data-ps="src/components/Footer.astro:p4vf8b">
-        <p class="m-0" data-ps="src/components/Footer.astro:euoo">© 2026 Net Express. All rights reserved.</p>
-        <span class="hidden sm:inline text-white/20" data-ps="src/components/Footer.astro:hzwfpb">|</span>
-        <a href="/terms/" class="text-[#9fb1c2] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:8o2pj">Terms of Service</a>
-        <span class="text-white/20" data-ps="src/components/Footer.astro:hzwfpa">|</span>
-        <a href="/privacy/" class="text-[#9fb1c2] hover:text-white transition-colors no-underline" data-ps="src/components/Footer.astro:8o2pk">Privacy Policy</a>
-      </div>
-      <p class="m-0 text-center sm:text-right" data-ps="src/components/Footer.astro:euop">Business phone · internet · IT · Michigan & the Midwest</p>
+    <div class="border-t border-white/[0.09] pt-6 mt-12 flex flex-col sm:flex-row justify-between items-center gap-4 text-[13.6px] text-[#a8a29e]" data-ps="src/components/Footer.astro:bottom-bar">
+      <p class="m-0" data-ps="src/components/Footer.astro:euoo">© {new Date().getFullYear()} {SITE.name} {SITE.license}. {SITE.veteranLine}.</p>
+      <p class="m-0 text-center sm:text-right" data-ps="src/components/Footer.astro:euop">Serving 22+ Pennsylvania counties</p>
     </div>
-
-    <!-- Agency Credit -->
     <div class="mt-4 text-center" data-ps="src/components/Footer.astro:credit">
-      <a
-        href="https://twalkerco.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-[#9fb1c2] text-[12px] hover:text-[#94e760] transition-colors no-underline inline-flex items-center gap-1.5"
-       data-ps="src/components/Footer.astro:8o2pg">
-        <img
-          src="https://pagesmith-cdn.com/726747c3/images/twalkerco-w-webclip-256.webp"
-          alt=""
-          width="20"
-          height="20"
-          class="w-5 h-5 object-contain shrink-0"
-          loading="lazy" data-ps="src/components/Footer.astro:4qdjex" />
+      <a href="https://twalkerco.com/" target="_blank" rel="noopener noreferrer" class="text-[#a8a29e] text-[12px] hover:text-[#f5bd14] transition-colors no-underline inline-flex items-center gap-1.5" data-ps="src/components/Footer.astro:8o2pg">
+        <img src="https://pagesmith-cdn.com/726747c3/images/twalkerco-w-webclip-256.webp" alt="" width="20" height="20" class="w-5 h-5 object-contain shrink-0" loading="lazy" data-ps="src/components/Footer.astro:4qdjey" />
         <span data-ps="src/components/Footer.astro:hzwfpf">Web Design and SEO by twalkerco</span>
       </a>
     </div>
-
   </div>
 </footer>
