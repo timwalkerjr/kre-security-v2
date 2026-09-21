@@ -1,0 +1,37 @@
+---
+import PageHero from '@/components/pages/PageHero.astro';
+import { SITE, designAsset } from '@/config/site';
+---
+
+<PageHero
+  eyebrow="Certification Programs: Active"
+  title="First Aid, CPR & AED Training"
+  primaryHref="#first-aid-form"
+  primaryLabel="Request a Training Quote"
+  secondaryHref={`tel:${SITE.phone.primaryTel}`}
+  secondaryLabel={SITE.phone.primary}
+>
+  <Fragment slot="lead">
+    <p class="m-0">
+      KRE Security LLC. offers custom based CPR/First Aid and AED Training for your business, facility, or civic and private groups. We can get you or your group certified!
+    </p>
+  </Fragment>
+  <Fragment slot="media">
+    <div class="space-y-4">
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-6">
+        <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-4">Approved By</p>
+        <div class="flex flex-wrap gap-6 items-center mb-4">
+          <img src={designAsset('/images/lib/39725c_bf51904ac9fe49bbaa66b0cd3459bcfc-mv2-110.webp')} alt="American Red Cross training" class="h-10 w-auto object-contain" loading="eager" />
+          <img src={designAsset('/images/lib/39725c_83d9d70bec11400db248ad3e6c07da4b-mv2.gif')} alt="American Heart Association training" class="h-10 w-auto object-contain" loading="eager" />
+        </div>
+        <p class="text-[#a8a29e] text-[14px] leading-[22px] m-0">
+          Courses approved by the American Heart Association and American Red Cross for healthcare providers and lay rescuers.
+        </p>
+      </div>
+      <div class="border-l-2 border-[#f5bd14] pl-4">
+        <p class="text-[#f5f5f4] text-[14px] font-bold m-0 mb-1">35+ Years of Teaching Experience</p>
+        <p class="text-[#a8a29e] text-[14px] m-0">Our staff brings over 35 years of field and academic teaching knowledge.</p>
+      </div>
+    </div>
+  </Fragment>
+</PageHero>
