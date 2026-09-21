@@ -1,0 +1,73 @@
+---
+import { designAsset } from '@/config/site';
+
+const services = [
+  'School Event Services',
+  'Fair Grounds Employees',
+  'Party Event Staffing',
+  'Stadium Staff',
+  'Concert Employees',
+  'School & Venue Based Sporting Game Ushers',
+  'Convention Staffing and Security',
+  'Sports Events Staffing and Security',
+  'Trade Show Event Staffing and Security',
+  'And Much More',
+];
+
+const capabilities = [
+  'Crowd Management',
+  'Access Control',
+  'VIP Security',
+  'Guest Services',
+  'Personal Protection',
+  'Parking Lot Attendants',
+  'Traffic Control Services',
+  'Event Ushers',
+];
+---
+
+<section class="relative isolate py-[72px] border-t border-white/[0.06]" data-ps="src/components/school-event-staff/EventStaffServices.astro:section">
+  <div class="max-w-[1180px] mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-4 h-[2px] bg-[#f5bd14]"></span>
+          <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase">Event Staffing Division</span>
+        </div>
+        <h2 class="text-[32px] sm:text-[36px] font-extrabold text-[#f5f5f4] leading-[1.08] mb-5">
+          Our Event Staffing Company Can Provide:
+        </h2>
+        <p class="text-[#a8a29e] text-[16px] leading-[26px] mb-8">
+          We provide the staffing for large and small events. If there will be a large gathering of people, we can make sure there are enough bodies to manage and control the flow of traffic, ensure safety, provide assistance, or manage the crowds.
+        </p>
+        <div class="space-y-2">
+          {services.map((service) => (
+            <div class="flex items-center gap-3 p-4 bg-white/[0.035] border border-white/[0.09] rounded-[12px] hover:border-[#f5bd14]/40 transition-colors">
+              <span class="w-2 h-2 bg-[#f5bd14] shrink-0 rounded-full"></span>
+              <span class="text-[#f5f5f4] text-[14px] font-semibold">{service}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="space-y-5">
+        <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-7">
+          <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-4">Staff Capabilities</p>
+          <div class="grid grid-cols-2 gap-3">
+            {capabilities.map((cap) => (
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 bg-[#f5bd14] shrink-0 rounded-full"></span>
+                <span class="text-[#a8a29e] text-[13px]">{cap}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden p-2">
+          <img src={designAsset('/images/lib/39725c_3ba4109b5877408ba9c2e259be148c43-mv2-768.webp')} alt="Event staff security eastern PA" class="w-full h-auto object-cover rounded-[12px]" loading="lazy" />
+        </div>
+        <a href="/#contact" class="inline-block w-full text-center bg-[#f5bd14] text-[#0a0a0a] font-bold text-[14px] px-8 py-4 rounded-[10px] no-underline hover:bg-[#e0ab10]">
+          Contact Us to Get Started
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
