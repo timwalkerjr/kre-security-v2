@@ -1,0 +1,58 @@
+---
+import { SITE, designAsset } from '@/config/site';
+
+const duties = [
+  'Watch for signs of a fire such as smoke, increased temperatures, flames or odors via hourly patrols of your property.',
+  'Identify other potential hazards that could pose safety issues or impede the ability of emergency response teams to combat a fire.',
+  'Check exits to make sure there are no blockages or other hazards that would prevent an evacuation.',
+  'Verify that fire extinguishers are present and in working order.',
+  'Carry appropriate supplies that would allow them to combat a small fire or assist in evacuation procedures such as fire extinguishers, flashlights, building keys and communication devices.',
+  'Understand the building layout and evacuation procedures.',
+  'Possess pertinent contact information for business owners or other business contacts as well as local law enforcement and fire departments.',
+  'Call 911 and provide emergency assistance to reduce property loss.',
+];
+---
+
+<section class="relative isolate py-[72px] border-t border-white/[0.06]" data-ps="src/components/fire-watch/FireWatchDuties.astro:section">
+  <div class="max-w-[1180px] mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-4 h-[2px] bg-[#f5bd14]"></span>
+          <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase">Guard Responsibilities</span>
+        </div>
+        <h2 class="text-[32px] sm:text-[36px] font-extrabold text-[#f5f5f4] leading-[1.08] mb-8">
+          What Our Fire Watch Guards Will Do
+        </h2>
+        <ul class="space-y-4 m-0 p-0 list-none">
+          {duties.map((duty) => (
+            <li class="flex gap-3 items-start">
+              <span class="mt-1.5 w-2 h-2 bg-[#f5bd14] shrink-0 rounded-full"></span>
+              <span class="text-[#a8a29e] text-[14px] leading-[22px]">{duty}</span>
+            </li>
+          ))}
+        </ul>
+        <div class="mt-8 pt-6 border-t border-white/[0.09]">
+          <p class="text-[#a8a29e] text-[14px] leading-[22px] m-0">
+            Depending on the severity of the risk, KRE fire watch patrols will make their rounds at regular intervals until the danger is mitigated. Guards are required to keep a log of each patrol round, including date and time, name of the patrolling guard, status of the patrol, and record of any incident. Unless they are certain they can safely manage a situation, guards do not attempt to extinguish fires on the premises.
+          </p>
+        </div>
+      </div>
+      <div class="space-y-5">
+        <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden p-2">
+          <img src={designAsset('/images/lib/Fire-260.webp')} alt="Fire watch security services" class="w-full max-w-[260px] h-auto object-cover rounded-[12px]" loading="lazy" />
+        </div>
+        <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-5">
+          <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-2">Patrol Log Requirement</p>
+          <p class="text-[#a8a29e] text-[14px] leading-[22px] m-0">
+            Guards are required to keep a log of each patrol round that includes date and time, the name of the patrolling guard, status of the patrol, and a record of any incident observed.
+          </p>
+        </div>
+        <div class="border-l-2 border-[#f5bd14] pl-4">
+          <p class="text-[#f5f5f4] text-[14px] font-bold m-0 mb-1">24-Hour Emergency Dispatch</p>
+          <a href={`tel:${SITE.phone.primaryTel}`} class="text-[#f5bd14] text-[22px] font-extrabold no-underline hover:text-[#e0ab10]">{SITE.phone.primary}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

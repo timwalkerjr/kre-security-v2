@@ -1,0 +1,67 @@
+---
+import { designAsset } from '@/config/site';
+
+const services = [
+  { label: 'Inventory Control Assistance', desc: 'Assisting in accurate management of all transportation container inventories.' },
+  { label: 'Fixed Guard Booth & GPS Tracking', desc: 'Stationary guard posts combined with GPS vehicle and asset tracking.' },
+  { label: 'Docking Designation', desc: 'Keeping accurate timing and coordinating proper dock assignments.' },
+  { label: 'Arrival & Departure Logging', desc: 'Tracking and maintaining logs for the arrival and departure of vehicles, materials, and equipment.' },
+  { label: 'Shipping Inventory Management', desc: 'Managing and verifying all shipping inventory against manifests.' },
+  { label: 'Full Truck Inspections', desc: 'Checking driver name, documenting front and back license plates, and ensuring no unauthorized pallets or equipment leave the facility.' },
+  { label: 'Reefer Temperature Logging', desc: 'For refrigerated trucks, inspecting and logging refrigeration temperatures.' },
+  { label: 'Cal/OSHA Audit Support', desc: 'Assisting in fulfilling Cal/OSHA audit requirements with highly trained staff.' },
+];
+
+const galleryImages = [
+  { src: '/images/lib/63861c_b40132039a454caca51a291d981bb653-mv2-320.webp', alt: 'KRE Security logistics operations' },
+  { src: '/images/lib/63861c_2413aa10d3184636be68c163373f1337-mv2-320.webp', alt: 'Transportation security monitoring' },
+  { src: '/images/lib/63861c_7f6517f50dca4fe8be7a405cccb9c373-mv2-320.webp', alt: 'Logistical security guard' },
+  { src: '/images/lib/63861c_552b9b4f821e46da8b116aed877efd39-mv2-320.webp', alt: 'Security checkpoint operations' },
+];
+---
+
+<section class="relative isolate py-[72px] border-t border-white/[0.06]" data-ps="src/components/logistical-security/LogisticalServices.astro:section">
+  <div class="max-w-[1180px] mx-auto px-6">
+    <div class="max-w-3xl mb-12">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="w-4 h-[2px] bg-[#f5bd14]"></span>
+        <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase">Transportation Industry Specialists</span>
+      </div>
+      <h2 class="text-[32px] sm:text-[40px] font-extrabold text-[#f5f5f4] leading-[1.08] tracking-[-1.1px] mb-4">
+        Our Logistical Security Services
+      </h2>
+      <p class="text-[#a8a29e] text-[16px] leading-[26px] m-0">
+        Our very affordable security services relieve your personnel of select inventory and inspection duties while enhancing our ability to provide proper security and accountability of all transportation containers for our clients. Whether you manage a storage yard, loading dock or a rail yard, our management team will design post order duties to match your business's needs and assign guards that are well-qualified to accomplish them.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+      {services.map((svc) => (
+        <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-5">
+          <span class="w-2 h-2 rounded-full block mb-3 bg-[#f5bd14]"></span>
+          <p class="text-[#f5f5f4] text-[14px] font-bold mb-2">{svc.label}</p>
+          <p class="text-[#a8a29e] text-[13px] leading-[20px] m-0">{svc.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-4">Operations Gallery</p>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+      {galleryImages.map((img) => (
+        <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden p-2">
+          <img src={designAsset(img.src)} alt={img.alt} class="w-full h-auto object-cover rounded-[12px]" loading="lazy" />
+        </div>
+      ))}
+    </div>
+
+    <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+      <div>
+        <p class="text-[#f5f5f4] text-[18px] font-bold m-0 mb-1">Serving the I-78 Corridor Since 1990</p>
+        <p class="text-[#a8a29e] text-[14px] m-0">Affordable, professional logistical security for transportation companies across Eastern Pennsylvania.</p>
+      </div>
+      <a href="/contact/" class="bg-[#f5bd14] text-[#0a0a0a] font-bold text-[14px] px-7 py-3 rounded-[10px] no-underline hover:bg-[#e0ab10] whitespace-nowrap">
+        Get Started
+      </a>
+    </div>
+  </div>
+</section>

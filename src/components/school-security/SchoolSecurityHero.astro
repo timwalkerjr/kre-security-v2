@@ -1,0 +1,42 @@
+---
+import PageHero from '@/components/pages/PageHero.astro';
+import { designAsset } from '@/config/site';
+---
+
+<PageHero
+  eyebrow="Dispatch Status: Active"
+  title="School Security Guard Services"
+  primaryHref="/#contact"
+  primaryLabel="Contact Us to Get Started"
+  secondaryHref="/armed-security-pa/"
+  secondaryLabel="Armed Security Info"
+>
+  <Fragment slot="lead">
+    <p class="m-0">
+      KRE Security LLC. is a local, well trusted and respected security company who has been providing a vast portion of security and protection needs to school districts across the region.
+    </p>
+    <p class="m-0">
+      Our high standard of performance and professionalism has allowed our firm to provide ongoing services for over 25 years throughout Berks, Schuylkill, Lehigh, & Montgomery Counties.
+    </p>
+    <div class="bg-white/[0.035] border border-white/[0.09] rounded-[12px] p-4 flex items-center gap-3">
+      <span class="w-2 h-2 rounded-full bg-[#f5bd14] animate-pulse shrink-0"></span>
+      <div>
+        <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest m-0">Certified</p>
+        <p class="text-[#f5f5f4] text-[14px] font-semibold m-0">Our Full-Time Staff are all certified by the NASRO</p>
+      </div>
+    </div>
+  </Fragment>
+  <Fragment slot="media">
+    <div class="grid grid-cols-2 gap-3">
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden">
+        <img src={designAsset('/images/lib/pastedImage-249.webp')} alt="School security services" class="w-full h-40 object-cover" loading="eager" />
+      </div>
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden">
+        <img src={designAsset('/images/lib/IMG_2754-320.webp')} alt="KRE school security officer" class="w-full h-40 object-cover" loading="eager" />
+      </div>
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden col-span-2">
+        <img src={designAsset('/images/lib/39725c_5cd7e3e1e5d84cc6a46b497a37fc813c-mv2-320.webp')} alt="School safety services" class="w-full h-36 object-cover" loading="eager" />
+      </div>
+    </div>
+  </Fragment>
+</PageHero>

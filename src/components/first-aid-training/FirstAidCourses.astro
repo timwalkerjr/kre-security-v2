@@ -1,0 +1,74 @@
+---
+const courses = [
+  'Heartsaver First Aid',
+  'Heartsaver CPR/AED',
+  'Friends and Family CPR',
+  'BLS for the Healthcare Provider',
+  'Heartsaver Bloodborne Pathogens',
+  'Pediatric First Aid',
+];
+
+const locations = [
+  'Reading', 'Pottsville', 'Allentown', 'Bethlehem', 'Easton',
+  'Lancaster', 'Lebanon', 'Pottstown', 'Philadelphia', 'Canton',
+  'Williamsport', 'Danville',
+];
+---
+
+<section id="first-aid-courses" class="relative isolate py-[72px] border-t border-white/[0.06]" data-ps="src/components/first-aid-training/FirstAidCourses.astro:section">
+  <div class="max-w-[1180px] mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-12">
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-4 h-[2px] bg-[#f5bd14]"></span>
+          <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase">Certification Classes</span>
+        </div>
+        <h2 class="text-[32px] font-extrabold text-[#f5f5f4] leading-[1.08] mb-6">Training Classes We Offer</h2>
+        <p class="text-[#a8a29e] text-[15px] leading-[24px] mb-6">
+          KRE Security will provide the following classes — as approved by the American Heart Association and the American Red Cross — offering customized certification programs for healthcare providers and lay rescuers, including any course in the AHA and BLS Family of courses curriculum.
+        </p>
+        <ul class="space-y-3 mb-8 m-0 p-0 list-none">
+          {courses.map((course) => (
+            <li class="flex items-center gap-3 bg-white/[0.035] border border-white/[0.09] rounded-[12px] p-3">
+              <span class="w-2 h-2 bg-[#f5bd14] shrink-0 rounded-full"></span>
+              <span class="text-[#f5f5f4] text-[14px] font-semibold">{course}</span>
+            </li>
+          ))}
+        </ul>
+        <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-5">
+          <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-2">Also Offered</p>
+          <p class="text-[#a8a29e] text-[14px] leading-[22px] m-0 mb-1">In-classroom instruction on basic fire extinguisher use and operation</p>
+          <p class="text-[#a8a29e] text-[14px] leading-[22px] m-0">Blood Borne Pathogens training per OSHA standard 1910.1030</p>
+        </div>
+      </div>
+      <div class="space-y-6">
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-4 h-[2px] bg-[#f5bd14]"></span>
+            <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase">Service Locations</span>
+          </div>
+          <h3 class="text-[22px] font-extrabold text-[#f5f5f4] mb-4">Classes Offered In</h3>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            {locations.map((loc) => (
+              <div class="border border-white/[0.09] bg-white/[0.035] rounded-[10px] px-3 py-2 text-center">
+                <span class="text-[#f5f5f4] text-[12px] font-bold uppercase">{loc}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-5">
+          <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-3">Teaching Standards</p>
+          <p class="text-[#a8a29e] text-[14px] leading-[22px] m-0">
+            Training certification and material is taught in accordance with all rules, regulations, and standards of both the American Heart Association and the American Red Cross curriculums. Our instructors conduct ongoing training and all staff meet current teaching backgrounds and security clearances.
+          </p>
+        </div>
+        <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-5">
+          <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-2">Equipment</p>
+          <p class="text-[#a8a29e] text-[14px] leading-[22px] m-0">
+            KRE Security provides students with the most up-to-date equipment, making our teaching experience as realistic as possible with current CPR, First Aid and AED tools.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

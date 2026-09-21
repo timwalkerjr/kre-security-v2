@@ -1,208 +1,92 @@
 ---
-title: "Net Express -- Business Phone, Internet & IT | Michigan"
-description: "Net Express is a single-source Michigan provider for business phone (Hosted VoIP), high-speed internet & fiber, virtual fax, managed IT, and 4G LTE failover. One provider, one bill, one support line."
-url: "https://gonetexpress.netlify.app/"
+title: "Security Companies PA | Hamburg, PA | KRE Security LLC."
+description: "We provide quality, licensed security guard services at competitive rates. Veteran Supported Firm. License No. 84. Serving 22+ Pennsylvania counties."
+url: "https://www.kresecurity.com/"
 slug: index
 ---
 
-[![Net Express](/netexpress-logo.png)](/#home)
+[![KRE Security LLC.](/images/kre-logo.webp)](/)
 
-- [Services](/#services)
-- [Why Net Express](/#why)
-- [Service Area](/#areas)
-- [Reviews](/#reviews)
-- [FAQ](/#faq)
-- [Contact](/#contact)
+- [Home](/)
+- [Services](/security-guards-pa/)
+- [Specialized](/act-67-certified-services/)
+- [About](/security-services-pa/)
+- [News](/blog/)
+- [Get a Quote](/contact/)
 
-Call **(855) 313-2300**
+Now Hiring · **610-562-0971** · [Facebook](https://www.facebook.com/KRE-Security-LLC-105764734683407)
 
-[Get a Quote](/#contact)
+# Precision protection for the Commonwealth.
 
-VoIP · Business Internet · Managed IT
+We provide quality, licensed security guard services at competitive rates. Your Total Security Professional. Under New Ownership and Management Since 2016. Veteran Supported Firm. License No. 84.
 
-# Always on.  Always local.
+[24hr dispatch 610-562-0971](tel:+16105620971) [Join our team](/employment/)
 
-Business phone, internet, and IT from one Michigan provider -- engineered so you never miss a call, a customer, or a beat.
+Hire · Train · Dispatch
 
-[Get a Free Quote →](/#contact) [See What We Do](/#services)
+Online · 24-hour emergency dispatch
 
-Locally owned & operated
+[Call 610-562-0971](tel:+16105620971)
+[Facebook](https://www.facebook.com/KRE-Security-LLC-105764734683407)
+[KRE Employment Application](/employee-application/)
+[KRE Job Openings](/employment/)
+[ACT 67 Training](/act-67-certified-services/)
+[First Aid Training Services](/first-aid-training/)
+Eastern PA Educators
 
-One provider, one bill
+Regional offices: Allentown / Bethlehem / Easton 610-562-0971 · Lancaster / Lebanon 717-450-7632 · Reading / Pottstown 610-223-3714 · Schuylkill 570-399-1010 · Harrisburg 717-480-2961
 
-Client Support Center
+## Service portfolio
 
-Online · 24/7 US-based support
+“Your Total Security Professional.” Comprehensive, professional, and responsive protection solutions tailored to your specific operational needs.
 
-[Remote Support](/#) [Open a Support Ticket](/#) [Pay Your Invoice](/#) [Client Portal](/#) [Call Support](tel:+18553132300)
+- [Event Staffing](/school-event-staff/)
+- [School Security](/school-security/)
+- [Security Guards](/security-guards-pa/)
+- [ACT 67 Certified Services](/act-67-certified-services/)
+- [Private Investigations](/private-investigations/)
+- [In-Home Security](/in-home-security/)
+- [Security Checks](/security-checks/)
+- [First Aid Training](/first-aid-training/)
+- [Vehicle Patrol](/vehicle-patrol/)
+- [Logistical Security](/logistical-security/)
+- [Armed Security](/armed-security-pa/)
+- [Warehouses & Distribution Centers](/warehouse-distribution-security/)
+- [Event Traffic Control](/event-traffic-control/)
+- [Process Services](/process-services/)
+- [Fire Watch](/fire-watch/)
+- [Armed Money Escorts](/armed-money-escorts/)
 
-★★★★★**5.0** on Google Reviews
+## License · Veteran · Dispatch
 
-◆**Single-source** phone, data & internet
+**License No. 84.** KRE Security, LLC is a fully licensed and insured agency operating under the strict regulatory standards of the Commonwealth of Pennsylvania.
 
-◆Serving **Michigan & the Midwest**
+**Management Excellence.** Under new ownership and management since 2016, delivering a modern, responsive approach to traditional law enforcement and private security protection.
 
-◆**No** expensive PBX hardware
+**Veteran Supported.** We are proud to be a Veteran Supported Firm, committed to the discipline, readiness, and integrity learned through military service.
 
-What we do
+**24-Hour Emergency Dispatch.** Our specialized emergency dispatch center is operational 24/7/365. [610-562-0971](tel:+16105620971)
 
-## Everything your business needs to stay connected.
+## 5 Benefits of Hiring a Security Company
 
-Voice, data, internet, and IT -- designed, provisioned, and supported by one local team.
+1. **Sense of Security** — Even just the presence of a security guard can make a business more effective and efficient by giving the owners and employees peace of mind.
+2. **Prevention** — A thief will think twice when there is a security guard present.
+3. **Customer Service** — Not only does a sense of security put your employees at ease but also your customers.
+4. **Handling Crime** — Security measures in place will allow police to solve a crime quickly and get you back to business.
+5. **Monitoring** — Leave your business security to a professional security guard company.
 
-### Hosted VoIP
+24/7 readiness. 100% compliance.
 
-A full cloud phone system with multi-location extension dialing, auto-attendants, and voicemail-to-email -- no on-site PBX to buy or maintain.
+## 22-county coverage
 
-### Tailored Solutions
+Our PA security company provides qualified law enforcement and investigative services across 22+ counties: Berks, Bucks, Carbon, Chester, Cumberland, Dauphin, Erie, Franklin, Juniata, Lancaster, Lebanon, Lehigh, Luzerne, Monroe, Montgomery, Northampton, Northumberland, Perry, Philadelphia, Schuylkill, Union, and Wayne.
 
-No two businesses run the same. We design and build a communications and IT system around how yours actually works -- not a one-size-fits-all package.
+Regional hotlines: Allentown / Bethlehem / Easton 610-562-0971 · Lancaster / Lebanon 717-450-7632 · Reading / Pottstown 610-223-3714 · Schuylkill 570-399-1010 · Harrisburg 717-480-2961.
 
-### Business Internet & Fiber
+## Get a quote
 
-Dedicated high-speed connectivity -- up to 1 Gbps on fiber -- built for business uptime, not best-effort. Redundant options available.
+Contact us today for a security service quote. Formspree `mljrgzln` → `/thanks/website/`.
 
-### Virtual Fax (FaxBridge)
+Main office: 16600 Pottsville Pike, Hamburg, PA 19526. Harrisburg: 3405 North 6th Street, Suite 204, Harrisburg, PA 17110.
 
-Send and receive faxes by email and web -- no machine, no dedicated line. Reliable and compliant for healthcare, legal, and finance.
-
-[Learn about FaxBridge →](/faxbridge/)
-
-### Managed IT
-
-Network management, security, and responsive support from a local team -- so your technology just works and someone's always accountable.
-
-### 4G LTE Failover
-
-Automatic wireless backup keeps you online when the wired line goes down. Your phones keep ringing and your business keeps running.
-
-Why Net Express
-
-## One provider instead of four.
-
-Most businesses juggle separate vendors for phone, internet, fax, and IT -- four bills, four support numbers, and finger-pointing when something breaks. We deliver all of it as a single, integrated service, backed by a local Michigan team that's accountable end to end.
-
-[Talk to a specialist](/#contact)
-
-- One monthly bill
-- One number for support
-- Keep your phone numbers
-- No PBX hardware to buy
-- Multi-location dialing
-- Local, US-based team
-
-Service area
-
-## Proudly serving Michigan & the Midwest.
-
-Headquartered in Clarkston, we support businesses from single storefronts to multi-location enterprises across the region -- with the responsiveness of a local partner and the reach of a full-service carrier.
-
-ClarkstonMetro DetroitOakland CountyFlintGrand RapidsLansingAnn Arbor& the Midwest
-
-1 Gbps
-
-dedicated fiber speeds available
-
-**Net Express HQ**
-
-6825 Dixie Hwy
-
-Clarkston, MI 48346
-
-★★★★★
-
-> "When we started looking at VoIP options, most providers wanted us to rip out our Avaya PBX and start from scratch. Net Express met us where we were and made the switch painless."
-
-**Michael Torres**  ·  5.0 on Google Reviews
-
-Questions
-
-## Frequently asked questions
-
-Everything you need to know about switching to Net Express.
-
-What does Net Express do?
-
-Net Express is a single-source provider for business phone, internet, and IT. We deliver Hosted VoIP, high-speed business internet and fiber, virtual fax, managed IT, and 4G LTE failover -- all from one local Michigan team, on one bill.
-
-Can I keep my existing phone numbers?
-
-Yes. We port your current business numbers to our network, so your customers keep reaching you at the numbers they already know -- with no interruption.
-
-Do I need to buy a phone system or PBX hardware?
-
-No. Our Hosted VoIP runs in the cloud, so there's no on-site PBX to purchase or maintain -- you get auto-attendants, voicemail-to-email, and multi-location extension dialing without the hardware.
-
-What areas do you serve?
-
-We're headquartered in Clarkston, Michigan and serve businesses across Michigan and the Midwest -- from single storefronts to multi-location enterprises.
-
-What is FaxBridge?
-
-FaxBridge internet-enables your existing fax machine. Plug it in and send or receive faxes over your internet connection instead of a dedicated phone line, with every fax stored securely in the cloud -- no new equipment needed.
-
-What happens to my phones if the internet goes down?
-
-Our 4G LTE failover automatically switches to a wireless connection if your wired line drops, so your phones keep ringing and your business stays online.
-
-How do billing and support work?
-
-One provider, one monthly bill, and one number to call. Our US-based support is available 24/7, backed by a local Michigan team that's accountable from setup through day-to-day service.
-
-Get connected
-
-## Let's simplify your business communications.
-
-Talk to a Michigan-based specialist. We'll design the right phone, internet, and IT setup for your business -- and handle the switch.
-
-[Call (855) 313-2300](tel:+18553132300) [Email us](mailto:support@gonetexpress.com)
-
-Call us
-
-[(855) 313-2300](tel:+18553132300)
-
-Email
-
-[support@gonetexpress.com](mailto:support@gonetexpress.com)
-
-Visit
-
-6825 Dixie Hwy, Clarkston, MI 48346
-
-![Net Express](/netexpress-logo.png)
-
-Your single-source Michigan provider for business phone, data, internet, and IT. One provider, one bill, one support line.
-
-#### Services
-
-- [Hosted VoIP](/#services)
-- [Tailored Solutions](/#services)
-- [Internet & Fiber](/#services)
-- [Virtual Fax (FaxBridge)](/faxbridge/)
-- [Managed IT](/#services)
-
-#### Company
-
-- [Why Net Express](/#why)
-- [Service Area](/#areas)
-- [Reviews](/#reviews)
-- [FAQ](/#faq)
-- [Contact](/#contact)
-
-#### Contact
-
-[Toll free (855) 313-2300](tel:+18553132300)
-
-[Local (248) 313-2300](tel:+12483132300)
-
-[support@gonetexpress.com](mailto:support@gonetexpress.com)
-
-6825 Dixie Hwy
-
-Clarkston, MI 48346
-
-© 2026 Net Express. All rights reserved.
-
-Business phone · internet · IT · Michigan & the Midwest
-
-[Web Design and SEO by twalkerco](https://twalkerco.com/)
+General: jemes@kresecurity.com · Billing: financial@kresecurity.com · Scheduling: scheduling@kresecurity.com

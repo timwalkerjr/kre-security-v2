@@ -1,0 +1,173 @@
+---
+import { SITE } from '@/config/site';
+---
+
+<section id="contact" class="relative isolate py-[72px] lg:py-[92px] border-t border-white/[0.06]" data-ps="src/components/home/QuoteForm.astro:section">
+  <div class="max-w-[1180px] mx-auto px-6" data-ps="src/components/home/QuoteForm.astro:container">
+    <div class="bg-white/[0.035] border border-white/[0.09] rounded-[22px] p-6 sm:p-8 lg:p-12" data-ps="src/components/home/QuoteForm.astro:panel">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-[48px]" data-ps="src/components/home/QuoteForm.astro:grid">
+        <div class="lg:col-span-5" data-ps="src/components/home/QuoteForm.astro:left-col">
+          <div class="flex items-center gap-2 mb-3" data-ps="src/components/home/QuoteForm.astro:eyebrow">
+            <span class="w-4 h-[2px] bg-[#f5bd14]" data-ps="src/components/home/QuoteForm.astro:bar"></span>
+            <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase" data-ps="src/components/home/QuoteForm.astro:label">
+              Dispatch portal
+            </span>
+          </div>
+          <h2 class="text-[34px] sm:text-[40px] font-extrabold text-[#f5f5f4] leading-[1.08] tracking-[-1.1px] mb-5" data-ps="src/components/home/QuoteForm.astro:h2">
+            Contact Us Today for a Security Service Quote
+          </h2>
+          <p class="text-[#a8a29e] text-[16.5px] leading-[27px] mb-10" data-ps="src/components/home/QuoteForm.astro:p">
+            Professional protection begins with a tailored assessment. Connect with our regional headquarters to discuss your security requirements.
+          </p>
+
+          <div class="space-y-7" data-ps="src/components/home/QuoteForm.astro:nap">
+            <div class="flex gap-4 items-start" data-ps="src/components/home/QuoteForm.astro:row-dispatch">
+              <div class="w-11 h-11 rounded-[10px] bg-[#f5bd14]/12 text-[#f5bd14] flex items-center justify-center shrink-0" data-ps="src/components/home/QuoteForm.astro:icon-dispatch">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+              </div>
+              <div data-ps="src/components/home/QuoteForm.astro:dispatch-copy">
+                <div class="text-[11px] font-bold text-[#f5bd14] tracking-widest uppercase mb-1" data-ps="src/components/home/QuoteForm.astro:dispatch-kicker">
+                  Emergency Dispatch
+                </div>
+                <a href={`tel:${SITE.phone.primaryTel}`} class="text-[26px] font-extrabold text-[#f5f5f4] no-underline hover:text-[#f5bd14] transition-colors" data-ps="src/components/home/QuoteForm.astro:dispatch-phone">
+                  {SITE.phone.primary}
+                </a>
+              </div>
+            </div>
+
+            <div class="flex gap-4 items-start" data-ps="src/components/home/QuoteForm.astro:row-hq">
+              <div class="w-11 h-11 rounded-[10px] bg-[#f5bd14]/12 text-[#f5bd14] flex items-center justify-center shrink-0" data-ps="src/components/home/QuoteForm.astro:icon-hq">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <div data-ps="src/components/home/QuoteForm.astro:hq-copy">
+                <div class="text-[11px] font-bold text-[#f5bd14] tracking-widest uppercase mb-1" data-ps="src/components/home/QuoteForm.astro:hq-kicker">Main Office</div>
+                <p class="text-[15px] text-[#a8a29e] leading-relaxed m-0" data-ps="src/components/home/QuoteForm.astro:hq-addr">
+                  {SITE.address.streetAddress}<br />
+                  {SITE.address.addressLocality}, {SITE.address.addressRegion} {SITE.address.postalCode}<br />
+                  <a href={`tel:${SITE.phone.primaryTel}`} class="text-[#f5f5f4] hover:text-[#f5bd14] no-underline font-bold">{SITE.phone.primary}</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4 items-start" data-ps="src/components/home/QuoteForm.astro:row-hbg">
+              <div class="w-11 h-11 rounded-[10px] bg-[#f5bd14]/12 text-[#f5bd14] flex items-center justify-center shrink-0" data-ps="src/components/home/QuoteForm.astro:icon-hbg">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <div data-ps="src/components/home/QuoteForm.astro:hbg-copy">
+                <div class="text-[11px] font-bold text-[#f5bd14] tracking-widest uppercase mb-1" data-ps="src/components/home/QuoteForm.astro:hbg-kicker">Harrisburg Regional Office</div>
+                <p class="text-[15px] text-[#a8a29e] leading-relaxed m-0" data-ps="src/components/home/QuoteForm.astro:hbg-addr">
+                  3405 North 6th Street, Suite 204<br />
+                  Harrisburg, PA 17110<br />
+                  <a href="tel:+17174802961" class="text-[#f5f5f4] hover:text-[#f5bd14] no-underline font-bold">717-480-2961</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4 items-start" data-ps="src/components/home/QuoteForm.astro:row-email">
+              <div class="w-11 h-11 rounded-[10px] bg-[#f5bd14]/12 text-[#f5bd14] flex items-center justify-center shrink-0" data-ps="src/components/home/QuoteForm.astro:icon-email">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <div data-ps="src/components/home/QuoteForm.astro:email-copy">
+                <div class="text-[11px] font-bold text-[#f5bd14] tracking-widest uppercase mb-1" data-ps="src/components/home/QuoteForm.astro:email-kicker">Email Us</div>
+                <div class="space-y-1 text-[14.5px] text-[#a8a29e]" data-ps="src/components/home/QuoteForm.astro:emails">
+                  <div data-ps="src/components/home/QuoteForm.astro:email-general">
+                    General: <a href={`mailto:${SITE.emails.owner}`} class="text-[#f5f5f4] hover:text-[#f5bd14] no-underline">{SITE.emails.owner}</a>
+                  </div>
+                  <div data-ps="src/components/home/QuoteForm.astro:email-billing">
+                    Billing: <a href={`mailto:${SITE.emails.financial}`} class="text-[#f5f5f4] hover:text-[#f5bd14] no-underline">{SITE.emails.financial}</a>
+                  </div>
+                  <div data-ps="src/components/home/QuoteForm.astro:email-scheduling">
+                    Scheduling: <a href={`mailto:${SITE.emails.scheduling}`} class="text-[#f5f5f4] hover:text-[#f5bd14] no-underline">{SITE.emails.scheduling}</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7" data-ps="src/components/home/QuoteForm.astro:right-col">
+          <form
+            name="KRE Security — Website inquiry"
+            class="space-y-5"
+            action="https://formspree.io/f/mljrgzln"
+            method="POST"
+            data-ps="src/components/home/QuoteForm.astro:form"
+          >
+            <input type="hidden" name="_subject" value="KRE Security — Website inquiry" />
+            <input type="hidden" name="_next" value="/thanks/website/" />
+            <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" data-ps="src/components/home/QuoteForm.astro:name-row">
+              <div data-ps="src/components/home/QuoteForm.astro:first-wrap">
+                <label for="first-name" class="block text-[12px] font-bold text-[#f5bd14] uppercase tracking-widest mb-1.5" data-ps="src/components/home/QuoteForm.astro:first-label">
+                  First Name *
+                </label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first_name"
+                  required
+                  class="w-full bg-[#141414] border border-white/[0.12] rounded-[10px] px-4 py-3 text-[#f5f5f4] placeholder-[#a8a29e]/50 text-[15px] focus:outline-none focus:border-[#f5bd14] focus:ring-1 focus:ring-[#f5bd14] transition-colors"
+                />
+              </div>
+              <div data-ps="src/components/home/QuoteForm.astro:last-wrap">
+                <label for="last-name" class="block text-[12px] font-bold text-[#f5bd14] uppercase tracking-widest mb-1.5" data-ps="src/components/home/QuoteForm.astro:last-label">
+                  Last Name
+                </label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last_name"
+                  class="w-full bg-[#141414] border border-white/[0.12] rounded-[10px] px-4 py-3 text-[#f5f5f4] placeholder-[#a8a29e]/50 text-[15px] focus:outline-none focus:border-[#f5bd14] focus:ring-1 focus:ring-[#f5bd14] transition-colors"
+                />
+              </div>
+            </div>
+
+            <div data-ps="src/components/home/QuoteForm.astro:email-wrap">
+              <label for="quote-email" class="block text-[12px] font-bold text-[#f5bd14] uppercase tracking-widest mb-1.5" data-ps="src/components/home/QuoteForm.astro:email-label">
+                Email *
+              </label>
+              <input
+                type="email"
+                id="quote-email"
+                name="email"
+                required
+                class="w-full bg-[#141414] border border-white/[0.12] rounded-[10px] px-4 py-3 text-[#f5f5f4] placeholder-[#a8a29e]/50 text-[15px] focus:outline-none focus:border-[#f5bd14] focus:ring-1 focus:ring-[#f5bd14] transition-colors"
+              />
+            </div>
+
+            <div data-ps="src/components/home/QuoteForm.astro:message-wrap">
+              <label for="quote-message" class="block text-[12px] font-bold text-[#f5bd14] uppercase tracking-widest mb-1.5" data-ps="src/components/home/QuoteForm.astro:message-label">
+                Message
+              </label>
+              <textarea
+                id="quote-message"
+                name="message"
+                rows="5"
+                class="w-full bg-[#141414] border border-white/[0.12] rounded-[10px] px-4 py-3 text-[#f5f5f4] placeholder-[#a8a29e]/50 text-[15px] focus:outline-none focus:border-[#f5bd14] focus:ring-1 focus:ring-[#f5bd14] transition-colors resize-y"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full sm:w-auto bg-[#f5bd14] text-[#0a0a0a] font-bold text-[15px] tracking-wide uppercase px-10 py-4 rounded-[10px] hover:bg-[#e0ab10] hover:shadow-lg transition-all cursor-pointer"
+              data-ps="src/components/home/QuoteForm.astro:submit"
+            >
+              Submit Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

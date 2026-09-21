@@ -1,0 +1,22 @@
+---
+import { SITE } from '@/config/site';
+---
+
+<section class="relative isolate pt-[36px] pb-[56px]" data-ps="src/components/armed-security-pa/ArmedSecurityHero.astro:section">
+  <div class="max-w-[1180px] mx-auto px-6">
+    <div class="flex items-center gap-2 mb-4">
+      <span class="w-4 h-[2px] bg-[#f5bd14]"></span>
+      <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase">NASRO Certified — PA State License No. 84</span>
+    </div>
+    <h1 class="text-[36px] sm:text-[48px] font-extrabold text-[#f5f5f4] leading-[1.08] tracking-[-1.2px] mb-5 max-w-3xl">
+      Armed Security Guard Services
+    </h1>
+    <p class="text-[#a8a29e] text-[17px] leading-[28px] mb-8 max-w-2xl">
+      When a situation arises that may require special security services, our Armed Security guard service can help. Our full-time armed security guards are all certified by the NASRO and trained in the use of firearms and are fully belted.
+    </p>
+    <div class="flex flex-wrap gap-3">
+      <a href="/contact/" class="bg-[#f5bd14] text-[#0a0a0a] font-bold text-[14px] px-[24px] py-[13px] rounded-[10px] no-underline hover:bg-[#e0ab10]">Contact Us Today</a>
+      <a href={`tel:${SITE.phone.primaryTel}`} class="border border-white/20 text-[#f5f5f4] font-semibold text-[14px] px-[24px] py-[13px] rounded-[10px] no-underline hover:border-[#f5bd14]">{SITE.phone.primary}</a>
+    </div>
+  </div>
+</section>

@@ -7,50 +7,32 @@ const jsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
-    name: 'Contact Net Express | Business Phone, Internet & IT Support',
-    description: 'Get in touch with Net Express for business phone systems, dedicated fiber internet, virtual fax, and managed IT in Michigan.',
-    url: new URL('/contact', SITE.url).toString(),
+    name: 'Contact KRE Security',
+    description: 'Request licensed security coverage or 24-hour dispatch from KRE Security in Hamburg, PA.',
+    url: new URL('/contact/', SITE.url).toString(),
   },
   {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Net Express',
+    name: SITE.name,
     description: SITE.description,
     url: SITE.url,
-    telephone: '+1-855-313-2300',
+    telephone: SITE.phone.primary,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '6825 Dixie Hwy',
-      addressLocality: 'Clarkston',
-      addressRegion: 'MI',
-      postalCode: '48346',
-      addressCountry: 'US',
+      streetAddress: SITE.address.streetAddress,
+      addressLocality: SITE.address.addressLocality,
+      addressRegion: SITE.address.addressRegion,
+      postalCode: SITE.address.postalCode,
+      addressCountry: SITE.address.addressCountry,
     },
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: SITE.url,
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Contact',
-        item: new URL('/contact', SITE.url).toString(),
-      },
-    ],
   },
 ];
 ---
 
 <BaseLayout
-  title="Contact Net Express | Business Phone, Internet & IT in Michigan"
-  description="Contact Net Express for Michigan business phone systems (Hosted VoIP), dedicated fiber internet, virtual fax, and managed IT. One provider, one bill, one support line."
+  title="Contact KRE Security | Hamburg, PA"
+  description="Contact KRE Security for 24-hour dispatch, licensed guards, school security, ACT 67, and First Aid training across Eastern Pennsylvania."
   jsonLd={jsonLd}
 >
   <div class="pt-8" data-ps="src/pages/contact.astro:lx8n1i">

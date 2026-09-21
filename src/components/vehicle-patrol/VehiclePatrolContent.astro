@@ -1,0 +1,114 @@
+---
+const equipment = [
+  'Flashlight',
+  'Spot Lights',
+  'Guard Accountability Wand',
+  'Incident and Daily Reports',
+  'Medical Response Bag',
+  'Jumper Cables',
+  'KRE and Client Vehicle Policy',
+  'Vehicle Log',
+  'Traffic Safety Cones',
+  'AAA Membership',
+  'Traffic Hand Wand',
+  'UHF or VHF Radio (Programmable to client sites)',
+];
+
+const fleetOptions = [
+  {
+    tag: 'Marked Fleet',
+    title: 'Marked Patrol Vehicles',
+    desc: 'High-visibility branded patrol vehicles providing a deterrent presence and active patrol of client facilities. Fully insured and licensed for facility grounds.',
+  },
+  {
+    tag: 'Covert Fleet',
+    title: 'Unmarked / Covert Vehicles',
+    desc: 'Discreet, unmarked patrol vehicles for covert surveillance and undercover security operations — indistinguishable from standard civilian vehicles.',
+  },
+  {
+    tag: 'All-Terrain',
+    title: '4x4 & All-Wheel Drive',
+    desc: '4x4 and all-wheel drive capable vehicles can be stationed for the client’s specific environmental needs, including off-road and challenging terrain environments.',
+  },
+  {
+    tag: 'Venue Specific',
+    title: 'Security Patrol Golf Carts',
+    desc: 'Golf carts can be utilized on venue-specific areas, offering a cost savings for the facility. Available during warmer conditions and marked for visibility. Can reduce fuel expenses at facilities.',
+  },
+];
+---
+
+<section class="relative isolate py-[72px] border-t border-white/[0.06]" data-ps="src/components/vehicle-patrol/VehiclePatrolContent.astro:section">
+  <div class="max-w-[1180px] mx-auto px-6">
+    <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-8 lg:p-10 mb-16">
+      <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-3">Marked Security Patrol Vehicles Division</p>
+      <h2 class="text-[28px] font-extrabold text-[#f5f5f4] mb-4">KRE Security Vehicle Patrol Division</h2>
+      <p class="text-[#a8a29e] text-[15px] leading-[24px] max-w-3xl m-0">
+        KRE provides a custom patrol service based on the client’s needs and venue. Our fleet is fully insured and licensed for vehicle use at facility grounds. Each vehicle is configured and equipped to meet the operational demands of the client’s site.
+      </p>
+    </div>
+
+    <div class="mb-16">
+      <div class="mb-8">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-4 h-[2px] bg-[#f5bd14]"></span>
+          <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase">Fleet Options</span>
+        </div>
+        <h2 class="text-[32px] font-extrabold text-[#f5f5f4] leading-[1.08]">Vehicle Fleet Overview</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-5">
+        {fleetOptions.map((option) => (
+          <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-6">
+            <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-2">{option.tag}</p>
+            <h3 class="text-[16px] font-bold text-[#f5f5f4] mb-3">{option.title}</h3>
+            <p class="text-[#a8a29e] text-[14px] leading-[22px] m-0">{option.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 items-start mb-16">
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-4 h-[2px] bg-[#f5bd14]"></span>
+          <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase">Standard Loadout</span>
+        </div>
+        <h2 class="text-[28px] font-extrabold text-[#f5f5f4] mb-6">Each Vehicle is Equipped With:</h2>
+        <div class="grid grid-cols-2 gap-3">
+          {equipment.map((item) => (
+            <div class="flex items-start gap-3 bg-white/[0.035] border border-white/[0.09] rounded-[12px] p-3">
+              <span class="mt-1.5 w-2 h-2 bg-[#f5bd14] shrink-0 rounded-full"></span>
+              <span class="text-[#a8a29e] text-[13px] leading-tight">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-5">
+          <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-2">Custom Configuration</p>
+          <p class="text-[#a8a29e] text-[14px] leading-[22px] m-0">
+            KRE provides a custom patrol service based on the client’s needs and venue. Each assignment is assessed and the appropriate vehicle type is assigned.
+          </p>
+        </div>
+        <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-5">
+          <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-2">UHF / VHF Radio</p>
+          <p class="text-[#a8a29e] text-[14px] leading-[22px] m-0">
+            All patrol vehicles are equipped with UHF or VHF radios programmable to the client’s specific site frequencies for seamless communication.
+          </p>
+        </div>
+        <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-5">
+          <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-2">Golf Cart Option</p>
+          <p class="text-[#a8a29e] text-[14px] leading-[22px] m-0">
+            Golf Carts can be discussed to reduce fuel expenses at facilities. Available and marked during warmer conditions for venue-specific areas.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a href="/contact/" class="inline-block bg-[#f5bd14] text-[#0a0a0a] font-bold text-[14px] px-10 py-4 rounded-[10px] no-underline hover:bg-[#e0ab10]">
+        Contact Us Today to Get Started
+      </a>
+    </div>
+  </div>
+</section>

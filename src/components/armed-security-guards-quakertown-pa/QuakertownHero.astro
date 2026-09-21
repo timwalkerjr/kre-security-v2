@@ -1,0 +1,29 @@
+---
+import PageHero from '@/components/pages/PageHero.astro';
+import { SITE, designAsset } from '@/config/site';
+---
+
+<PageHero
+  eyebrow="Serving Quakertown & Surrounding Cities"
+  title="Armed Security Guards Quakertown PA"
+  primaryHref={`tel:${SITE.phone.primaryTel}`}
+  primaryLabel={SITE.phone.primary}
+  secondaryHref="/contact/"
+  secondaryLabel="Contact Us"
+>
+  <Fragment slot="lead">
+    <p class="m-0">
+      Our mission is to provide qualified, educated and professional law enforcement, security services protection, and investigation services that meet the needs of our clients as “Your Total Security Professional.” Our obligation is to promote safety and security for you 24/7 while maintaining competitive and affordable security services throughout Pennsylvania.
+    </p>
+  </Fragment>
+  <Fragment slot="media">
+    <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden p-2">
+      <img
+        src={designAsset('/images/lib/IMG_5834_JPG-320.webp')}
+        alt="Armed security guard services Quakertown"
+        class="w-full max-w-[320px] mx-auto h-auto object-cover rounded-[12px]"
+        loading="eager"
+      />
+    </div>
+  </Fragment>
+</PageHero>

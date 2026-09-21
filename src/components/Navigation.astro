@@ -1,104 +1,112 @@
 ---
-// Net Express Navigation
-// ps:header-variant — BaseLayout passes variant="solid" on pages whose source
-// shows the header solid at the top; the scroll script below keeps it so.
+import { SITE, NAV } from '@/config/site';
+
 const headerVariant =
   (Astro.props as { variant?: 'transparent' | 'solid' }).variant ??
   'transparent';
-
 ---
 
-<header data-header-variant={headerVariant} id="navbar" class="sticky top-0 z-50 bg-[#091a2c]/85 backdrop-blur-md border-b border-white/[0.08]" data-ps="src/components/Navigation.astro:header">
-  <div class="max-w-[1180px] mx-auto px-6 h-[68px] flex items-center justify-between" data-ps="src/components/Navigation.astro:container">
-    <!-- Logo -->
-    <a href="/#home" class="flex items-center no-underline shrink-0" data-ps="src/components/Navigation.astro:logo">
-      <img
-        src="https://pagesmith-cdn.com/726747c3/images/netexpress-logo-320.webp"
-        alt="Net Express"
-        width="169"
-        height="31"
-        class="h-[31px] w-[169px] object-contain"
-        loading="eager" data-ps="src/components/Navigation.astro:d4d69x" />
-    </a>
-
-    <!-- Desktop Navigation Links -->
-    <nav class="hidden lg:flex items-center gap-[24px]" aria-label="Main Navigation" data-ps="src/components/Navigation.astro:desktop-nav">
-      <a href="/#services" class="text-[14.88px] font-medium text-[#c4d1dd] hover:text-white transition-colors no-underline" data-ps="src/components/Navigation.astro:7vkjs6">Services</a>
-      <a href="/#why" class="text-[14.88px] font-medium text-[#c4d1dd] hover:text-white transition-colors no-underline" data-ps="src/components/Navigation.astro:7vkjs7">Why Net Express</a>
-      <a href="/service-areas" class="text-[14.88px] font-medium text-[#c4d1dd] hover:text-white transition-colors no-underline" data-ps="src/components/Navigation.astro:7vkjs8">Service Area</a>
-      <a href="/articles" class="text-[14.88px] font-medium text-[#c4d1dd] hover:text-white transition-colors no-underline" data-ps="src/components/Navigation.astro:articles-link">Articles</a>
-      <a href="/#reviews" class="text-[14.88px] font-medium text-[#c4d1dd] hover:text-white transition-colors no-underline" data-ps="src/components/Navigation.astro:7vkjs9">Reviews</a>
-      <a href="/#faq" class="text-[14.88px] font-medium text-[#c4d1dd] hover:text-white transition-colors no-underline" data-ps="src/components/Navigation.astro:7vkjsa">FAQ</a>
-      <a href="/#contact" class="text-[14.88px] font-medium text-[#c4d1dd] hover:text-white transition-colors no-underline" data-ps="src/components/Navigation.astro:7vkjsb">Contact</a>
-    </nav>
-
-    <!-- Desktop Right CTA & Phone -->
-    <div class="hidden md:flex items-center gap-5" data-ps="src/components/Navigation.astro:right-cta">
-      <div class="text-[14.88px] text-[#c4d1dd]" data-ps="src/components/Navigation.astro:gqvsdc">
-        Call <a href="tel:+18553132300" class="font-bold text-white hover:text-[#94e760] transition-colors no-underline" data-ps="src/components/Navigation.astro:7vkjsc">(855) 313-2300</a>
-      </div>
-      <a
-        href="/#contact"
-        class="bg-white text-[#0a1a2e] font-semibold text-[15.2px] px-[18px] py-[9px] rounded-[10px] hover:bg-[#eef3f7] hover:shadow transition-all no-underline shrink-0"
-       data-ps="src/components/Navigation.astro:7vkjsd">
-        Get a Quote
-      </a>
+<header data-header-variant={headerVariant} id="navbar" class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/[0.08]" data-ps="src/components/Navigation.astro:header">
+  <div class="border-b border-white/[0.06] bg-black" data-ps="src/components/Navigation.astro:county-bar">
+    <div class="max-w-[1180px] mx-auto px-6 py-1.5 text-[11px] leading-4 text-[#a8a29e] tracking-wide" data-ps="src/components/Navigation.astro:county-copy">
+      Serving {SITE.counties.join(', ')} Counties in Pennsylvania.
     </div>
-
-    <!-- Mobile Menu Button -->
-    <button
-      id="mobile-menu-button"
-      type="button"
-      class="lg:hidden p-2 text-[#c4d1dd] hover:text-white transition-colors"
-      aria-label="Toggle menu"
-      aria-expanded="false"
-      aria-controls="mobile-menu"
-      data-ps="src/components/Navigation.astro:mobile-btn"
-    >
-      <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-      <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-      </svg>
+  </div>
+  <div class="max-w-[1180px] mx-auto px-6 h-[68px] flex items-center justify-between gap-4" data-ps="src/components/Navigation.astro:container">
+    <a href="/" class="flex items-center gap-2.5 no-underline shrink-0" data-ps="src/components/Navigation.astro:logo">
+      <img src={SITE.logo} alt="KRE Security LLC." width="40" height="48" class="h-10 w-auto object-contain" loading="eager" data-ps="src/components/Navigation.astro:d4d69x" />
+      <span class="hidden sm:flex flex-col leading-none" data-ps="src/components/Navigation.astro:logo-type">
+        <span class="text-white font-extrabold text-[14px] tracking-wide" data-ps="src/components/Navigation.astro:logo-name">KRE SECURITY</span>
+        <span class="text-[#f5bd14] font-bold text-[10px] tracking-[0.18em]" data-ps="src/components/Navigation.astro:logo-llc">LLC.</span>
+      </span>
+    </a>
+    <nav class="hidden xl:flex items-center gap-[18px]" aria-label="Main Navigation" data-ps="src/components/Navigation.astro:desktop-nav">
+      <a href="/" class="text-[13.5px] font-medium text-[#d6d3d1] hover:text-white transition-colors no-underline" data-ps="src/components/Navigation.astro:7vkjs6">Home</a>
+      <div class="relative group" data-ps="src/components/Navigation.astro:services-menu">
+        <button type="button" class="text-[13.5px] font-medium text-[#d6d3d1] group-hover:text-white transition-colors inline-flex items-center gap-1" data-ps="src/components/Navigation.astro:7vkjs7">Services <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></button>
+        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all" data-ps="src/components/Navigation.astro:services-panel-wrap">
+          <div class="w-[300px] bg-[#141414] border border-white/[0.1] rounded-[14px] p-4 shadow-2xl" data-ps="src/components/Navigation.astro:services-panel">
+            {NAV.coreServices.map((item) => (
+              <a href={item.href} class="block text-[13px] text-[#d6d3d1] hover:text-[#f5bd14] no-underline py-1.5" data-ps="src/components/Navigation.astro:7vkjs8">{item.title}</a>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div class="relative group" data-ps="src/components/Navigation.astro:specialized-menu">
+        <button type="button" class="text-[13.5px] font-medium text-[#d6d3d1] group-hover:text-white transition-colors inline-flex items-center gap-1" data-ps="src/components/Navigation.astro:articles-link">Specialized <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></button>
+        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all" data-ps="src/components/Navigation.astro:specialized-panel-wrap">
+          <div class="w-[340px] bg-[#141414] border border-white/[0.1] rounded-[14px] p-4 shadow-2xl" data-ps="src/components/Navigation.astro:specialized-panel">
+            {NAV.specialized.map((item) => (
+              <a href={item.href} class="block text-[13px] text-[#d6d3d1] hover:text-[#f5bd14] no-underline py-1.5" data-ps="src/components/Navigation.astro:7vkjs9">{item.title}</a>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div class="relative group" data-ps="src/components/Navigation.astro:about-menu">
+        <button type="button" class="text-[13.5px] font-medium text-[#d6d3d1] group-hover:text-white transition-colors inline-flex items-center gap-1" data-ps="src/components/Navigation.astro:7vkjsa">About <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></button>
+        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all" data-ps="src/components/Navigation.astro:about-panel-wrap">
+          <div class="w-[240px] bg-[#141414] border border-white/[0.1] rounded-[14px] p-4 shadow-2xl" data-ps="src/components/Navigation.astro:about-panel">
+            {NAV.about.map((item) => (
+              <a href={item.href} class="block text-[13px] text-[#d6d3d1] hover:text-[#f5bd14] no-underline py-1.5" data-ps="src/components/Navigation.astro:7vkjsb">{item.title}</a>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div class="relative group" data-ps="src/components/Navigation.astro:news-menu">
+        <button type="button" class="text-[13.5px] font-medium text-[#d6d3d1] group-hover:text-white transition-colors inline-flex items-center gap-1" data-ps="src/components/Navigation.astro:news-btn">News <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></button>
+        <div class="absolute right-0 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all" data-ps="src/components/Navigation.astro:news-panel-wrap">
+          <div class="w-[280px] bg-[#141414] border border-white/[0.1] rounded-[14px] p-4 shadow-2xl" data-ps="src/components/Navigation.astro:news-panel">
+            {NAV.news.map((item) => (
+              <a href={item.href} class="block text-[13px] text-[#d6d3d1] hover:text-[#f5bd14] no-underline py-1.5" data-ps="src/components/Navigation.astro:news-link">{item.title}</a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="hidden md:flex items-center gap-3 lg:gap-4" data-ps="src/components/Navigation.astro:right-cta">
+      <span class="text-[11px] font-bold uppercase tracking-[0.14em] text-[#f5bd14]" data-ps="src/components/Navigation.astro:now-hiring">Now Hiring</span>
+      <a href={`tel:${SITE.phone.primaryTel}`} class="text-[13.5px] font-bold text-white hover:text-[#f5bd14] transition-colors no-underline" data-ps="src/components/Navigation.astro:7vkjsc">{SITE.phone.primary}</a>
+      <a href={SITE.socials.facebook} target="_blank" rel="noopener noreferrer" class="text-[#d6d3d1] hover:text-[#f5bd14] transition-colors" aria-label="KRE Security on Facebook" data-ps="src/components/Navigation.astro:facebook">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
+      </a>
+      <a href="/contact/" class="bg-white text-[#0a0a0a] font-semibold text-[14px] px-[16px] py-[8px] rounded-[10px] hover:bg-[#e7e5e4] hover:shadow transition-all no-underline shrink-0" data-ps="src/components/Navigation.astro:7vkjsd">Get a Quote</a>
+    </div>
+    <button id="mobile-menu-button" type="button" class="xl:hidden p-2 text-[#d6d3d1] hover:text-white transition-colors" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu" data-ps="src/components/Navigation.astro:mobile-btn">
+      <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+      <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
     </button>
   </div>
-
-  <!-- Mobile Menu Dropdown -->
-  <div
-    id="mobile-menu"
-    class="hidden lg:hidden bg-[#091a2c]/95 border-b border-white/[0.08] backdrop-blur-xl px-6 py-5 flex flex-col gap-3"
-    role="navigation"
-    aria-label="Mobile navigation"
-    data-ps="src/components/Navigation.astro:mobile-menu"
-  >
-    <a href="/#services" class="text-[#c4d1dd] font-medium text-[16px] py-2 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:7vkjse">Services</a>
-    <a href="/#why" class="text-[#c4d1dd] font-medium text-[16px] py-2 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:7vkjsf">Why Net Express</a>
-    <a href="/service-areas" class="text-[#c4d1dd] font-medium text-[16px] py-2 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:kd8n5z">Service Area</a>
-    <a href="/articles" class="text-[#c4d1dd] font-medium text-[16px] py-2 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:mobile-articles">Articles</a>
-    <a href="/#reviews" class="text-[#c4d1dd] font-medium text-[16px] py-2 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:kd8n5y">Reviews</a>
-    <a href="/#faq" class="text-[#c4d1dd] font-medium text-[16px] py-2 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:kd8n5x">FAQ</a>
-    <a href="/#contact" class="text-[#c4d1dd] font-medium text-[16px] py-2 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:kd8n5w">Contact</a>
+  <div id="mobile-menu" class="hidden xl:hidden bg-black/96 border-b border-white/[0.08] backdrop-blur-xl px-6 py-5 flex flex-col gap-2 overflow-y-auto max-h-[calc(100vh-108px)]" role="navigation" aria-label="Mobile navigation" data-ps="src/components/Navigation.astro:mobile-menu">
+    <a href="/" class="text-[#d6d3d1] font-medium text-[16px] py-2 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:7vkjse">Home</a>
+    <p class="text-[11px] font-bold uppercase tracking-[0.16em] text-[#f5bd14] mt-2 mb-0" data-ps="src/components/Navigation.astro:mobile-services-label">Services</p>
+    {NAV.coreServices.map((item) => (
+      <a href={item.href} class="text-[#d6d3d1] font-medium text-[15px] py-1.5 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:7vkjsf">{item.title}</a>
+    ))}
+    <p class="text-[11px] font-bold uppercase tracking-[0.16em] text-[#f5bd14] mt-3 mb-0" data-ps="src/components/Navigation.astro:mobile-specialized-label">Specialized</p>
+    {NAV.specialized.map((item) => (
+      <a href={item.href} class="text-[#d6d3d1] font-medium text-[15px] py-1.5 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:kd8n5z">{item.title}</a>
+    ))}
+    <p class="text-[11px] font-bold uppercase tracking-[0.16em] text-[#f5bd14] mt-3 mb-0" data-ps="src/components/Navigation.astro:mobile-about-label">About</p>
+    {NAV.about.map((item) => (
+      <a href={item.href} class="text-[#d6d3d1] font-medium text-[15px] py-1.5 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:mobile-articles">{item.title}</a>
+    ))}
+    <p class="text-[11px] font-bold uppercase tracking-[0.16em] text-[#f5bd14] mt-3 mb-0" data-ps="src/components/Navigation.astro:mobile-news-label">News</p>
+    {NAV.news.map((item) => (
+      <a href={item.href} class="text-[#d6d3d1] font-medium text-[15px] py-1.5 no-underline hover:text-white transition-colors" data-ps="src/components/Navigation.astro:kd8n5y">{item.title}</a>
+    ))}
     <div class="pt-3 border-t border-white/[0.08] flex flex-col gap-3" data-ps="src/components/Navigation.astro:gqvsdd">
-      <div class="text-[15px] text-[#c4d1dd]" data-ps="src/components/Navigation.astro:gqvsde">
-        Call <a href="tel:+18553132300" class="font-bold text-white hover:text-[#94e760] no-underline" data-ps="src/components/Navigation.astro:kd8n5v">(855) 313-2300</a>
-      </div>
-      <a
-        href="/#contact"
-        class="bg-white text-[#0a1a2e] text-center font-semibold text-[15.2px] px-[18px] py-[11px] rounded-[10px] hover:bg-[#eef3f7] transition-all no-underline"
-       data-ps="src/components/Navigation.astro:kd8n5u">
-        Get a Quote
-      </a>
+      <div class="text-[15px] text-[#f5bd14] font-bold uppercase tracking-[0.14em]" data-ps="src/components/Navigation.astro:gqvsde">Now Hiring</div>
+      <div class="text-[15px] text-[#d6d3d1]" data-ps="src/components/Navigation.astro:mobile-phone">Call <a href={`tel:${SITE.phone.primaryTel}`} class="font-bold text-white hover:text-[#f5bd14] no-underline" data-ps="src/components/Navigation.astro:kd8n5v">{SITE.phone.primary}</a></div>
+      <a href={SITE.socials.facebook} target="_blank" rel="noopener noreferrer" class="text-white font-medium no-underline hover:text-[#f5bd14]" data-ps="src/components/Navigation.astro:kd8n5x">Facebook</a>
+      <a href="/contact/" class="bg-white text-[#0a0a0a] text-center font-semibold text-[15.2px] px-[18px] py-[11px] rounded-[10px] hover:bg-[#e7e5e4] transition-all no-underline" data-ps="src/components/Navigation.astro:kd8n5u">Get a Quote</a>
     </div>
   </div>
 </header>
-
 <script is:inline>
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');
   const menuIconOpen = document.getElementById('menu-icon-open');
   const menuIconClose = document.getElementById('menu-icon-close');
-
   function toggleMenu() {
     const isOpen = !mobileMenu?.classList.contains('hidden');
     if (isOpen) {
@@ -113,7 +121,6 @@ const headerVariant =
       mobileMenuButton?.setAttribute('aria-expanded', 'true');
     }
   }
-
   mobileMenuButton?.addEventListener('click', toggleMenu);
   mobileMenu?.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {

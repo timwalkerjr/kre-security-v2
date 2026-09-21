@@ -1,0 +1,23 @@
+---
+import PageHero from '@/components/pages/PageHero.astro';
+import { designAsset } from '@/config/site';
+---
+
+<PageHero
+  eyebrow="Authorized Vendor: ACT 67 Compliance"
+  title="KRE Security: Authorized Vendor for ACT 67 Compliance"
+  primaryHref="/contact/"
+  primaryLabel="Get Started Today"
+>
+  <Fragment slot="lead">
+    <p class="text-[#f5bd14] font-bold uppercase tracking-widest text-[13px] m-0">Ensuring School Safety with Certified Expertise</p>
+    <p class="m-0">
+      KRE Security is proud to announce that we are now an approved and authorized vendor for ACT 67 compliance. This designation allows us to provide top-tier security services tailored to meet the stringent requirements of Pennsylvania’s school safety laws.
+    </p>
+  </Fragment>
+  <Fragment slot="media">
+    <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden">
+      <img src={designAsset('/images/lib/63861c_73787725be8f4fa5b6f02908b0c8a9b2-mv2-82.webp')} alt="School security guard services" class="w-full h-64 object-cover" loading="eager" />
+    </div>
+  </Fragment>
+</PageHero>

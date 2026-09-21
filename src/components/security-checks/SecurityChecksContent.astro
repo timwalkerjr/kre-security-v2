@@ -1,0 +1,83 @@
+---
+const checkItems = [
+  'Check all doors and windows to be sure closed and locked',
+  'Water indoor and outdoor plants per your instructions',
+  'Bring in mail, solicitation flyers & newspapers',
+  'Rotate lights for lived-in look',
+  'Check for water leaks under sinks, toilets and washing machine',
+  'After rain storm check ceilings in home and garage for water leaks',
+  'Follow up with landscaper, pool server, housekeeper, pest control, etc., as needed',
+  'Spray weeds (client provides weed spray)',
+  'Put out trash cans on scheduled trash, then put away after emptied',
+  'Prepare home for client’s return — reset thermostat, turn some lights on, schedule housekeeper, pest control, etc.',
+  'After each inspection, we will notify you of our findings',
+  'Alarm response by officers to check on your property while you are away',
+];
+
+const counties = ['Berks County', 'Schuylkill County', 'Lehigh County', 'Surrounding Counties'];
+---
+
+<section class="relative isolate py-[72px] border-t border-white/[0.06]" data-ps="src/components/security-checks/SecurityChecksContent.astro:section">
+  <div class="max-w-[1180px] mx-auto px-6">
+    <div class="mb-10">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="w-4 h-[2px] bg-[#f5bd14]"></span>
+        <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase">Comprehensive Inspection</span>
+      </div>
+      <h2 class="text-[32px] sm:text-[40px] font-extrabold text-[#f5f5f4] leading-[1.08] tracking-[-1.1px]">
+        What Do Home Security Checks Include?
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-4 mb-16">
+      {checkItems.map((item) => (
+        <div class="flex gap-4 items-start bg-white/[0.035] border border-white/[0.09] rounded-[12px] p-4">
+          <span class="mt-1.5 w-2 h-2 bg-[#f5bd14] shrink-0 rounded-full"></span>
+          <span class="text-[#a8a29e] text-[14px] leading-[22px]">{item}</span>
+        </div>
+      ))}
+    </div>
+
+    <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-8 lg:p-10">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-3">Coverage Area</p>
+          <h2 class="text-[28px] font-extrabold text-[#f5f5f4] mb-4">Serving Eastern Pennsylvania</h2>
+          <p class="text-[#a8a29e] text-[15px] leading-[24px] mb-6">
+            KRE Security LLC. offers Berks, Schuylkill, Lehigh and surrounding counties expert home security check services — giving you, the home or business owner, complete peace-of-mind while you are away.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-8">
+            {counties.map((county) => (
+              <span class="border border-white/[0.09] text-[#a8a29e] font-bold uppercase text-[11px] tracking-widest px-3 py-1 rounded-[8px]">
+                {county}
+              </span>
+            ))}
+          </div>
+          <a href="/contact/" class="inline-block bg-[#f5bd14] text-[#0a0a0a] font-bold text-[14px] px-8 py-4 rounded-[10px] no-underline hover:bg-[#e0ab10]">
+            Contact Us Today to Get Started
+          </a>
+        </div>
+        <div class="space-y-4">
+          <div class="border border-white/[0.09] rounded-[12px] p-5">
+            <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-2">Peace of Mind</p>
+            <p class="text-[#a8a29e] text-[14px] leading-[22px] m-0">
+              Our security checks are designed and planned with you in mind — giving you total confidence while you’re on vacation, traveling for business, or out of town for a prolonged period.
+            </p>
+          </div>
+          <div class="border border-white/[0.09] rounded-[12px] p-5">
+            <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-2">Personal Care</p>
+            <p class="text-[#a8a29e] text-[14px] leading-[22px] m-0">
+              We care for your home as if it were our very own. Every inspection is followed up with a full report of our findings.
+            </p>
+          </div>
+          <div class="border border-white/[0.09] rounded-[12px] p-5">
+            <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-2">24-Hour Alarm Response</p>
+            <p class="text-[#a8a29e] text-[14px] leading-[22px] m-0">
+              Our officers respond to alarms and check on your property around the clock while you are away.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

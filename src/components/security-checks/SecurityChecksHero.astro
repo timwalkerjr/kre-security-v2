@@ -1,0 +1,30 @@
+---
+import PageHero from '@/components/pages/PageHero.astro';
+import { SITE, designAsset } from '@/config/site';
+---
+
+<PageHero
+  eyebrow="Berks · Schuylkill · Lehigh & Surrounding Counties"
+  title="Residential / Commercial Security Checks"
+  primaryHref="/contact/"
+  primaryLabel="Contact Us Today"
+  secondaryHref={`tel:${SITE.phone.primaryTel}`}
+  secondaryLabel={SITE.phone.primary}
+>
+  <Fragment slot="lead">
+    <p class="text-[#f5bd14] font-bold uppercase tracking-widest text-[13px] m-0">“Your Total Security Professional”</p>
+    <p class="m-0">
+      KRE Security LLC. offers expert home security check services — giving you, the home or business owner, peace-of-mind while you are on vacation, traveling for business or out of town for a prolonged period of time. We care for your home as if it were our very own.
+    </p>
+  </Fragment>
+  <Fragment slot="media">
+    <div class="grid grid-cols-2 gap-3">
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden">
+        <img src={designAsset('/images/lib/39725c_91ebaf25dff34dd39410d0f4f785fe77-mv2-320.webp')} alt="Out of town home security check services" class="w-full h-48 object-cover" loading="eager" />
+      </div>
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden">
+        <img src={designAsset('/images/lib/39725c_c009777e5f86444db4532247de687268-mv2-320.webp')} alt="Put your mind at ease with our home security checks" class="w-full h-48 object-cover" loading="eager" />
+      </div>
+    </div>
+  </Fragment>
+</PageHero>

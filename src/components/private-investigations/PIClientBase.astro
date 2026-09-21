@@ -1,0 +1,54 @@
+---
+import { designAsset } from '@/config/site';
+
+const clients = ['Private Citizens', 'Attorneys', 'Processing Services', 'Corporate Investigation'];
+
+const gallery = [
+  { src: '/images/lib/39725c_86c608ccdb0d4da3b8fcae29c1d66966-mv2-249.webp', alt: 'Assets investigations eastern PA' },
+  { src: '/images/lib/39725c_cb3f85e968114b56ae9df1c5c7d2070b-mv2-249.webp', alt: 'Accident investigation eastern PA' },
+  { src: '/images/lib/39725c_1e2fcb7bd06c47daa05d6a0123c21dba-mv2-249.webp', alt: 'Arson investigation eastern PA' },
+  { src: '/images/lib/39725c_5a11581892684bb2b92d20d8f345a562-mv2-249.webp', alt: 'Aerial photography eastern PA' },
+  { src: '/images/lib/39725c_4fad465f794a469fbba6908140d4d1dc-mv2-249.webp', alt: 'Security for banks in eastern PA' },
+  { src: '/images/lib/39725c_a3ed82b6ac544fcfa158aa82cdaf287e-mv2-249.webp', alt: 'Private investigator Berks County PA' },
+  { src: '/images/lib/39725c_763698ed78cd45928029cc4654c0c7e5-mv2-249.webp', alt: 'Child abuse investigations reading' },
+  { src: '/images/lib/39725c_467643f3786a417fa8f521861f6674f0-mv2-249.webp', alt: 'Custody support near reading PA' },
+  { src: '/images/lib/39725c_ca4dc36d09fd4b40a790fbff199405ed-mv2-249.webp', alt: 'Civil litigation support Montgomery' },
+];
+---
+
+<section class="relative isolate py-[72px] border-t border-white/[0.06]" data-ps="src/components/private-investigations/PIClientBase.astro:section">
+  <div class="max-w-[1180px] mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-12">
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-4 h-[2px] bg-[#f5bd14]"></span>
+          <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase">Client Base</span>
+        </div>
+        <h2 class="text-[28px] sm:text-[32px] font-extrabold text-[#f5f5f4] leading-[1.08] mb-5">
+          Diverse Clientele, Tailored Investigations
+        </h2>
+        <p class="text-[#a8a29e] text-[16px] leading-[26px] mb-6">
+          Our firm specializes and handles numerous types of investigations with various scenarios. All casework is performed based on each client's needs.
+        </p>
+        <div class="grid grid-cols-2 gap-3">
+          {clients.map((client) => (
+            <div class="flex items-center gap-3 p-3 bg-white/[0.035] border border-white/[0.09] rounded-[12px]">
+              <span class="w-2 h-2 bg-[#f5bd14] shrink-0 rounded-full"></span>
+              <span class="text-[#f5f5f4] text-[13px] font-semibold">{client}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-6">
+        <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-4">Investigation Gallery</p>
+        <div class="grid grid-cols-3 gap-3">
+          {gallery.map((img) => (
+            <div class="overflow-hidden aspect-square rounded-[10px]">
+              <img src={designAsset(img.src)} alt={img.alt} class="w-full h-full object-cover" loading="lazy" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

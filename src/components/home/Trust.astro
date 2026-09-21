@@ -1,0 +1,81 @@
+---
+import { SITE } from '@/config/site';
+---
+
+<section id="trust" class="relative isolate py-[72px] lg:py-[92px] border-y border-white/[0.06]" data-ps="src/components/home/Trust.astro:section">
+  <div class="max-w-[1180px] mx-auto px-6" data-ps="src/components/home/Trust.astro:container">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-[28px]" data-ps="src/components/home/Trust.astro:pillars">
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-[28px]" data-ps="src/components/home/Trust.astro:card-license">
+        <div class="text-[#f5bd14] text-[12px] font-semibold tracking-[0.18em] uppercase mb-3" data-ps="src/components/home/Trust.astro:eyebrow-license">
+          Authority
+        </div>
+        <h2 class="text-[24px] font-extrabold text-[#f5f5f4] leading-[1.2] mb-3" data-ps="src/components/home/Trust.astro:h-license">
+          {SITE.license}
+        </h2>
+        <p class="text-[#a8a29e] text-[15px] leading-[24px] m-0" data-ps="src/components/home/Trust.astro:p-license">
+          KRE Security, LLC is a fully licensed and insured agency operating under the strict regulatory standards of the Commonwealth of Pennsylvania.
+        </p>
+      </div>
+
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-[28px]" data-ps="src/components/home/Trust.astro:card-mgmt">
+        <div class="text-[#f5bd14] text-[12px] font-semibold tracking-[0.18em] uppercase mb-3" data-ps="src/components/home/Trust.astro:eyebrow-mgmt">
+          Experience
+        </div>
+        <h2 class="text-[24px] font-extrabold text-[#f5f5f4] leading-[1.2] mb-3" data-ps="src/components/home/Trust.astro:h-mgmt">
+          Management Excellence
+        </h2>
+        <p class="text-[#a8a29e] text-[15px] leading-[24px] m-0" data-ps="src/components/home/Trust.astro:p-mgmt">
+          Under new ownership and management since 2016, delivering a modern, responsive approach to traditional law enforcement and private security protection.
+        </p>
+      </div>
+
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-[28px]" data-ps="src/components/home/Trust.astro:card-vet">
+        <div class="text-[#f5bd14] text-[12px] font-semibold tracking-[0.18em] uppercase mb-3" data-ps="src/components/home/Trust.astro:eyebrow-vet">
+          Values
+        </div>
+        <h2 class="text-[24px] font-extrabold text-[#f5f5f4] leading-[1.2] mb-3" data-ps="src/components/home/Trust.astro:h-vet">
+          Veteran Supported
+        </h2>
+        <p class="text-[#a8a29e] text-[15px] leading-[24px] m-0" data-ps="src/components/home/Trust.astro:p-vet">
+          We are proud to be a Veteran Supported Firm, committed to the discipline, readiness, and integrity learned through military service.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-[56px] grid grid-cols-1 lg:grid-cols-2 gap-[40px] items-center" data-ps="src/components/home/Trust.astro:dispatch">
+      <div data-ps="src/components/home/Trust.astro:dispatch-copy">
+        <h2 class="text-[36px] sm:text-[42px] font-extrabold text-[#f5f5f4] leading-[1.08] tracking-[-1.1px] mb-5" data-ps="src/components/home/Trust.astro:h-dispatch">
+          24-Hour Emergency Dispatch
+        </h2>
+        <p class="text-[#a8a29e] text-[17px] leading-[28px] mb-8 max-w-lg" data-ps="src/components/home/Trust.astro:p-dispatch">
+          Our specialized emergency dispatch center is operational 24/7/365, ensuring immediate coordination for urgent security needs across our service areas.
+        </p>
+        <a
+          href={`tel:${SITE.phone.primaryTel}`}
+          class="inline-flex items-center gap-4 text-[#f5bd14] no-underline group"
+          data-ps="src/components/home/Trust.astro:dispatch-phone"
+        >
+          <span class="text-[32px] sm:text-[40px] font-extrabold tracking-tight text-[#f5bd14]" data-ps="src/components/home/Trust.astro:phone-num">
+            {SITE.phone.primary}
+          </span>
+          <span class="w-12 h-12 rounded-full border border-[#f5bd14] flex items-center justify-center group-hover:bg-[#f5bd14] group-hover:text-[#0a0a0a] transition-all" data-ps="src/components/home/Trust.astro:phone-arrow">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-2" data-ps="src/components/home/Trust.astro:dispatch-frame">
+        <img
+          src="/images/dispatch.svg"
+          alt="KRE Security emergency dispatch uniform and radio"
+          class="w-full h-auto object-cover rounded-[12px] opacity-90"
+          width="768"
+          height="337"
+          data-ps="src/components/home/Trust.astro:dispatch-img"
+        />
+      </div>
+    </div>
+  </div>
+</section>

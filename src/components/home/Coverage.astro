@@ -1,0 +1,108 @@
+---
+import { SITE } from '@/config/site';
+
+const locations = [
+  { county: 'Berks', cities: 'Hamburg, Reading, Wyomissing, Boyertown, Kutztown, Temple, Leesport, Wernersville' },
+  { county: 'Bucks', cities: 'Levittown, Quakertown, Doylestown' },
+  { county: 'Carbon', cities: 'Jim Thorpe, Lehighton, Nesquehoning' },
+  { county: 'Chester', cities: 'West Chester, Phoenixville, Downingtown, Coatesville, Kennett Square' },
+  { county: 'Cumberland', cities: 'Carlisle' },
+  { county: 'Dauphin', cities: 'Harrisburg, Hershey, Colonial Park, Middletown' },
+  { county: 'Erie', cities: 'Erie' },
+  { county: 'Franklin', cities: 'Fannettsburg' },
+  { county: 'Juniata', cities: 'Port Royal, Mifflintown' },
+  { county: 'Lancaster', cities: 'Lancaster, Ephrata, Elizabethtown, Lititz, Columbia, New Holland' },
+  { county: 'Lebanon', cities: 'Lebanon, Palmyra, Annville, Hershey' },
+  { county: 'Lehigh', cities: 'Allentown, Bethlehem, Emmaus, Whitehall, Fogelsville' },
+  { county: 'Luzerne', cities: 'Wilkes-Barre' },
+  { county: 'Monroe', cities: 'Kunkletown, East Stroudsburg' },
+  { county: 'Montgomery', cities: 'Norristown, Pottstown, King of Prussia, Lansdale, Willow Grove' },
+  { county: 'Northampton', cities: 'Easton, Northampton, Palmer' },
+  { county: 'Northumberland', cities: 'Sunbury, Shamokin, Elysburg' },
+  { county: 'Perry', cities: 'Newport' },
+  { county: 'Philadelphia', cities: 'Center City and Surrounding City Limits' },
+  { county: 'Schuylkill', cities: 'Pottsville, Tamaqua, Minersville, Shenandoah, Cressona, Deer Lake, Port Carbon, Schuylkill Haven' },
+  { county: 'Union', cities: 'Lewisburg' },
+  { county: 'Wayne', cities: 'Honesdale' },
+];
+---
+
+<section id="coverage" class="relative isolate py-[72px] lg:py-[92px] border-t border-white/[0.06]" data-ps="src/components/home/Coverage.astro:section">
+  <div class="max-w-[1180px] mx-auto px-6" data-ps="src/components/home/Coverage.astro:container">
+    <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8 mb-12" data-ps="src/components/home/Coverage.astro:header">
+      <div class="max-w-2xl" data-ps="src/components/home/Coverage.astro:intro">
+        <div class="flex items-center gap-2 mb-3" data-ps="src/components/home/Coverage.astro:eyebrow">
+          <span class="w-4 h-[2px] bg-[#f5bd14]" data-ps="src/components/home/Coverage.astro:bar"></span>
+          <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase" data-ps="src/components/home/Coverage.astro:label">
+            Regional coverage
+          </span>
+        </div>
+        <h2 class="text-[36px] sm:text-[42px] font-extrabold text-[#f5f5f4] leading-[1.08] tracking-[-1.1px] mb-4" data-ps="src/components/home/Coverage.astro:h2">
+          Major Cities Covered By KRE Security LLC.
+        </h2>
+        <p class="text-[#a8a29e] text-[17px] leading-[28px] m-0" data-ps="src/components/home/Coverage.astro:p">
+          Our PA security company provides qualified law enforcement and investigative services across 22+ counties, ensuring professional protection in the following key regions.
+        </p>
+      </div>
+      <a
+        href="#contact"
+        class="border border-white/20 text-[#f5f5f4] font-semibold text-[14px] px-[24px] py-[13px] rounded-[10px] hover:border-[#f5bd14] hover:text-white transition-all no-underline whitespace-nowrap"
+        data-ps="src/components/home/Coverage.astro:map-cta"
+      >
+        View service area map
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-[40px] items-start" data-ps="src/components/home/Coverage.astro:grid">
+      <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8" data-ps="src/components/home/Coverage.astro:counties">
+        {locations.map((loc) => (
+          <div class="border-b border-white/[0.08] pb-6" data-ps="src/components/home/Coverage.astro:county">
+            <h3 class="text-[16px] font-bold text-[#f5f5f4] mb-2 flex justify-between items-center" data-ps="src/components/home/Coverage.astro:county-name">
+              {loc.county} County
+              <span class="w-1.5 h-1.5 rounded-full bg-[#f5bd14]" data-ps="src/components/home/Coverage.astro:county-dot"></span>
+            </h3>
+            <p class="text-[#a8a29e] text-[12.5px] leading-[20px] uppercase tracking-wider font-medium m-0" data-ps="src/components/home/Coverage.astro:cities">
+              {loc.cities}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <div class="lg:col-span-4 lg:sticky lg:top-32" data-ps="src/components/home/Coverage.astro:aside">
+        <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-7" data-ps="src/components/home/Coverage.astro:map-card">
+          <img
+            src="/images/pa-map.svg"
+            alt="Pennsylvania counties served by KRE Security"
+            class="w-full h-auto object-contain mb-7 opacity-80"
+            width="1024"
+            height="637"
+            data-ps="src/components/home/Coverage.astro:map"
+          />
+          <div class="text-[11px] font-bold text-[#f5bd14] tracking-[0.16em] uppercase mb-3" data-ps="src/components/home/Coverage.astro:hotline-label">
+            Regional hotlines
+          </div>
+          <div class="space-y-3" data-ps="src/components/home/Coverage.astro:hotlines">
+            {SITE.offices.map((office) => (
+              <div data-ps="src/components/home/Coverage.astro:hotline">
+                <div class="text-[11px] font-semibold text-[#a8a29e] uppercase tracking-wider" data-ps="src/components/home/Coverage.astro:hotline-region">
+                  {office.label}
+                </div>
+                <a
+                  href={`tel:${office.tel}`}
+                  class="text-[15px] font-bold text-[#f5f5f4] no-underline hover:text-[#f5bd14] transition-colors"
+                  data-ps="src/components/home/Coverage.astro:hotline-phone"
+                >
+                  {office.phone}
+                </a>
+              </div>
+            ))}
+          </div>
+          <div class="pt-4 mt-4 border-t border-white/[0.08] flex justify-between items-center text-[12px]" data-ps="src/components/home/Coverage.astro:count">
+            <span class="font-bold uppercase text-[#a8a29e]" data-ps="src/components/home/Coverage.astro:count-l">Coverage</span>
+            <span class="font-bold uppercase text-[#f5f5f4]" data-ps="src/components/home/Coverage.astro:count-v">22+ Counties</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

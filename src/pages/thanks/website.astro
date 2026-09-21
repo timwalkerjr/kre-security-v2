@@ -1,0 +1,33 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Quote request received | KRE Security"
+  description="Thank you for contacting KRE Security. We will follow up on your security quote request."
+  noIndex={true}
+>
+  <section class="relative isolate py-[96px]" data-ps="src/pages/thanks/website.astro:section">
+    <div class="max-w-[720px] mx-auto px-6 text-center" data-ps="src/pages/thanks/website.astro:container">
+      <div class="flex items-center justify-center gap-2 mb-4" data-ps="src/pages/thanks/website.astro:eyebrow">
+        <span class="w-4 h-[2px] bg-[#f5bd14]" data-ps="src/pages/thanks/website.astro:bar"></span>
+        <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase" data-ps="src/pages/thanks/website.astro:label">
+          Dispatch portal
+        </span>
+      </div>
+      <h1 class="text-[40px] font-extrabold text-[#f5f5f4] leading-[1.08] tracking-[-1.1px] mb-4" data-ps="src/pages/thanks/website.astro:h1">
+        We received your quote request.
+      </h1>
+      <p class="text-[#a8a29e] text-[17px] leading-[28px] mb-8" data-ps="src/pages/thanks/website.astro:p">
+        A KRE dispatcher will review the site details you sent and follow up. For urgent coverage, call 24-hour emergency dispatch at 610-562-0971.
+      </p>
+      <a
+        href="/"
+        class="inline-flex bg-[#f5bd14] text-[#0a0a0a] font-bold text-[15px] px-8 py-4 rounded-[10px] no-underline hover:bg-[#e0ab10] transition-all"
+        data-ps="src/pages/thanks/website.astro:home"
+      >
+        Back to home
+      </a>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,95 @@
+---
+import { designAsset } from '@/config/site';
+
+const services = [
+  'Special Events Security',
+  'Sporting Event Security',
+  'Proms & School Events',
+  'Traffic Direction',
+  'Building Patrols',
+  'Event Security Services',
+  'Security Consulting for Districts',
+];
+---
+
+<section class="relative isolate py-[72px] border-t border-white/[0.06]" data-ps="src/components/school-security/SchoolSecurityContent.astro:services">
+  <div class="max-w-[1180px] mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-4 h-[2px] bg-[#f5bd14]"></span>
+          <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase">Services Provided</span>
+        </div>
+        <h2 class="text-[32px] sm:text-[40px] font-extrabold text-[#f5f5f4] leading-[1.08] tracking-[-1.1px] mb-5">
+          Comprehensive School Security Solutions
+        </h2>
+        <p class="text-[#a8a29e] text-[16px] leading-[26px] mb-6">
+          Our school security officers are well diverse to perform services within the education setting, with our goal to promote the safety and well being while maintaining the academic setting for students, staff, and guests to the school districts and university campuses we provide services to.
+        </p>
+        <div class="space-y-2">
+          {services.map((service) => (
+            <div class="flex items-center gap-3 p-4 bg-white/[0.035] border border-white/[0.09] rounded-[12px] hover:border-[#f5bd14]/40 transition-colors">
+              <span class="w-2 h-2 bg-[#f5bd14] shrink-0 rounded-full"></span>
+              <span class="text-[#f5f5f4] text-[14px] font-semibold">{service}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="space-y-5">
+        <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-7">
+          <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-3">Armed School Security</p>
+          <p class="text-[#a8a29e] text-[15px] leading-[24px] mb-5">
+            KRE Security currently provides armed agents to service as a protection role in several districts across the region. Our professional armed security guard staff has prior backgrounds in law enforcement, public safety, and educational backgrounds, which allows for our agents to interact with students to gain the professional trust of a security presence daily in the schools.
+          </p>
+          <a href="/armed-security-pa/" class="inline-block bg-[#f5bd14] text-[#0a0a0a] font-bold text-[13px] px-6 py-3 rounded-[10px] no-underline hover:bg-[#e0ab10]">
+            Armed Security Services →
+          </a>
+        </div>
+        <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden p-2">
+          <img src={designAsset('/images/lib/39725c_797b9b116d42412dbbebab45c6dee4e0-mv2-320.webp')} alt="School security guards" class="w-full max-w-[320px] h-auto object-cover rounded-[12px]" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="relative isolate py-[64px] border-t border-white/[0.06]" data-ps="src/components/school-security/SchoolSecurityContent.astro:training">
+  <div class="max-w-[1180px] mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden p-2">
+        <img src={designAsset('/images/lib/KRE-NASRO-Class-Photo--320.webp')} alt="KRE NASRO Class Photo — ACT 67 Training" class="w-full h-auto object-cover rounded-[12px]" loading="lazy" />
+      </div>
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-4 h-[2px] bg-[#f5bd14]"></span>
+          <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase">ACT 67 Training</span>
+        </div>
+        <h2 class="text-[28px] sm:text-[34px] font-extrabold text-[#f5f5f4] leading-[1.1] mb-4">NASRO Certified & ACT 67 Compliant</h2>
+        <p class="text-[#a8a29e] text-[16px] leading-[26px] mb-4">
+          Six, including management, members of the KRE school Security Division just attended training at the BCIU Berks County Intermediate Unit — Reading, PA as part of the PA ACT 67 training for deployment as Armed Security in several districts KRE provides services to.
+        </p>
+        <p class="text-[#a8a29e] text-[14px] mb-6">Photos Courtesy of Harold Hoch of the Reading Eagle.</p>
+        <a href="/act-67-certified-services/" class="inline-block bg-white text-[#0a0a0a] font-bold text-[14px] px-7 py-3 rounded-[10px] no-underline hover:bg-[#e7e5e4]">
+          ACT 67 Certified Services
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="relative isolate pb-[72px]" data-ps="src/components/school-security/SchoolSecurityContent.astro:cta">
+  <div class="max-w-[1180px] mx-auto px-6">
+    <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden p-2 mb-6">
+      <img src={designAsset('/images/lib/39725c_3ba4109b5877408ba9c2e259be148c43-mv2-768.webp')} alt="School security guard services" class="w-full max-w-[768px] mx-auto h-auto object-cover rounded-[12px]" loading="lazy" />
+    </div>
+    <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-7 flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
+      <div>
+        <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-1">KRE Security LLC.</p>
+        <p class="text-[#f5f5f4] text-[18px] m-0">Ready to secure your school district? Contact us today.</p>
+      </div>
+      <a href="/#contact" class="bg-[#f5bd14] text-[#0a0a0a] font-bold text-[14px] px-7 py-3 rounded-[10px] no-underline hover:bg-[#e0ab10] whitespace-nowrap">
+        Contact Us to Get Started
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+---
+import PageHero from '@/components/pages/PageHero.astro';
+import { SITE, designAsset } from '@/config/site';
+---
+
+<PageHero
+  eyebrow="Dispatch Status: Active — 24/7/365"
+  title="Armed Money Escorts"
+  primaryHref="/contact/"
+  primaryLabel="Request a Quote"
+  secondaryHref={`tel:${SITE.phone.primaryTel}`}
+  secondaryLabel={SITE.phone.primary}
+>
+  <Fragment slot="lead">
+    <p class="m-0">
+      Through vigilance and attention to detail, KRE Security has performed countless escorts without incident over the course of our last 35 years in business. Protection and safety of our customers is our top priority.
+    </p>
+  </Fragment>
+  <Fragment slot="media">
+    <div class="grid grid-cols-2 gap-3">
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden">
+        <img src={designAsset('/images/lib/Screenshot-2023-11-09-at-1_25_26-PM-320.webp')} alt="Armed money escort services" class="w-full h-40 object-cover" loading="eager" />
+      </div>
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden">
+        <img src={designAsset('/images/lib/ATM-keypad-320.webp')} alt="ATM services" class="w-full h-40 object-cover" loading="eager" />
+      </div>
+    </div>
+  </Fragment>
+</PageHero>
