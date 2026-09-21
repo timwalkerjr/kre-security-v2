@@ -129,3 +129,9 @@ export const NAV = {
 } as const;
 
 export type SiteConfig = typeof SITE;
+
+/** Design-repo / Netlify image. Prefer this over inventing new CDN hotlinks. */
+export function designAsset(src: string) {
+  if (src.startsWith('http')) return src;
+  return `https://kre-security.netlify.app${src.startsWith('/') ? src : `/${src}`}`;
+}

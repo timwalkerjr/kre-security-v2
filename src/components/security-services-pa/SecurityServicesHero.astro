@@ -1,0 +1,44 @@
+---
+import PageHero from '@/components/pages/PageHero.astro';
+import { designAsset } from '@/config/site';
+---
+
+<PageHero
+  eyebrow="Founded August 1990 — Under New Ownership Since 2016"
+  title="About KRE Security"
+  primaryHref="/contact/"
+  primaryLabel="Contact Us: 610-562-0971"
+  secondaryHref="/security-company-faq/"
+  secondaryLabel="Learn More: FAQs"
+>
+  <Fragment slot="lead">
+    <p class="m-0" data-ps="src/components/security-services-pa/SecurityServicesHero.astro:p1">
+      KRE Security LLC. was founded in August of 1990. We are a full-time Security Service and Investigations Corporation. We provide factually based investigations and conduct every investigation ethically, morally, legally and with the highest degree of integrity.
+    </p>
+    <p class="m-0" data-ps="src/components/security-services-pa/SecurityServicesHero.astro:p2">
+      Our goal is to meet your security needs 24/7 while providing cost effective services to our customers.
+    </p>
+  </Fragment>
+  <Fragment slot="media">
+    <div class="space-y-4" data-ps="src/components/security-services-pa/SecurityServicesHero.astro:aside">
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-6" data-ps="src/components/security-services-pa/SecurityServicesHero.astro:press">
+        <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-2" data-ps="src/components/security-services-pa/SecurityServicesHero.astro:press-kicker">Featured Press</p>
+        <h3 class="text-[18px] font-bold text-[#f5f5f4] mb-2" data-ps="src/components/security-services-pa/SecurityServicesHero.astro:press-h">
+          “Post-9/11, A New World Emerges for Security”
+        </h3>
+        <p class="text-[#a8a29e] text-[14px] leading-[22px] m-0" data-ps="src/components/security-services-pa/SecurityServicesHero.astro:press-p">
+          An article written by Reading Eagle’s Carole Duran — read about the difference KRE Security LLC. is making in the community when it comes to safety and security.
+        </p>
+      </div>
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-4" data-ps="src/components/security-services-pa/SecurityServicesHero.astro:affiliations">
+        <img
+          src={designAsset('/images/lib/39725c_4a7648f40324491e9b8364d7b4789a69-mv2-320.webp')}
+          alt="KRE Security affiliations"
+          class="w-full max-w-[320px] h-auto object-contain"
+          loading="eager"
+          data-ps="src/components/security-services-pa/SecurityServicesHero.astro:affiliations-img"
+        />
+      </div>
+    </div>
+  </Fragment>
+</PageHero>
