@@ -1,0 +1,94 @@
+---
+import { designAsset } from '@/config/site';
+
+const teamMembers = [
+  {
+    name: 'Kandice Pyles',
+    title: 'Executive Director of Finance',
+    image: '/images/lib/63861c_1140176b21f944f687d5a4673411f71b-mv2-230.webp',
+    imageAlt: 'Kandice Pyles finance & scheduling mgr',
+    bio: "Miss Pyles holds a Bachelor's degree in Sports Administration with a Minor in Business Administration from Indiana University of Pennsylvania. She is primarily responsible for overseeing and managing the financial, payroll, and billing departments at KRE Security. Kandice's expertise has been instrumental in implementing an updated employee tracking, scheduling, and payroll management system within our office. Her focus on financial stability and integrity is central to the services KRE provides.",
+  },
+  {
+    name: 'Matthew Peters',
+    title: 'Executive Director / Client & Staff Relations / Operations',
+    image: '/images/lib/profile-picture-237.webp',
+    imageAlt: 'Matthew Peters - Executive Director',
+    bio: 'Matt brings a very diverse skill set to the company. With a Communications degree from Penn State University, Matt also completed the prestigious Marsh and McLennan Management & Leadership Training Course in Dallas, TX. A United States Marine Corps veteran, Matt served multiple combat tours in Iraq and held a Secret Clearance during his time in service. He has a wealth of experience in security management, having worked as a supervisor at Southern California nightclubs, professional sporting events, and live music venues.',
+  },
+  {
+    name: 'Rachael Dalton',
+    title: 'Senior Director of Administration',
+    image: '/images/lib/1000017319-237.webp',
+    imageAlt: 'Rachael Dalton - Senior Director of Administration',
+    bio: 'Ms. Dalton joined KRE Security in August 2021, initially serving as a Dispatcher before quickly advancing through roles to her current position. With over 25 years of experience in Administration, Human Resources, and Scheduling, Rachael brings a wealth of expertise to her role. She holds her Act 235 Lethal Weapons Certification through the Commonwealth of Pennsylvania. As Director of Administration, Rachael is responsible for providing direct support to KRE President Jarrod Emes and overseeing day-to-day operations.',
+  },
+  {
+    name: 'Amanda Ahmed, M.A.',
+    title: 'Hiring Recruitment Supervisor',
+    image: '/images/lib/image-237.webp',
+    imageAlt: 'Amanda Ahmed - Hiring Recruitment Supervisor',
+    bio: "Amanda Ahmed is KRE Security's Hiring and Recruitment Supervisor, bringing an exceptional blend of professionalism, insight, and heart to her work. Armed with a Master's degree in Forensic Psychology from Kean University, where she graduated with a perfect 4.0 GPA, Amanda combines sharp analytical thinking with a genuine passion for people and organizational excellence. She plays a vital role in building and strengthening KRE's team of talented and dependable professionals.",
+  },
+  {
+    name: 'Jeff Weidenhammer',
+    title: 'Fleet Supervisor',
+    image: '/images/lib/Screenshot_20260331_104832_Messages-227.webp',
+    imageAlt: 'Jeff Weidenhammer - Fleet Supervisor',
+    bio: "Jeff joined KRE Security in 2015 and quickly grew into a trusted leader, serving in roles ranging from Security Officer to Site Lead, Manager, Supervisor, and Operations Manager. Over nearly 16 years of service, Jeff has worn many hats across the organization. Today, Jeff plays a key role in supporting KRE's continued growth by overseeing the company's fleet of vehicles, including cars, trucks, trailers, and golf carts.",
+  },
+  {
+    name: 'Samantha Chase',
+    title: 'Contract & Risk Administration Manager',
+    image: '/images/lib/image-227.webp',
+    imageAlt: 'Samantha Chase - Contract & Risk Administration Manager',
+    bio: 'Samantha joined KRE Security in May 2024 as a Scheduling Coordinator and quickly advanced to Director of Scheduling, then to her current role as Contract and Risk Administration Manager. She brings more than 15 years of experience in customer service, transportation, logistics, client services, and scheduling within fast-paced, security-focused environments.',
+  },
+  {
+    name: 'Joseph Dzingleski',
+    title: 'Operations Manager',
+    image: '/images/lib/image-227.webp',
+    imageAlt: 'Joseph Dzingleski - Operations Manager',
+    bio: 'Joseph Dzingleski is the Operations Manager at KRE Security, overseeing day-to-day security operations across a wide range of client environments including corporate, retail, industrial, and educational sites. He previously served in the United States Army as an Infantry Team Leader and Squad Leader, and serves as a volunteer firefighter. Joseph holds a Bachelor of Science in Emergency Management and Homeland Security.',
+  },
+  {
+    name: 'James P. Wilson',
+    title: 'Senior Field Supervisor',
+    image: '/images/lib/jim-237.webp',
+    imageAlt: 'James P. Wilson - Senior Field Supervisor',
+    bio: 'Jim is a seasoned professional with over 30 years of experience in law enforcement, corrections, and management. A retired Act 120 Certified Patrolman from the Wyomissing Police Department. At KRE Security, Jim oversees the Firearms Training Program, field operations, training, and investigations division. He ensures that daily field operations comply with client needs and manages safety plans and training.',
+  },
+];
+---
+
+<section class="relative isolate py-[72px] border-t border-white/[0.06]" data-ps="src/components/security-services-pa/SecurityServicesTeam.astro:section">
+  <div class="max-w-[1180px] mx-auto px-6" data-ps="src/components/security-services-pa/SecurityServicesTeam.astro:container">
+    <div class="mb-10" data-ps="src/components/security-services-pa/SecurityServicesTeam.astro:header">
+      <div class="flex items-center gap-2 mb-3" data-ps="src/components/security-services-pa/SecurityServicesTeam.astro:eyebrow">
+        <span class="w-4 h-[2px] bg-[#f5bd14]"></span>
+        <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase">Leadership & Operations</span>
+      </div>
+      <h2 class="text-[32px] sm:text-[40px] font-extrabold text-[#f5f5f4] leading-[1.08] tracking-[-1.1px]" data-ps="src/components/security-services-pa/SecurityServicesTeam.astro:h2">
+        KRE Security Management Team
+      </h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-5" data-ps="src/components/security-services-pa/SecurityServicesTeam.astro:grid">
+      {teamMembers.map((member) => (
+        <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-5 flex gap-4" data-ps="src/components/security-services-pa/SecurityServicesTeam.astro:card">
+          <img
+            src={designAsset(member.image)}
+            alt={member.imageAlt}
+            class="w-20 h-24 object-cover object-top rounded-[10px] shrink-0 bg-[#141414]"
+            loading="lazy"
+            data-ps="src/components/security-services-pa/SecurityServicesTeam.astro:photo"
+          />
+          <div data-ps="src/components/security-services-pa/SecurityServicesTeam.astro:bio">
+            <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-wider mb-1 m-0" data-ps="src/components/security-services-pa/SecurityServicesTeam.astro:role">{member.title}</p>
+            <h3 class="text-[16px] font-bold text-[#f5f5f4] mb-2" data-ps="src/components/security-services-pa/SecurityServicesTeam.astro:name">{member.name}</h3>
+            <p class="text-[#a8a29e] text-[13px] leading-[20px] m-0" data-ps="src/components/security-services-pa/SecurityServicesTeam.astro:copy">{member.bio}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

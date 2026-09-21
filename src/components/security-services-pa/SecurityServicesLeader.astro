@@ -1,0 +1,69 @@
+---
+import { SITE, designAsset } from '@/config/site';
+---
+
+<section class="relative isolate py-[72px] border-t border-white/[0.06]" data-ps="src/components/security-services-pa/SecurityServicesLeader.astro:section">
+  <div class="max-w-[1180px] mx-auto px-6" data-ps="src/components/security-services-pa/SecurityServicesLeader.astro:container">
+    <div class="grid lg:grid-cols-2 gap-12 items-start" data-ps="src/components/security-services-pa/SecurityServicesLeader.astro:grid">
+      <div data-ps="src/components/security-services-pa/SecurityServicesLeader.astro:copy">
+        <div class="flex items-center gap-2 mb-3" data-ps="src/components/security-services-pa/SecurityServicesLeader.astro:eyebrow">
+          <span class="w-4 h-[2px] bg-[#f5bd14]"></span>
+          <span class="text-[#f5bd14] text-[13.6px] font-semibold tracking-wider uppercase">Owner & President</span>
+        </div>
+        <h2 class="text-[32px] sm:text-[40px] font-extrabold text-[#f5f5f4] leading-[1.08] tracking-[-1.1px] mb-2" data-ps="src/components/security-services-pa/SecurityServicesLeader.astro:h2">
+          Jarrod Emes
+        </h2>
+        <p class="text-[#f5bd14] text-[12px] font-bold uppercase tracking-widest mb-6" data-ps="src/components/security-services-pa/SecurityServicesLeader.astro:role">
+          Owner and President
+        </p>
+        <div class="space-y-4 text-[#a8a29e] text-[15px] leading-[24px]" data-ps="src/components/security-services-pa/SecurityServicesLeader.astro:bio">
+          <p class="m-0">
+            Jarrod is a graduate of Alvernia College, where he earned a Bachelor’s degree in Criminal Justice with a Minor in Sociology. In 2007, he was honored with the Saint Michael Archangel Award. Jarrod also served as a “Program Advisory Board Member” for the Criminal Justice Department at Berks Technical Institute.
+          </p>
+          <p class="m-0">
+            His professional background includes being a member of the KRE Security/Investigations Inc. Management Team from 2007 to 2016 and becoming the Owner of KRE Security LLC in 2016. Jarrod is a certified instructor in American Heart CPR, First Aid, Phazzer Non-Lethal Training, and PA Act 235 Lethal Weapon Agent certification.
+          </p>
+          <p class="m-0">
+            Jarrod’s work experience spans over 20 years in the Emergency Services field, specializing in Fire/Rescue and Emergency Management. He currently oversees municipal hazard plans, mitigation projects, and ongoing safety assessments. His previous roles include working at the Berks County Juvenile Detention Center, the Berks County Department of Emergency Services as a Special Projects Officer, and serving as a Deputy Coroner for the Schuylkill County Coroner’s Office.
+          </p>
+          <p class="m-0">
+            With over 15 years of experience at KRE Security/Investigations Inc., and 6 years as the proud owner, Jarrod remains deeply committed to client service. As Owner and President, he works directly with clients on a daily basis and is always available 24/7, 365 days a year.
+          </p>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-3" data-ps="src/components/security-services-pa/SecurityServicesLeader.astro:actions">
+          <a href={`tel:${SITE.phone.primaryTel}`} class="bg-[#f5bd14] text-[#0a0a0a] font-bold text-[14px] px-[24px] py-[13px] rounded-[10px] no-underline hover:bg-[#e0ab10]" data-ps="src/components/security-services-pa/SecurityServicesLeader.astro:phone">
+            {SITE.phone.primary}
+          </a>
+          <a href={`mailto:${SITE.emails.scheduling}`} class="border border-white/20 text-[#f5f5f4] font-semibold text-[14px] px-[24px] py-[13px] rounded-[10px] no-underline hover:border-[#f5bd14]" data-ps="src/components/security-services-pa/SecurityServicesLeader.astro:email">
+            Email Us Here
+          </a>
+        </div>
+      </div>
+      <div class="space-y-5" data-ps="src/components/security-services-pa/SecurityServicesLeader.astro:media">
+        <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-3" data-ps="src/components/security-services-pa/SecurityServicesLeader.astro:portrait-wrap">
+          <img
+            src={designAsset('/images/lib/image-4-320.webp')}
+            alt="Jarrod Emes - Owner and President of KRE Security"
+            class="w-full max-w-[320px] mx-auto h-auto object-cover rounded-[12px]"
+            loading="lazy"
+            data-ps="src/components/security-services-pa/SecurityServicesLeader.astro:portrait"
+          />
+        </div>
+        <div class="grid grid-cols-2 gap-4" data-ps="src/components/security-services-pa/SecurityServicesLeader.astro:logos">
+          <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-4 flex items-center justify-center">
+            <img src={designAsset('/images/lib/63861c_3d55985869664c34bf4dcf7b0625f951-mv2-200.webp')} alt="Alvernia University logo" class="max-w-[200px] w-full h-auto object-contain" loading="lazy" />
+          </div>
+          <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-4 flex items-center justify-center">
+            <img src={designAsset('/images/lib/63861c_2bdb9acc9da64a9b9c0ce4c17beeb8d2-mv2-292.webp')} alt="Union Fire Co Hamburg" class="max-w-[120px] w-full h-auto object-contain" loading="lazy" />
+          </div>
+        </div>
+        <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] p-5" data-ps="src/components/security-services-pa/SecurityServicesLeader.astro:alumni">
+          <p class="text-[#f5bd14] text-[11px] font-bold uppercase tracking-widest mb-2">Class Alumni</p>
+          <p class="text-[#a8a29e] text-[13px] leading-[21px] m-0">
+            Jarrod is a graduate of Alvernia College, where he earned a Bachelor’s degree in Criminal Justice. In 2007, he was honored with the Saint Michael Archangel Award. He served as a “Program Advisory Board Member” for the Criminal Justice Department at Berks Technical Institute.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
