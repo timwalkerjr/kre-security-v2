@@ -1,0 +1,29 @@
+---
+import PageHero from '@/components/pages/PageHero.astro';
+import { SITE, designAsset } from '@/config/site';
+---
+
+<PageHero
+  eyebrow="Marked & Unmarked Fleet — Fully Insured & Licensed"
+  title="Security Vehicle Patrol"
+  primaryHref="/contact/"
+  primaryLabel="Request a Quote"
+  secondaryHref={`tel:${SITE.phone.primaryTel}`}
+  secondaryLabel={SITE.phone.primary}
+>
+  <Fragment slot="lead">
+    <p class="m-0">
+      KRE Security has a fleet of Marked Security Patrol Vehicles, Unmarked Patrol, Covert Vehicles, and Security Patrol Golf Carts for venue specific areas. KRE provides a custom patrol service based on the client’s needs and venue.
+    </p>
+  </Fragment>
+  <Fragment slot="media">
+    <div class="grid grid-cols-2 gap-3">
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden">
+        <img src={designAsset('/images/lib/IMG_4535-320.webp')} alt="KRE Security patrol vehicle" class="w-full h-48 object-cover" loading="eager" />
+      </div>
+      <div class="bg-white/[0.035] border border-white/[0.09] rounded-[16px] overflow-hidden">
+        <img src={designAsset('/images/lib/Rav-4-pic-for-proposals-320.webp')} alt="KRE Security RAV4 patrol vehicle" class="w-full h-48 object-cover" loading="eager" />
+      </div>
+    </div>
+  </Fragment>
+</PageHero>
