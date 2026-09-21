@@ -14,12 +14,9 @@ import remarkGfm from 'remark-gfm';
 
 import remarkToc from './src/plugins/remark-toc.mjs';
 
-const siteUrl = process.env.SITE_URL || 'https://gonetexpress.com';
+const siteUrl = process.env.SITE_URL || 'https://www.kresecurity.com';
 const projectRoot = dirname(fileURLToPath(import.meta.url));
 
-// Scan pages once at config load for noIndex={true} so we can exclude them
-// from the sitemap. Matches the runtime behaviour of the noIndex prop in
-// BaseLayout/SEOHead, which renders <meta name="robots" content="noindex">.
 function collectNoIndexPaths() {
   const files = globSync('src/pages/**/*.astro', { cwd: projectRoot });
   const paths = new Set();
@@ -38,7 +35,6 @@ function collectNoIndexPaths() {
 
 const noIndexPaths = collectNoIndexPaths();
 
-// https://astro.build/config
 export default defineConfig({
   output: 'static',
   trailingSlash: 'always',
@@ -46,25 +42,15 @@ export default defineConfig({
     imageService: 'passthrough',
     prerenderEnvironment: 'node',
   }),
-  // Astro 6 + @astrojs/cloudflare 13 auto-provision a SESSION KV namespace
-  // per deploy. Pinning a non-KV driver tells the adapter "sessions are
-  // handled" so it skips emitting the SESSION binding. Our pages are static
-  // and never call Astro.session at runtime.
   session: {
     driver: sessionDrivers.lruCache(),
   },
   site: siteUrl,
-  // CSRF origin check for form-encoded POST/PUT/PATCH/DELETE. This is the
-  // Astro 5/6 default; pinned explicitly so a template edit can't silently
-  // disable it. Note it does NOT cover /api/auth/* (JSON posts) — those are
-  // protected by Better Auth trustedOrigins in the auth integration.
   security: {
     checkOrigin: true,
   },
   integrations: [
-    // MDX support for blog posts, docs, and content
     mdx(),
-    // Generate sitemap.xml, excluding pages flagged noIndex={true}
     sitemap({
       filter: (page) => {
         const { pathname } = new URL(page);
@@ -78,8 +64,6 @@ export default defineConfig({
     shikiConfig: {
       theme: 'github-dark',
     },
-    // Astro 7 defaults to the Sätteri pipeline; keep the remark/rehype
-    // pipeline so our custom remark-toc plugin (and remark-gfm) still apply.
     processor: unified({ remarkPlugins: [remarkGfm, remarkToc] }),
   },
   build: {
